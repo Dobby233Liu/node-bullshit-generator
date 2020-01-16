@@ -4,8 +4,4 @@
  * formatted by:	https://beautifier.io/
 */
 var 生成狗屁 = require("../lib/狗屁库.js");
-if(process.argv.length - 1 < 2) {
-    console.log("error: argv[2] as theme");
-} else {
-    console.log(生成狗屁(process.argv[2]));
-}
+console.log(生成狗屁(process.argv[2]));
