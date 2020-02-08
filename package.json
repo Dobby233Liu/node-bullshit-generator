@@ -1,6 +1,6 @@
 {
   "name": "node-bullshit-generator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Port of menzi11/BullshitGenerator@github.com to JavaScript",
   "main": "bin/bs-gen.js",
   "bin": {
