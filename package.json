@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "node bin/bs-gen.js 学生会退会",
-	"bundle": "browserify -r ./lib/狗屁库.js -o dist/狗屁库.min.js"
+    "bundle": "browserify -r ./lib/狗屁库.js -o dist/狗屁库.min.js"
   },
   "repository": {
     "type": "git",
@@ -31,5 +31,10 @@
   "devDependencies": {
     "browserify": "^16.5.0"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "chancer": "^2.0.2"
+  }
 }
