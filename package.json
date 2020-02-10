@@ -34,7 +34,5 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "dependencies": {
-    "chancer": "^2.0.2"
-  }
+  "dependencies": {}
 }
