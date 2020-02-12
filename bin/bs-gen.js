@@ -4,4 +4,4 @@
  * formatted by:	https://beautifier.io/
 */
 var 生成狗屁 = require("../lib/狗屁库.js");
-console.log(生成狗屁(process.argv[2]));
+console.log(生成狗屁(process.argv[2],process.argv[3],undefined,undefined,undefined,undefined,process.argv[4]&&JSON.stringify(process.argv[4])));
