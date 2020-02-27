@@ -3,9 +3,13 @@
 In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community 100% open.
 # Our Standards
 Examples of good behaviors include:
-	1. anything
+
+1. anything
+
 Examples of unacceptable behavior by participants include:
-	1. nothing
+
+1. nothing
+
 # Our Responsibilities
 Project maintainers are responsible for clarifying the standards.
 # Scope
