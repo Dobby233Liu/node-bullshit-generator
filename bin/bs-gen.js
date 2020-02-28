@@ -15,7 +15,8 @@ You can also specify a "-h" or "--help" in place of anywhere to display a help m
 
 Source code can be found at https://github.com/Dobby233Liu/node-bullshit-generator
 
-This program is licensed using Anti 996 License, version 1.0 (draft). Obtain a copy at https://github.com/996icu/996.ICU/blob/617129b/LICENSE
+This program is licensed using the Anti 996 License, version 1.0 (draft).
+Obtain a copy at https://github.com/996icu/996.ICU/blob/617129b/LICENSE
 THE LICENSED WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
