@@ -7,7 +7,7 @@ A.K.A. http://github.com/menzi11/BullshitGenerator but for Node.js.
 # Usage
 ## As a library
 
-**Note:** Currently, `node-bullshit-generator` *doesn't* expose anything to your script when constructed. You submit a Pull Request if youre willing to help.
+**Note:** Currently, `node-bullshit-generator` *doesn't* expose anything to your script when constructed. Please submit a Pull Request if you're willing to help.
 
 Install the library by any way.
 

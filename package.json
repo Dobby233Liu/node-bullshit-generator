@@ -1,5 +1,6 @@
 {
   "name": "node-bullshit-generator",
+  "private": true,
   "version": "0.0.4",
   "description": "Port of menzi11/BullshitGenerator@github.com to JavaScript",
   "main": "lib/狗屁库.js",
@@ -31,9 +32,6 @@
   "homepage": "https://github.com/Dobby233Liu/node-bullshit-generator#readme",
   "devDependencies": {
     "browserify": "^16.5.0"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {}
 }
