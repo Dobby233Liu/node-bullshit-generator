@@ -9,7 +9,7 @@ This is a work-in-progress help document.
 
 Parameters: bullshit-generator [theme] [length] [options]
 [theme] = Article/bullshit theme, as a string.
-[length] = Bullshit length. Must be a integer.
+[length] = Bullshit length. Must be a positive integer, or the value is ignored.
 [options] = More options to the generator. If specified, must be a parsable JSON.
 You can also specify a "-h" or "--help" in place of anywhere to display a help message (this)
 
@@ -31,5 +31,5 @@ if(argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
 	console.log(helpText)
 } else {
 	var 生成狗屁 = require("../lib/狗屁库.js");
-	console.log(生成狗屁(process.argv[2],parseInt(process.argv[3]),undefined,undefined,undefined,undefined,process.argv[4]&&JSON.stringify(process.argv[4])));
+	console.log(生成狗屁(process.argv[2],process.argv[3]>=0&&parseInt(process.argv[3]),require("../lib/dict/default/名人名言.js"),require("../lib/dict/default/废话.js")(process.argv[2]),require("../lib/dict/default/前面垫话.js"),require("../lib/dict/default/后面垫话.js"),process.argv[4]&&JSON.stringify(process.argv[4])));
 }
