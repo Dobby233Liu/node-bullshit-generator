@@ -9,7 +9,7 @@
   },
   "directories": {
     "lib": "lib",
-	"bin": "bin"
+    "bin": "bin"
   },
   "scripts": {
     "test": "node bin/bs-gen.js 学生会退会",
