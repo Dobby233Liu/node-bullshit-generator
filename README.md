@@ -26,7 +26,7 @@ Simply call the function with the parameters you would like to supply.
 ```
 bullshit-generator [theme] [length] [options]
 [theme] = Article/bullshit theme, as a string.
-[length] = Bullshit length. Must be a integer.
+[length] = Bullshit length. Must be a positive integer, or the value is ignored.
 [options] = More options to the generator. If specified, must be a parsable JSON.
 You can also specify a "-h" or "--help" in place of anywhere to display a help message
 ```
