@@ -10,7 +10,6 @@ This is a work-in-progress help document.
 Parameters: bullshit-generator [theme] [length] [options]
 [theme] = Article/bullshit theme, as a string.
 [length] = Bullshit length. Must be a positive integer, or the value is ignored.
-[options] = More options to the generator. If specified, must be a parsable JSON.
 You can also specify a "-h" or "--help" in place of anywhere to display a help message (this)
 
 Source code can be found at https://github.com/Dobby233Liu/node-bullshit-generator
@@ -26,10 +25,11 @@ OTHERWISE, ARISING FROM, OUT OF OR IN ANY WAY CONNECTION WITH THE
 LICENSED WORK OR THE USE OR OTHER DEALINGS IN THE LICENSED WORK.
 
 This is a Node.js port of https://github.com/menzi11/BullshitGenerator`
-var argvClean = process.argv.map((x)=>x.trim().toLowerCase())
+var argvClean = process.argv.map((x)=>x.trim().toLowerCase()).slice(2)
 if(argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
 	console.log(helpText)
 } else {
-	var 生成狗屁 = require("../lib/狗屁库.js");
-	console.log(生成狗屁(process.argv[2],process.argv[3]>=0&&parseInt(process.argv[3]),require("../lib/dict/default/名人名言.js"),require("../lib/dict/default/废话.js")(process.argv[2]),require("../lib/dict/default/前面垫话.js"),require("../lib/dict/default/后面垫话.js"),process.argv[4]&&JSON.stringify(process.argv[4])));
+	console.log(
+		require("../lib/狗屁库.js")(argvClean[0]||"学生会退会",(argvClean[1]?argvClean[1]>=0&&parseInt(process.argv[3]):undefined))
+	);
 }
