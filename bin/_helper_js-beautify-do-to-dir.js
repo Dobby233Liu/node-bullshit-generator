@@ -32,7 +32,7 @@ var beaut_short = (data) => beautify(data, {
   "comma_first": false,
   "e4x": true,
   "indent_empty_lines": false
-}));
+});
 var mainDirectorys = getFnames();
 var handlerPerDirectory = function(fnames){
 	for(i_ in fnames){
