@@ -11,9 +11,6 @@ function getFnames(dir = dirA){
 		iHadLunch[sliy] = dirent.name;
 		sliy ++;
 	}
-	dir.close((err)=>{
-		if(err) throw err;
-	});
 	return iHadLunch;
 }
 var beaut_short = (data) => beautify(data, {
