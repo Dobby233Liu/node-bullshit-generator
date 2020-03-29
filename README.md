@@ -7,7 +7,7 @@ A node library & program that generates meaningless Chinese bullshit when ran.
 A.K.A. http://github.com/menzi11/BullshitGenerator but for Node.js.
 
 # Usage
-## As a library
+## As a library ("libBullshit")
 
 **Note:** Currently, `node-bullshit-generator` *doesn't* expose anything to your script when constructed. Please submit a Pull Request if you're willing to help. (If not, maybe I'll do it in a reconstruction.)
 

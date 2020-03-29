@@ -7,7 +7,7 @@
 A.K.A. 给 node.js 用的 http://github.com/menzi11/BullshitGenerator
 
 # 食用方法
-## 库方式
+## 库（“狗屎库”）方式
 
 **注意：** 目前狗屎库在 `new` 后提供不了任何函数，如果意帮忙，请提交 PR。（如果要我做，重组的时候再说吧。）
 
