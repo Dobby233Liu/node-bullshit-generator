@@ -1,5 +1,7 @@
 # node-bullshit-generator
 
+[en_*](README.md) | [zh_cn](README-zh_cn.md)
+
 A node library & program that generates meaningless Chinese bullshit when ran.
 
 A.K.A. http://github.com/menzi11/BullshitGenerator but for Node.js.
@@ -7,9 +9,9 @@ A.K.A. http://github.com/menzi11/BullshitGenerator but for Node.js.
 # Usage
 ## As a library
 
-**Note:** Currently, `node-bullshit-generator` *doesn't* expose anything to your script when constructed. Please submit a Pull Request if you're willing to help.
+**Note:** Currently, `node-bullshit-generator` *doesn't* expose anything to your script when constructed. Please submit a Pull Request if you're willing to help. (If not, maybe I'll do it in a reconstruction.)
 
-Install the library by any way.
+Install the library by any way. (yet~gugugu~ to get a npm release)
 
 After you `require` the library, you got a function:
 ```javascript
@@ -33,7 +35,8 @@ You can also specify a "-h" or "--help" in place of anywhere to display a help m
 # License
 
 ```
-This program is licensed using the Anti 996 License, version 1.0 (draft).
+This program is licensed using the Anti 996 License, version 1.0 (draft),
+inheriting the upstream's license.
 Obtain a copy at https://github.com/996icu/996.ICU/blob/617129b/LICENSE
 
 THE LICENSED WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
