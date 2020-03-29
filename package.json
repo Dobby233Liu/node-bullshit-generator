@@ -13,7 +13,10 @@
   },
   "scripts": {
     "test": "node bin/bs-gen.js 学生会退会",
-    "bundle": "browserify -r ./lib/狗屁库.js -o dist/狗屁库.min.js"
+    "bundle": "browserify -e ./lib/狗屁库.js --im -d -o dist/狗屁库.js",
+    "bundle-minifing-offical": "uglifyjs -c -m -p acorn --timings --verbose --warn --comments -o dist/狗屁库.min.js -- dist/狗屁库.js",
+    "beautify-offical-replace": "node bin/_helper_js-beautify-do-to-dir.js && js-beautify -r bin/bs-gen.js && js-beautify -r bin/_helper_js-beautify-do-to-dir.js",
+    "bundle-with-minify-offical": "npm run bundle && npm run bundle-minifing-offical"
   },
   "repository": {
     "type": "git",
@@ -31,7 +34,9 @@
   },
   "homepage": "https://github.com/Dobby233Liu/node-bullshit-generator#readme",
   "devDependencies": {
-    "browserify": "^16.5.0"
+    "browserify": "^16.5.0",
+    "js-beautify": "^1.10.3",
+    "uglify-js": "^3.8.1"
   },
   "dependencies": {}
 }
