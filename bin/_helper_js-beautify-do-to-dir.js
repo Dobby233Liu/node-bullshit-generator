@@ -45,7 +45,7 @@ var handlerPerDirectory = function(fnames){
 				var _thisDone = false;
 				fs.readFile(i, (err, data) => {
 					if (err) throw err;
-					beaut_short(data);
+					fs.writeFileSync(i, beaut_short(data), { mode: '0' + (stat.mode & parseInt('777', 8)).toString(8) });
 					console.log("done for: ",i);
 					_thisDone = true;
 				});
