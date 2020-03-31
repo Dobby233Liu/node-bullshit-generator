@@ -35,6 +35,6 @@ if(argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
 	console.log(helpText)
 } else {
 	console.log(
-		require("../lib/狗屁库.js")(argvClean[0]||"学生会退会",(argvClean[1]?argvClean[1]>=0&&parseInt(process.argv[3]):undefined))
+		require("../lib/狗屁库.js")(argvClean[2]||"学生会退会",(argvClean[3]?argvClean[3]>=0&&parseInt(process.argv[3]):undefined))
 	);
 }
