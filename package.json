@@ -16,7 +16,7 @@
     "bundle": "browserify -e ./lib/狗屁库.js --im -s bullshit -o dist/狗屁库.js",
     "bundle+min": "npm run bundle && npm run min-bundle",
     "min-bundle": "terser dist/狗屁库.js -o dist/狗屁库.min.js -m -c --source-map filename=\"dist/狗屁库.min.js.map\" --timings --verbose --warn",
-    "beautify": "js-beautify lib/**/*.js bin/**/*.js"
+	"beautify": "js-beautify lib/**/*.js bin/**/*.js"
   },
   "repository": {
     "type": "git",
