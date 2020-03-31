@@ -11,7 +11,7 @@ A.K.A. http://github.com/menzi11/BullshitGenerator but for Node.js.
 
 **Note:** Currently, `node-bullshit-generator` *doesn't* expose anything to your script when constructed. Please submit a Pull Request if you're willing to help. (If not, maybe I'll do it in a reconstruction.)
 
-Install the library by any way. (yet~gugugu~ to get a npm release)
+Install the library by any way. (at the time of writtening this didn't get on the npm registery)
 
 After you `require` the library, you got a function:
 ```javascript
