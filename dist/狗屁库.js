@@ -40,12 +40,9 @@ module.exports = (主题) => ["现在，解决" + 主题 + "的问题，是非�
     主题 + "似乎是一种巧合，但如果我们从一个更大的角度看待问题，这似乎是一种不可避免的事实。", "在这种不可避免的冲突下，我们必须解决这个问题。", "既然如此，", "对我个人而言，" + 主题 + "不仅仅是一个重大的事件，还可能会改变我的人生。"
 ];
 },{}],6:[function(require,module,exports){
-/* libBullshit / 狗屁库
- * orig py program: menzi11 https://github.com/menzi11/BullshitGenerator/blob/master/%E8%87%AA%E5%8A%A8%E7%8B%97%E5%B1%81%E4%B8%8D%E9%80%9A%E6%96%87%E7%AB%A0%E7%94%9F%E6%88%90%E5%99%A8.py
- * node.js port:	Dobby233Liu 2019/11/15 first broken version
- *			   					2020/01/14 v2
- * formatted by:	https://beautifier.io/ and js-beautify
- * @preserve
+/*
+ * libBullshit / 狗屁库
+ * @author Dobby233Liu
  * @license Anti-996 License 1.0
  */
 function 生成狗屁(主题 = "学生会退会", 文章长度 = 6000 * 主题.length, 名人名言 = require("./dict/default/名人名言.js"), 废话 = require("./dict/default/废话.js")(主题), 前面垫话 = require("./dict/default/前面垫话.js"), 后面垫话 = require("./dict/default/后面垫话.js"), 选项 = {
