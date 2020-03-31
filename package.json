@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/Dobby233Liu/node-bullshit-generator#readme",
   "devDependencies": {
-    "browserify": "^16.5.0"
+    "browserify": "^16.5.1"
   },
   "dependencies": {}
 }
