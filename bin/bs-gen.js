@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+
 /*
  * bullshit-generator / bs-gen
  * @author Dobby233Liu
  * @license Anti-996 License 1.0
-*/
+ */
 var helpText = `bullshit-generator: Generates random Chinese bullshit.
 This is a work-in-progress help document.
 
