@@ -1,9 +1,9 @@
 {
-  "name": "node-bullshit-generator",
-  "private": true,
+  "name": "@lwys-pkg-releaser/node-bullshit-generator",
   "version": "0.0.6",
   "description": "Port of menzi11/BullshitGenerator@github.com to JavaScript",
   "main": "lib/狗屁库.js",
+  "module": "lib/狗屁库.js",
   "bin": {
     "bullshit-generator": "./bin/bs-gen.js"
   },
@@ -13,10 +13,18 @@
   },
   "scripts": {
     "test": "node bin/bs-gen.js 学生会退会",
+	"build": "npm run bundle+min",
+	"clean": "del dist/*.js && del dist/*.js.map",
     "bundle": "browserify -e ./lib/狗屁库.js --im -s bullshit -o dist/狗屁库.js",
+	"build.nonmin": "npm run bundle",
     "bundle+min": "npm run bundle && npm run min-bundle",
     "min-bundle": "terser dist/狗屁库.js -o dist/狗屁库.min.js -m -c --source-map filename=\"dist/狗屁库.min.js.map\" --timings --verbose --warn",
     "beautify": "js-beautify lib/**/*.js bin/**/*.js"
+  },
+  "author": {
+    "name": "Liu Wenyuan",
+    "email": "papaqi1234567@126.com",
+    "url": "https://dobby233liu.github.io/?src=npm"
   },
   "repository": {
     "type": "git",
@@ -27,7 +35,6 @@
     "generator",
     "bullshit"
   ],
-  "author": "Dobby233Liu",
   "license": "SEE LICENSE IN LICENSE.txt",
   "bugs": {
     "url": "https://github.com/Dobby233Liu/node-bullshit-generator/issues"
