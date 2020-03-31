@@ -5,12 +5,13 @@ jobs:
         if: "!contains(github.event.head_commit.message, '[nobundle]')"
         steps:
             - uses: actions/checkout@v2
+            - uses: fregante/setup-git-token@v1
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                name: GitHub Actions
             - run: "npm install"
             - run: "npm run bundle+min"
-            - run: |
-                git config --local user.email "actions@github.com"
-                git config --local user.name "GitHub Actions"
-                git commit -m "[nobundle][newgrass] bundle" -a
+            - run: "git commit -m \"[nobundle][newgrass] Automatical bundled the library using .github/workflows/auto-bundle.yml\" -a"
             - uses: ad-m/github-push-action@master
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}

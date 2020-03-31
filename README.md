@@ -18,7 +18,7 @@ After you `require` the library, you got a function:
 生成狗屁(主题 = "学生会退会", 文章长度 = 6000 * 主题.length, 名人名言 = require("./dict/default/名人名言.js"), 废话 = require("./dict/default/废话.js")(主题),
 	前面垫话 = require("./dict/default/前面垫话.js"),
 	后面垫话 = require("./dict/default/后面垫话.js"),
-	选项 = [omitted in this README] )
+	_选项 = { omitted: true } )
 ```
 Simply call the function with the parameters you would like to supply.
 
