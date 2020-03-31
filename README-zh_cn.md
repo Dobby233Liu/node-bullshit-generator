@@ -33,6 +33,7 @@ bullshit-generator [theme] [length] [options]
 ```
 ## 中文网页方式
 https://Dobby233Liu.github.io/node-bullshit-generator
+
 注：用的是 master 版的，提供者为 jsDelivr（可能有劫持！）
 
 # 许可证
