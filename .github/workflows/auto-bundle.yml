@@ -1,3 +1,4 @@
+on: [push]
 jobs:
     bundle_plus_min:
         runs-on: ubuntu-latest
