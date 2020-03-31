@@ -14,8 +14,9 @@
   "scripts": {
     "test": "node bin/bs-gen.js 学生会退会",
     "bundle": "browserify -e ./lib/狗屁库.js --im -s bullshit -o dist/狗屁库.js",
-	"bundle+min": "npm run bundle && npm run min-bundle",
-	"min-bundle": "terser dist/狗屁库.js -o dist/狗屁库.min.js -m -c --source-map filename=\"dist/狗屁库.min.js.map\" --timings --verbose --warn"
+    "bundle+min": "npm run bundle && npm run min-bundle",
+    "min-bundle": "terser dist/狗屁库.js -o dist/狗屁库.min.js -m -c --source-map filename=\"dist/狗屁库.min.js.map\" --timings --verbose --warn",
+	"beautify": "js-beautify lib/*.js bin/*.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
   "homepage": "https://github.com/Dobby233Liu/node-bullshit-generator#readme",
   "devDependencies": {
     "browserify": "^16.5.1",
+    "js-beautify": "^1.10.3",
     "terser": "^4.6.9"
   },
   "dependencies": {}
