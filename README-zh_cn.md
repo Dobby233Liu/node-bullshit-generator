@@ -31,6 +31,9 @@ bullshit-generator [theme] [length] [options]
 [length] = 狗屎长度。需要非负数自然数，否则忽略。
 随意添加 -h（或 --help）命令行选项以显示英文版帮助
 ```
+## 中文网页方式
+https://Dobby233Liu.github.io/node-bullshit-generator
+注：用的是 master 版的，提供者为 jsDelivr（可能有劫持！）
 
 # 许可证
 

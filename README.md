@@ -31,6 +31,9 @@ bullshit-generator [theme] [length] [options]
 [length] = Bullshit length. Must be a positive integer, or the value is ignored.
 You can also specify a "-h" or "--help" in place of anywhere to display a help message
 ```
+## As a (Chinese) web page
+https://Dobby233Liu.github.io/node-bullshit-generator
+Note: It uses the master version, and the library is streamed through jsDelivr. There may have a CDN-hijack!
 
 # License
 
