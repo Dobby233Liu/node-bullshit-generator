@@ -2,8 +2,8 @@
 class LCG中介 {
     种子 = 0;
     my种子 = 0;
-    同余乘数 = 1664525;
-    同余加数 = 1013904223;
+    同余乘数 = 214013;
+    同余加数 = 2531011;
     同余模 = Math.pow(2, 32);
     constructor(seed = NaN) {
         this.my种子 = seed;
@@ -11,7 +11,7 @@ class LCG中介 {
     }
     下种(seed) {
         if(isNaN(seed)) {
-            this.种子 = Number(new Date().valueOf());
+            this.种子 = Math.floor(Math.random() * this.同余模); // Number(new Date().valueOf());
         } else {
             this.种子 = seed;
         }
@@ -51,7 +51,7 @@ function 生成狗屁(主题 = "学生会退会", 文章长度 = 6000 * 主题.l
     "有概率不添加后面垫话": false,
     "有时不加废话": true,
     "之前处理过废话的话不要处理名言": true,
-    "LCG随机数机": false,
+    "LCG随机数机": true,
     "v3语法改进": true,
     "menzi11#175": false /**, "menzi11#175-2": true (implemented by v3语法改进)**/
 }) {
