@@ -15,7 +15,7 @@
     "test": "node bin/bs-gen.js 学生会退会",
     "build": "npm run bundle+min",
     "clean": "del dist/*.js && del dist/*.js.map",
-	"babel": "babel lib --out-dir _babel_lib",
+    "babel": "babel lib --out-dir _babel_lib",
     "bundle": "npm run babel && browserify -e ./_babel_lib/狗屁库.js -s bullshit -o dist/狗屁库.js",
     "bundle.nobabel": "browserify -e ./lib/狗屁库.js -s bullshit -o dist/狗屁库.js",
     "build.nonmin": "npm run bundle",
