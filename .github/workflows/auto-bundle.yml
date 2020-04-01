@@ -13,7 +13,7 @@ jobs:
             # fix
             - run: "git pull --tags -f"
             - run: "npm run bundle+min"
-            - run: "git add . && git commit -m \"[nobundle][newgrass] Automatical bundled the library"
+            - run: "git add . && git commit -m \"[nobundle][newgrass] Automatical bundled the library\""
             - uses: ad-m/github-push-action@master
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
