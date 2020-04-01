@@ -1,4 +1,5 @@
 node_modules
+_babel_lib
 .github
 .vscode
 CODE_OF_CONDUCT.md
