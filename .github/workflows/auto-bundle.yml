@@ -10,8 +10,10 @@ jobs:
                 token: ${{ secrets.GITHUB_TOKEN }}
                 name: GitHub Actions
             - run: "npm install"
+            # fix
+            - run: "git pull --tags -f"
             - run: "npm run bundle+min"
-            - run: "git commit -m \"[nobundle][newgrass] Automatical bundled the library using .github/workflows/auto-bundle.yml\" -a"
+            - run: "git add . && git commit -m \"[nobundle][newgrass] Automatical bundled the library"
             - uses: ad-m/github-push-action@master
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
