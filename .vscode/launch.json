@@ -8,7 +8,13 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceFolder}\\main.js"
+            "program": "${workspaceFolder}\\bin\\bs-gen.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "REPL",
+            "program": ""
         }
     ]
 }

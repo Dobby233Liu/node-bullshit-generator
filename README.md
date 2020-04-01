@@ -9,13 +9,12 @@ A.K.A. http://github.com/menzi11/BullshitGenerator but for Node.js.
 # Usage
 ## As a library ("libBullshit")
 
-**Note:** Currently, `node-bullshit-generator` *doesn't* expose anything to your script when constructed. Please submit a Pull Request if you're willing to help. (If not, maybe I'll do it in a reconstruction.)
+Install the library by any way. Omitting it here.
 
-Install the library by any way. (at the time of writtening this didn't get on the npm registery)
-
-After you `require` the library, you got a function:
+**Note: The original behaviour is changed in 1.0.0 (previously planned as 0.0.8)**
+After you `require` the library, you got a class. There should be a function inside after you construct it:
 ```javascript
-生成狗屁(主题 = "学生会退会", 文章长度 = 6000 * 主题.length, 名人名言 = require("./dict/default/名人名言.js"), 废话 = require("./dict/default/废话.js")(主题),
+this.生成(主题 = "学生会退会", 文章长度 = 6000 * 主题.length, 名人名言 = require("./dict/default/名人名言.js"), 废话 = require("./dict/default/废话.js")(主题),
 	前面垫话 = require("./dict/default/前面垫话.js"),
 	后面垫话 = require("./dict/default/后面垫话.js"),
 	_选项 = { omitted: true } )

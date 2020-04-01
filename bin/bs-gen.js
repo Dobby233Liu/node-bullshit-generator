@@ -30,7 +30,7 @@ LICENSED WORK OR THE USE OR OTHER DEALINGS IN THE LICENSED WORK.
 This is a Node.js port of https://github.com/menzi11/BullshitGenerator`
 var argvClean = process.argv.map((x) => x.trim().toLowerCase())
 if(argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
-    console.log(helpText)
+    console.log(helpText);
 } else {
-    console.log(require("../lib/狗屁库.js")(argvClean[2] || "学生会退会", (argvClean[3] ? argvClean[3] >= 0 && parseInt(process.argv[3]) : undefined)));
+    console.log(new (require("../lib/狗屁库.js"))().生成(argvClean[2] || "学生会退会", (argvClean[3] ? argvClean[3] >= 0 && parseInt(process.argv[3]) : undefined)));
 }
