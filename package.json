@@ -1,6 +1,6 @@
 {
   "name": "@lwys-pkg-releaser/node-bullshit-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Port of menzi11/BullshitGenerator@github.com to JavaScript",
   "main": "lib/狗屁库.js",
   "module": "lib/狗屁库.js",
@@ -15,7 +15,7 @@
     "test": "node bin/bs-gen.js 学生会退会",
     "build": "npm run bundle+min",
     "clean": "del dist/*.js && del dist/*.js.map",
-    "bundle": "browserify -e ./lib/狗屁库.js --im -s bullshit -o dist/狗屁库.js",
+    "bundle": "browserify -e ./lib/狗屁库.js -s bullshit -o dist/狗屁库.js",
     "build.nonmin": "npm run bundle",
     "bundle+min": "npm run bundle && npm run min-bundle",
     "min-bundle": "terser dist/狗屁库.js -o dist/狗屁库.min.js -m -c --source-map filename=\"dist/狗屁库.min.js.map\" --timings --verbose --warn",
