@@ -11,7 +11,7 @@ A.K.A. 给 node.js 用的 http://github.com/menzi11/BullshitGenerator
 
 用任意方法安装狗屎库，此处略。
 
-**注：原0.0.8（现1.0.0）的行为破坏了以前的用法，旧版本的使用方法请看github。**
+**注：1.0.0（原0.0.8）的行为破坏了0.x的用法，旧版本的使用方法请看github。请移到1.x的0.x使用者立即更改用法。**
 加载本库后并 new 它以后，对象里应该会有一个函数：
 ```javascript
 this.生成(主题 = "学生会退会", 文章长度 = 6000 * 主题.length, 名人名言 = require("./dict/default/名人名言.js"), 废话 = require("./dict/default/废话.js")(主题),
@@ -34,6 +34,9 @@ bullshit-generator [theme] [length] [options]
 https://Dobby233Liu.github.io/node-bullshit-generator
 
 注：用的是 master 版的，提供者为 jsDelivr（可能有劫持！）
+
+# 我将会对0.x停止支持
+1.0.0发布以后我将停止支持0.x。请及时迁移。
 
 # 许可证
 
