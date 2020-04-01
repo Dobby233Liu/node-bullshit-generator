@@ -57,8 +57,6 @@ var defaultOpts = {
 };
 
 function 生成狗屁(主题 = "学生会退会", 文章长度 = 6000 * 主题.length, 名人名言 = require("./dict/default/名人名言.js"), 废话 = require("./dict/default/废话.js")(主题), 前面垫话 = require("./dict/default/前面垫话.js"), 后面垫话 = require("./dict/default/后面垫话.js"), _选项 = defaultOpts) {
-    var LCG;
-    if(选项.LCG随机数机) LCG = new(require("./LCG中介.js"))();
     var 合并对象 = function (much, less) {
         var aPhoenixGraveSNewBirth = {};
         for(i in much) {
@@ -82,6 +80,8 @@ function 生成狗屁(主题 = "学生会退会", 文章长度 = 6000 * 主题.l
         return aPhoenixGraveSNewBirth;
     };
     var 选项 = 合并对象(defaultOpts, _选项); // “婚姻方程式：0.5+0.5=1，互补” Now we wouldn't need to explicitly define defaults in the function tree!!! Hooray!!!
+    var LCG;
+    if(选项.LCG随机数机) LCG = new(require("./LCG中介.js"))();
     /**
      * @param {Array} 数组
      */
