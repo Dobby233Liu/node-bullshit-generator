@@ -37,6 +37,7 @@ function wArtAppender(文章){
 		$('#文章').appendChild(newOwn);
 	}
 }
+window.dontAddFirstHR = false;
 function _gen_wrapper(__主题){
 	var appendedFirstHR = false, yetAppendLastHR = false;
 	try {
@@ -45,8 +46,9 @@ function _gen_wrapper(__主题){
 		var 文章, 错误围绕;
 		文章 = window.bullshitClass.生成(主题).split("\n");
 		if(错误围绕) $('#文章').classList.add("有错误");
-		$('#文章').appendChild(document.createElement("hr"));
+		if (!window.dontAddFirstHR) $('#文章').appendChild(document.createElement("hr"));
 		appendedFirstHR = true;
+		window.dontAddFirstHR = true;
 		wArtAppender(文章);
 		yetAppendLastHR = true;
 		$('#文章').appendChild(document.createElement("hr"));
@@ -61,7 +63,7 @@ function _gen_wrapper(__主题){
 			try { 
 				文章 = (ex.message + "\n\n" + (ex.stack || ex.stacktrace || "[无法获取堆栈跟踪]")).split("\n");
 				$('#文章').classList.add("有错误");
-				if (!appendedFirstHR) $('#文章').appendChild(document.createElement("hr"));
+				if (!window.dontAddFirstHR && !appendedFirstHR) $('#文章').appendChild(document.createElement("hr"));
 				wArtAppender(文章);
 				if (!yetAppendLastHR) $('#文章').appendChild(document.createElement("hr"));
 			} catch (e) { console.error(e); }
