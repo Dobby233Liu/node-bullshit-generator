@@ -231,6 +231,9 @@ let 狗屁库 = /*#__PURE__*/function () {
         }
       }
 
+      this.initXuanXiang(this.选项);
+      this.下一句废话到哪儿了 = 0;
+      this.下一句名人名言到哪儿了 = 0;
       return tmp;
     }
   }, {
