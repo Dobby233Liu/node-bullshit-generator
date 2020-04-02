@@ -38,13 +38,18 @@ function wArtAppender(文章){
 	}
 }
 function _gen_wrapper(__主题){
+	var appendedFirstHR = false, yetAppendLastHR = false;
 	try {
 		if (__主题) $('#主题 input').value = __主题;
 		var 主题 = $('#主题 input').value;
 		var 文章, 错误围绕;
 		文章 = window.bullshitClass.生成(主题).split("\n");
 		if(错误围绕) $('#文章').classList.add("有错误");
+		$('#文章').appendChild(document.createElement("hr"));
+		appendedFirstHR = true;
 		wArtAppender(文章);
+		yetAppendLastHR = true;
+		$('#文章').appendChild(document.createElement("hr"));
 		var composedTitle = document.title += " - 主题：" + 主题 + " - 请勿将生成的文章用于正规用途";
 		if (window._config_.historyApi) {
 			var elState = { 主题: 主题 };
@@ -53,10 +58,15 @@ function _gen_wrapper(__主题){
 	} catch (ex) {
 		if (window._config_.errorHndl){
 			错误围绕 = true;
-			文章 = (ex.message + "\n\n" + (ex.stack || ex.stacktrace || "[无法获取堆栈跟踪]")).split("\n");
+			try { 
+				文章 = (ex.message + "\n\n" + (ex.stack || ex.stacktrace || "[无法获取堆栈跟踪]")).split("\n");
+				$('#文章').classList.add("有错误");
+				if (!appendedFirstHR) $('#文章').appendChild(document.createElement("hr"));
+				wArtAppender(文章);
+				if (!yetAppendLastHR) $('#文章').appendChild(document.createElement("hr"));
+			} catch (e) { console.error(e); }
 		}
 		console.error(ex);
-		try { wArtAppender(文章); } catch (e) { console.error(e); }
 	}
 }
 if (( _主题 = 获取网址参数('主题'))) {
