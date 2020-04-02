@@ -6,6 +6,9 @@ A node library & program that generates meaningless Chinese bullshit when ran.
 
 A.K.A. http://github.com/menzi11/BullshitGenerator but for Node.js.
 
+# Simple alert
+LCG is broken. Using that with the shuffle function may pop a item to index NaN.
+
 # Usage
 ## As a library ("libBullshit")
 
