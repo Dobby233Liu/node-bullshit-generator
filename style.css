@@ -17,6 +17,11 @@
 	  line-height: 3rem;
 	  text-align: center;
 	}
+	h2{
+	  font-size: 2.25rem;
+	  line-height: 2rem;
+	  text-align: center;
+	}
 	#主题{
 	  text-align: center;
 	  margin-top: 6px;
@@ -101,6 +106,11 @@
 	#标题{
 	  font-size: 1.9rem;
 	  line-height: 1.9rem;
+	  text-align: center;
+	}
+	h2{
+	  font-size: 1rem;
+	  line-height: 1.5rem;
 	  text-align: center;
 	}
 	#主题{

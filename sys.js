@@ -38,28 +38,36 @@ function wArtAppender(文章){
 	}
 }
 window.dontAddFirstHR = false;
+window.rootTitle = document.title + "";
+function insertAfter(newNode, referenceNode) {
+	referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
 function _gen_wrapper(__主题){
 	var appendedFirstHR = false, yetAppendLastHR = false;
 	try {
 		if (__主题) $('#主题 input').value = __主题;
 		var 主题 = $('#主题 input').value;
-		var 文章, 错误围绕;
+		var 文章;
 		文章 = window.bullshitClass.生成(主题).split("\n");
-		if(错误围绕) $('#文章').classList.add("有错误");
-		if (!window.dontAddFirstHR) $('#文章').appendChild(document.createElement("hr"));
-		appendedFirstHR = true;
-		window.dontAddFirstHR = true;
+		if (!window.dontAddFirstHR) {
+			$('#文章').appendChild(document.createElement("hr"));
+			appendedFirstHR = true;
+			window.dontAddFirstHR = true;
+		}
+		var legHero = document.createElement("h2");
+		legHero.innerHTML = escapeHtml(主题);
+		$('#文章').appendChild(legHero);
 		wArtAppender(文章);
 		yetAppendLastHR = true;
 		$('#文章').appendChild(document.createElement("hr"));
-		var composedTitle = document.title += " - 主题：" + 主题 + " - 请勿将生成的文章用于正规用途";
+		var composedTitle = document.title = window.rootTitle + " - 主题：" + 主题 + " - 请勿将生成的文章用于正规用途";
 		if (window._config_.historyApi) {
 			var elState = { 主题: 主题 };
 			history.pushState(elState, document.title, appendParamToUrlString("主题", 主题));
 		}
+		$('#文章').classList.remove("有错误");
 	} catch (ex) {
 		if (window._config_.errorHndl){
-			错误围绕 = true;
 			try { 
 				文章 = (ex.message + "\n\n" + (ex.stack || ex.stacktrace || "[无法获取堆栈跟踪]")).split("\n");
 				$('#文章').classList.add("有错误");
