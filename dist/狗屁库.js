@@ -211,7 +211,7 @@ let 狗屁库 = /*#__PURE__*/function () {
           continue maketmp;
         }
 
-        tmp += tmp2;
+        tmp += tmp2.trim();
       }
 
       tmp = "    " + tmp.trim();
