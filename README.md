@@ -5,7 +5,7 @@
 A node library & program that generates meaningless Chinese bullshit when ran.
 
 A.K.A. http://github.com/menzi11/BullshitGenerator but for Node.js.
-
+---
 # Simple alert
 LCG is broken. Using that with the shuffle function may pop a item to index NaN.
 
@@ -40,6 +40,9 @@ Note: It uses the master version, and the library is streamed through jsDelivr. 
 
 # 0.x is going to lost my support
 0.x will lost my support once 1.0.0 is published. Please migrate quickly.
+
+# TODO
+* https://github.com/aetherwu/BullshitGenerator/blob/master/data.json - merge into default-plus
 
 # License
 
