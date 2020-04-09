@@ -5,13 +5,15 @@
 用于生成狗屁的 node.js 库 + 程序。
 
 A.K.A. 给 node.js 用的 http://github.com/menzi11/BullshitGenerator
-
+<hr /><!-- fixme(-2) -->
+# 简便通知
+LCG无法使用，因为使用那一个随机器洗牌可能会将一个元素洗到\#NaN。
 # 食用方法
 ## 库（“狗屎库”）方式
 
 用任意方法安装狗屎库，此处略。
 
-**注：1.0.0（原0.0.8）的行为破坏了0.x的用法，旧版本的使用方法请看github。请移到1.x的0.x使用者立即更改用法。**
+**注：1.0.0（原0.0.8）的行为破坏了0.x的用法，旧版本的使用方法请看GitHub。请移到1.x的0.x使用者立即更改用法。**
 加载本库后并 new 它以后，对象里应该会有一个函数：
 ```javascript
 this.生成(主题 = "学生会退会", 文章长度 = 6000 * 主题.length, 名人名言 = require("./dict/default/名人名言.js"), 废话 = require("./dict/default/废话.js")(主题),
@@ -37,6 +39,9 @@ https://Dobby233Liu.github.io/node-bullshit-generator
 
 # 我将会对0.x停止支持
 1.0.0发布以后我将停止支持0.x。请及时迁移。
+
+# TODO
+* https://github.com/aetherwu/BullshitGenerator/blob/master/data.json - 移植到 default-plus
 
 # 许可证
 
