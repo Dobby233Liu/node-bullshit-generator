@@ -52,6 +52,8 @@ module.exports = 主题 => ["现在，解决" + 主题 + "的问题，是非常�
 
 require("core-js/modules/es.string.ends-with");
 
+require("core-js/modules/es.string.trim");
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -66,6 +68,8 @@ let 中文常用 = /*#__PURE__*/function () {
   _createClass(中文常用, null, [{
     key: "\u80FD\u5426\u4EE5\u53E5\u53F7\u7ED3\u675F",
     value: function _(tmp2) {
+      tmp2 = tmp2.trim(); // temp postprocess
+
       return !tmp2.endsWith("。") && !tmp2.endsWith(".") && !tmp2.endsWith("：") && !tmp2.endsWith(":") && !tmp2.endsWith("？") && !tmp2.endsWith("?") && !tmp2.endsWith("！") && !tmp2.endsWith("!") && !tmp2.endsWith(",") && !tmp2.endsWith("，");
     }
   }, {
@@ -108,7 +112,7 @@ let 中文常用 = /*#__PURE__*/function () {
 }();
 
 module.exports = 中文常用;
-},{"core-js/modules/es.string.ends-with":86}],7:[function(require,module,exports){
+},{"core-js/modules/es.string.ends-with":86,"core-js/modules/es.string.trim":88}],7:[function(require,module,exports){
 "use strict";
 
 require("core-js/modules/es.string.ends-with");
@@ -176,7 +180,8 @@ let 狗屁库 = /*#__PURE__*/function () {
       maketmp: while (tmp.length < 文章长度) {
         分支 = Math.floor((this.选项.LCG随机数机 ? this.LCG.来个小小数() : Math.random()) * 100);
 
-        if (分支 < 5 && (this.选项.v3语法改进 ? !tmp.endsWith(sctStart) && !tmp2.endsWith(",") && !tmp2.endsWith("，") : true)) {
+        if (分支 < 5 && (this.选项.v3语法改进 ? !tmp.trim().endsWith(sctStart) && !tmp2.trim().endsWith(",") && !tmp2.trim().endsWith("，") : true)) {
+          // console.log("i DID do eol");
           tmp2 = this.另起一段(this.选项.v3语法改进 ? this.常用.能否以句号结束(tmp2.trim()) : true);
 
           if (this.选项.之前处理过废话的话不要处理名言) {
@@ -211,7 +216,8 @@ let 狗屁库 = /*#__PURE__*/function () {
           continue maketmp;
         }
 
-        tmp += tmp2.trim();
+        tmp += tmp2; //.trim();
+        //tmp = tmp//.trim();
       }
 
       tmp = "    " + tmp.trim();
@@ -229,6 +235,8 @@ let 狗屁库 = /*#__PURE__*/function () {
         if ((this.选项.检测到底应该如何和又会如何产生 ? tmp2.indexOf("到底应该如何") >= 0 || tmp2.indexOf("又会如何产生") >= 0 : false) && Math.floor((this.选项.LCG随机数机 ? this.LCG.来个小小数() : Math.random()) * 3) == 2) {
           tmp2 = tmp2.replace(/。/g, "？");
         }
+
+        tmp += tmp2;
       }
 
       this.initXuanXiang(this.选项);
