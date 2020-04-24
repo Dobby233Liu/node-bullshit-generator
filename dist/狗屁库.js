@@ -180,7 +180,7 @@ let 狗屁库 = /*#__PURE__*/function () {
       maketmp: while (tmp.length < 文章长度) {
         分支 = Math.floor((this.选项.LCG随机数机 ? this.LCG.来个小小数() : Math.random()) * 100);
 
-        if (分支 < 5 && (this.选项.v3语法改进 ? !tmp.trim().endsWith(sctStart) && !tmp2.trim().endsWith(",") && !tmp2.trim().endsWith("，") : true)) {
+        if (分支 < 5 && (this.选项.v3语法改进 ? !tmp.endsWith(sctStart) && !tmp2.trim().endsWith(",") && !tmp2.trim().endsWith("，") : true)) {
           // console.log("i DID do eol");
           tmp2 = this.另起一段(this.选项.v3语法改进 ? this.常用.能否以句号结束(tmp2.trim()) : true);
 
