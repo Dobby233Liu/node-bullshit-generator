@@ -6,6 +6,7 @@
 
 A.K.A. 给 node.js 用的 http://github.com/menzi11/BullshitGenerator
 <hr /><!-- fixme(-2) -->
+
 # 简便通知
 LCG无法使用，因为使用那一个随机器洗牌可能会将一个元素洗到\#NaN。
 # 食用方法
