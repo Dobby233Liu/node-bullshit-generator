@@ -11,12 +11,14 @@ jobs:
             - uses: fregante/setup-git-token@v1
               with:
                 token: ${{ secrets.GITHUB_TOKEN }}
-                name: GitHub Actions
+                # use bot creds rather than org creds
+                name: github-actions[bot]
+                email: 41898282+github-actions[bot]@users.noreply.github.com
             - run: "npm install"
-            # fix
-            - run: "git pull --tags -f"
+            - run: "git pull --tags -f" # checklater
+            - run: "npm run beautify"
             - run: "npm run bundle+min"
-            - run: "git add . && git commit -m \"[nobundle][newgrass] Automatical bundled the library\""
+            - run: "git add . && git commit -m \"[nobundle][newgrass] Bundle library\""
             - uses: ad-m/github-push-action@master
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}

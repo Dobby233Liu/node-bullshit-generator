@@ -4,7 +4,8 @@
  * bullshit-generator / bs-gen
  * @author Dobby233Liu
  * @license Anti-996 License 1.0
- */
+*/
+
 var helpText = `bullshit-generator: Generates random Chinese bullshit.
 This is a work-in-progress help document.
 
@@ -28,9 +29,16 @@ OTHERWISE, ARISING FROM, OUT OF OR IN ANY WAY CONNECTION WITH THE
 LICENSED WORK OR THE USE OR OTHER DEALINGS IN THE LICENSED WORK.
 
 This is a Node.js port of https://github.com/menzi11/BullshitGenerator`
+
 var argvClean = process.argv.map((x) => x.trim().toLowerCase())
+var theme, length, library, article;
 if(argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
     console.log(helpText);
+	process.exit(1);
 } else {
-    console.log(new(require("../lib/狗屁库.js"))().生成(argvClean[2] || "学生会退会", (argvClean[3] ? argvClean[3] >= 0 && parseInt(process.argv[3]) : undefined)));
+	theme = process.argv[2] || "学生会退会";
+	length = argvClean[3] ? argvClean[3] >= 0 && parseInt(argvClean[3]) : undefined;
+	library = new (require("../lib/狗屁库.js"))();
+	article = library.生成(theme, length);
+    console.log(article);
 }
