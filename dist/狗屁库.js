@@ -60,6 +60,8 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+// the mini lodash for bslib
+// @author Dobby233Liu
 let 中文常用 = /*#__PURE__*/function () {
   function 中文常用() {
     _classCallCheck(this, 中文常用);
@@ -81,10 +83,12 @@ let 中文常用 = /*#__PURE__*/function () {
     key: "\u5408\u5E76\u5BF9\u8C61",
     value: function _(much, less) {
       var aPhoenixGraveSNewBirth = {};
-      var i = 0; // quick fix
+      var i = ""; // quick fix
 
       for (i in much) {
+        if (i == "__proto__") continue; // skip
         // “如果老婆跟我意见相同“... (same NaN or same as told by == or === op)
+
         if (isNaN(this._lodash_safeGet(much, i)) && isNaN(this._lodash_safeGet(less, i)) || isNaN(this._lodash_safeGet(less, i)) && isNaN(this._lodash_safeGet(much, i)) || this._lodash_safeGet(much, i) == this._lodash_safeGet(less, i) || this._lodash_safeGet(much, i) === this._lodash_safeGet(less, i)) {
           // “听老婆的”
           aPhoenixGraveSNewBirth[i] = this._lodash_safeGet(much, i);
@@ -138,7 +142,7 @@ let 狗屁库 = /*#__PURE__*/function () {
   _createClass(狗屁库, [{
     key: "initXuanXiang",
     value: function initXuanXiang(选项) {
-      if (选项.LCG随机数机) this.LCG = new (require("./LCG中介.js"))();
+      if (选项.LCG随机数机) this.LCG = new (require("./LCG中介"))();
 
       if (选项["menzi11#175"]) {
         this.下一句前面垫话 = this.随机常用Exchanged.洗牌(this.前面垫话);
@@ -152,22 +156,22 @@ let 狗屁库 = /*#__PURE__*/function () {
     value: function _() {
       let 主题 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "学生会退会";
       let 文章长度 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6000 * 主题.length;
-      let 名人名言 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : require("./dict/default/名人名言.js");
-      let 废话 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : require("./dict/default/废话.js")(主题);
+      let 名人名言 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : require("./dict/default/名人名言");
+      let 废话 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : require("./dict/default/废话")(主题);
       let 前面垫话 = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : require("./dict/default/前面垫话.js");
-      let 后面垫话 = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : require("./dict/default/后面垫话.js");
+      let 后面垫话 = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : require("./dict/default/后面垫话");
 
       let _选项 = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : this.defaultOpts;
 
       this.选项 = this.常用.合并对象(this.defaultOpts, _选项);
       this.随机常用Exchanged = new this.随机常用(this.选项.LCG随机数机 ? this.LCG.来个小小数 : Math.random);
+      this.前面垫话 = 前面垫话;
+      this.后面垫话 = 后面垫话;
       this.initXuanXiang(this.选项);
       this.下一句废话 = this.随机常用Exchanged.洗牌(废话);
       this.下一句废话到哪儿了 = 0;
       this.下一句名人名言 = this.随机常用Exchanged.洗牌(名人名言);
       this.下一句名人名言到哪儿了 = 0;
-      this.前面垫话 = 前面垫话;
-      this.后面垫话 = 后面垫话;
       this.名人名言 = 名人名言;
       let tmp2 = "";
       let tmp = "    ";
@@ -294,7 +298,7 @@ let 狗屁库 = /*#__PURE__*/function () {
       "LCG随机数机": false,
       // alert: broken. using this with the shuffle function may pop a item to NaN
       "v3语法改进": true,
-      "menzi11#175": false
+      "menzi11#175": true
       /**, "menzi11#175-2": true (implemented by v3语法改进)**/
 
     });
@@ -312,7 +316,7 @@ let 狗屁库 = /*#__PURE__*/function () {
 }();
 
 module.exports = 狗屁库;
-},{"./LCG中介.js":1,"./dict/default/前面垫话.js":2,"./dict/default/名人名言.js":3,"./dict/default/后面垫话.js":4,"./dict/default/废话.js":5,"./常用":6,"./随机常用":8,"core-js/modules/es.string.ends-with":86,"core-js/modules/es.string.replace":87,"core-js/modules/es.string.trim":88}],8:[function(require,module,exports){
+},{"./LCG中介":1,"./dict/default/前面垫话.js":2,"./dict/default/名人名言":3,"./dict/default/后面垫话":4,"./dict/default/废话":5,"./常用":6,"./随机常用":8,"core-js/modules/es.string.ends-with":86,"core-js/modules/es.string.replace":87,"core-js/modules/es.string.trim":88}],8:[function(require,module,exports){
 "use strict";
 
 require("core-js/modules/web.dom-collections.iterator");
