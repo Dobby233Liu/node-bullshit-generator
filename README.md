@@ -1,13 +1,14 @@
 # node-bullshit-generator
 
-[en_*](README.md) | [zh_cn](README-zh_cn.md)
+[en_us](README.md) | [zh_cn](README-zh_cn.md)
 
 A node library & program that generates meaningless Chinese bullshit when ran.
 
 A.K.A. http://github.com/menzi11/BullshitGenerator but for Node.js.
-<hr /><!-- fixme(-2) -->
 
-# Simple alert
+---
+
+# Note
 LCG is broken. Using that with the shuffle function may pop a item to index NaN.
 
 # Usage
@@ -26,6 +27,7 @@ this.生成(主题 = "学生会退会", 文章长度 = 6000 * 主题.length, 名
 Simply call the function with the parameters you would like to supply.
 
 *todo: Document the parameters. <s>I am so lazy so do this far later.</s>*
+
 ## As a simple app
 
 ```
@@ -38,9 +40,6 @@ You can also specify a "-h" or "--help" in place of anywhere to display a help m
 https://Dobby233Liu.github.io/node-bullshit-generator
 
 Note: It uses the master version, and the library is streamed through jsDelivr. There may have a CDN-hijack!
-
-# 0.x is going to lost my support
-0.x will lost my support once 1.0.0 is published. Please migrate quickly.
 
 # TODO
 * https://github.com/aetherwu/BullshitGenerator/blob/master/data.json - merge into default-plus
