@@ -1,5 +1,5 @@
 window._config_ = {
-	devStuff: true,
+	devStuff: false,
 	historyApi: true,
 	errorHndl: true
 };
