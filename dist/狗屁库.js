@@ -181,7 +181,7 @@ let 狗屁库 = /*#__PURE__*/function () {
 
       var 分支 = 0; // quick fix
 
-      maketmp: while (tmp.length < 文章长度) {
+      maketmp: while (tmp.length < 文章长度 || (this.选项.v3语法改进 ? tmp.trim().endsWith("：") || tmp.trim().endsWith(":") || tmp.trim().endsWith(",") || tmp.trim().endsWith("，") : false)) {
         分支 = Math.floor((this.选项.LCG随机数机 ? this.LCG.来个小小数() : Math.random()) * 100);
 
         if (分支 < 5 && (this.选项.v3语法改进 ? !tmp.endsWith(sctStart) && !tmp2.trim().endsWith(",") && !tmp2.trim().endsWith("，") : true)) {
@@ -225,24 +225,6 @@ let 狗屁库 = /*#__PURE__*/function () {
       }
 
       tmp = "    " + tmp.trim();
-
-      while (this.选项.v3语法改进 && (tmp.trim().endsWith("：") || tmp.trim().endsWith(":") || tmp.trim().endsWith(",") || tmp.trim().endsWith("，"))) {
-        tmp2 = this.下一句废话[this.下一句废话到哪儿了].replace(/x/g, 主题);
-
-        if (this.下一句废话.length - 1 == this.下一句废话到哪儿了) {
-          // todo: 这算 v3语法改进吗？
-          this.下一句废话 = this.随机常用Exchanged.洗牌(废话); // 不够，再洗一下
-
-          this.下一句废话到哪儿了 = 0;
-        } else this.下一句废话到哪儿了++;
-
-        if ((this.选项.检测到底应该如何和又会如何产生 ? tmp2.indexOf("到底应该如何") >= 0 || tmp2.indexOf("又会如何产生") >= 0 : false) && Math.floor((this.选项.LCG随机数机 ? this.LCG.来个小小数() : Math.random()) * 3) == 2) {
-          tmp2 = tmp2.replace(/。/g, "？");
-        }
-
-        tmp += tmp2;
-      }
-
       this.initXuanXiang(this.选项);
       this.下一句废话到哪儿了 = 0;
       this.下一句名人名言到哪儿了 = 0;
