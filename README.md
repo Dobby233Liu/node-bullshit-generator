@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Dobby233Liu/node-bullshit-generator) 
+
 # node-bullshit-generator
 
 [en_us](README.md) | [zh_cn](README-zh_cn.md)
