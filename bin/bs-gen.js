@@ -41,7 +41,7 @@ if (argvClean.indexOf("--help") >= 0 ||
     theme = process.argv[2] || "学生会退会";
     length = argvClean[3] ? argvClean[
         3] >= 0 && parseInt(argvClean[
-            3]) : undefined;
+        3]) : undefined;
     library = new(require(
         "../lib/狗屁库.js"))();
     article = library.生成(theme, length);
