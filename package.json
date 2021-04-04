@@ -24,7 +24,7 @@
     "bundle+min": "npm run bundle && npm run min-bundle",
     "bundle+min.nobabel": "npm run bundle.nobabel && npm run min-bundle",
     "min-bundle": "terser dist/狗屁库.js -o dist/狗屁库.min.js -m -c --timings --verbose --warn",
-    "beautify": "js-beautify -r -f lib/**/*.js bin/**/*.js bin/*.js lib/*.js"
+    "beautify": "js-beautify -r -f lib/**/*.js lib/dict/**/*.js bin/**/*.js bin/*.js lib/*.js"
   },
   "author": {
     "name": "Liu Wenyuan",
