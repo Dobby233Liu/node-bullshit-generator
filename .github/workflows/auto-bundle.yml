@@ -1,6 +1,7 @@
 on:
     push:
-    pull_request:
+    # This workflow doesn't do anything with a PR
+    #pull_request:
 
 jobs:
     bundle_plus_min:
