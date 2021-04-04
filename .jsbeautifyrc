@@ -1,9 +1,9 @@
 {
   "indent_size": "4",
   "indent_char": " ",
-  "max_preserve_newlines": "5",
-  "preserve_newlines": false,
-  "keep_array_indentation": false,
+  "max_preserve_newlines": "0",
+  "preserve_newlines": true,
+  "keep_array_indentation": true,
   "break_chained_methods": false,
   "indent_scripts": "normal",
   "brace_style": "collapse",
