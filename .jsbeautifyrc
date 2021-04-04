@@ -11,7 +11,7 @@
   "unescape_strings": false,
   "jslint_happy": true,
   "end_with_newline": false,
-  "wrap_line_length": "40",
+  "wrap_line_length": "0",
   "indent_inner_html": false,
   "comma_first": false,
   "e4x": true,
