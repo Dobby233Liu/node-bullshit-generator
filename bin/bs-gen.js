@@ -37,7 +37,7 @@ if (argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
 } else {
     theme = process.argv[2] || "学生会退会";
     length = argvClean[3] ? argvClean[3] >= 0 && parseInt(argvClean[3]) : undefined;
-    library = new(require("../lib/狗屁库.js"))();
+    library = new(require(".."))();
     article = library.生成(theme, length);
     console.log(article);
 }
