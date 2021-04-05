@@ -17,10 +17,13 @@ jobs:
                 email: 41898282+github-actions[bot]@users.noreply.github.com
             - run: npm install
             - run: "git pull --tags -f" # checklater
-            - run: npm run beautify
+            #- run: npm run beautify
               #continue-on-error: true
-            - run: npm run bundle+min
+            #- run: npm run bundle+min
               #continue-on-error: true
+            - run: |
+                git mv lib src
+                git mv dist lib
             - run: git add . && git commit -m "[nobundle] Bundle library and beautify"
               id: commit-files
               continue-on-error: true
