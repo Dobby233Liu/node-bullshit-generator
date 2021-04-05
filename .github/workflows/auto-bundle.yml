@@ -22,8 +22,8 @@ jobs:
             #- run: npm run bundle+min
               #continue-on-error: true
             - run: |
-                git mv lib src
-                git mv dist lib
+                mv lib src
+                mv dist lib
             - run: git add . && git commit -m "[nobundle] Bundle library and beautify"
               id: commit-files
               continue-on-error: true
