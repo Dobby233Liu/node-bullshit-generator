@@ -1,1 +1,2 @@
-module.exports = new(require("../..")).生成;
+module.exports = new(require("../.."))
+    .生成;
