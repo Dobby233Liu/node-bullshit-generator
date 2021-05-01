@@ -11,12 +11,12 @@ class 狗屁库 {
         "v3语法改进": true,
         "menzi11#175": true /**, "menzi11#175-2": true (implemented by v3语法改进)**/
     }
-    默认字典 ＝ require("./dict/default/配置") // obj with old params + 句号 etc.
+    默认字典 ＝ require("./dict/default/配置"); // obj with old params + 句号 etc.
     常用 = require("./常用");
     随机 = new require("./随机常用")(Math.random);
-    生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = this.默认字典, _选项 = this.defaultOpts) {
+    生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = this.默认字典(主题), _选项 = this.defaultOpts) {
         this.选项 = this.常用.合并对象(this.defaultOpts, _选项);
-        this.字典 = this.常用.合并对象(this.默认字典, _字典);
+        this.字典 = this.常用.合并对象(this.默认字典(主题), _字典);
         this.前面垫话 = this.字典.前面垫话;
         this.后面垫话 = this.字典.后面垫话;
         if (选项["menzi11#175"]) {
