@@ -19,7 +19,7 @@ class 狗屁库 {
         this.字典 = this.常用.合并对象(this.默认字典(主题), _字典);
         this.前面垫话 = this.字典.前面垫话;
         this.后面垫话 = this.字典.后面垫话;
-        if (选项["menzi11#175"]) {
+        if (this.选项["menzi11#175"]) {
             this.下一句前面垫话 = this.随机.洗牌(this.字典.前面垫话);
             this.下一句后面垫话 = this.随机.洗牌(this.字典.后面垫话);
             this.下一句前面垫话到哪儿了 = 0;
