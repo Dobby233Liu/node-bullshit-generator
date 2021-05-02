@@ -11,7 +11,7 @@ class 狗屁库 {
     }
     默认字典 = require("./dict/default/配置");
     常用 = require("./常用");
-    随机 = new(require("./随机常用"))(Math.random);
+    随机 = require("./随机常用");
     生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = this.默认字典(主题), _选项 = this.默认选项) {
         this.选项 = this.常用.合并对象(_选项, this.默认选项);
         this.字典 = this.常用.合并对象(_字典, this.默认字典(主题));
