@@ -27,9 +27,10 @@ Simply call the function with the parameters you would like to supply.
 ## As a simple app
 
 ```
-bullshit-generator [theme] [length] [options]
+bullshit-generator [theme] [length] [dict]
 [theme] = Article/bullshit theme, as a string.
 [length] = Bullshit length. Must be a positive integer, or the value is ignored.
+[dict] = Path leading to a "dict config" file. Export must be a function.
 You can also specify a "-h" or "--help" in place of anywhere to display a help message
 ```
 
