@@ -17,7 +17,6 @@ class 狗屁库 {
     生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = this.默认字典(主题), _选项 = this.默认选项) {
         this.选项 = this.常用.合并对象(_选项, this.默认选项);
         this.字典 = this.常用.合并对象(_字典, this.默认字典(主题));
-        console.log(Object.keys(this.字典));
         this.起段 = this.字典.起段;
         this.前面垫话 = this.字典.前面垫话;
         this.后面垫话 = this.字典.后面垫话;
@@ -42,7 +41,7 @@ class 狗屁库 {
                 .endsWith(",") || 文章.trim()
                 .endsWith("，")) : false)) {
             var 分支 = Math.floor(Math.random() * 100);
-            if (分支 < 5 && (this.选项.v3语法改进 ? (!文章.endsWith(this.起段) && !缓冲.trim()
+            if (分支 < 5 && (this.选项.v3语法改进 ? ((!this.起段 || !文章.endsWith(this.起段)) && !缓冲.trim()
                     .endsWith(",") && !缓冲.trim()
                     .endsWith("，")) : true)) {
                 缓冲 = this.另起一段((this.选项.v3语法改进 ? this.常用.能否以句号结束(缓冲.trim()) : true));
