@@ -2,8 +2,6 @@
 
 # node-bullshit-generator
 
-[en](README.md) | [cn](README-zh_cn.md)
-
 A Node.js library & program that generates meaningless Chinese bullshit when run.
 
 Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
