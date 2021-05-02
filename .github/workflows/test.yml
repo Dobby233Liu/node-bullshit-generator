@@ -11,4 +11,4 @@ jobs:
                 dict: [classic, default-plus, default, internet-industry-terms, qwas982]
         steps:
         - uses: actions/checkout@v2
-        - run: node bin/bs-gen.js 学生会退会 30000 ${{ env.GITHUB_WORKSPACE }}/src/dict/${{ matrix.dict }}/配置.js
+        - run: node bin/bs-gen.js 学生会退会 30000 ${{ github.workspace }}/src/dict/${{ matrix.dict }}/配置.js
