@@ -7,7 +7,7 @@ updates:
       interval: "daily"
     assignees:
       - "Dobby233Liu"
-    reviewers:
-      - "Dobby233Liu"
+    #reviewers:
+    #  - "Dobby233Liu"
     labels:
       - "dependencies"
