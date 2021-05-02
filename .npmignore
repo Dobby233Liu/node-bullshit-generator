@@ -2,6 +2,10 @@ node_modules
 _babel_lib
 .github
 .vscode
-CODE_OF_CONDUCT.md
-CONTRIBUTING.md
+*.md
+!README*.md
 new_version.bat
+.gitpod.Dockerfile
+.gitpod.yml
+.jsbeautifyrc
+#lib

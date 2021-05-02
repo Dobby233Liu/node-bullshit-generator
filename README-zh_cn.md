@@ -1,3 +1,6 @@
+> ###### 注意
+> 目前请以en版为准。
+
 # node-bullshit-generator
 
 [en_*](README.md) | [zh_cn](README-zh_cn.md)
