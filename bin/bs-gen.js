@@ -39,6 +39,6 @@ if (argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
     length = argvClean[3] ? argvClean[3] >= 0 && parseInt(argvClean[3]) : undefined;
     library = new(require(".."))();
     dict = require(process.argv[4] ? process.argv[4] : "../src/dict/default/配置")(theme);
-    article = library.生成(theme, length);
+    article = library.生成(theme, length, dict);
     console.log(article);
 }
