@@ -59,7 +59,7 @@
     "browserify": "^16.5.1",
     "core-js": "^3.6.4",
     "js-beautify": "^1.10.3",
-    "terser": "^4.6.10"
+    "terser": "^5.7.0"
   },
   "dependencies": {}
 }
