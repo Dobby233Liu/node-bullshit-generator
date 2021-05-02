@@ -7,7 +7,7 @@ class 常用 {
     }
     static 合并对象(less, much) {
         var ret = much;
-        for (i in less) {
+        for (var i in less) {
             if (i != "__proto__") {
                 ret[i] = less[i];
             }
