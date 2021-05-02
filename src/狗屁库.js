@@ -42,7 +42,7 @@ class 狗屁库 {
             if (分支 < 5 && (this.选项.v3语法改进 ? ((!this.起段 || !文章.endsWith(this.起段)) && !(文章.trim()
                     .endsWith(",")) && !(文章.trim()
                     .endsWith("，"))) : true)) {
-                if (this.常用.能否以句号结束(文章.trim())) 缓冲 = this.字典.句号;
+                if (this.选项.v3语法改进 && this.常用.能否以句号结束(文章.trim())) 缓冲 = this.字典.句号;
                 else 缓冲 = "";
                 缓冲 += "\n";
                 缓冲 += this.起段;
