@@ -32,6 +32,7 @@ class 狗屁库 {
         this.名人名言 = this.字典.名人名言;
         let 缓冲 = ""; // tmp2
         let 起段 = this.字典.起段; //"    "; // sctStart
+        console.info("SctStart len::" + 起段.length);
         this.起段 = 起段;
         let 文章 = 起段; // tmp
         let 曾处理过废话 = false; // unused when opts.之前处理过废话的话不要处理名言 == !true
