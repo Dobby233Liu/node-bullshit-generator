@@ -38,7 +38,7 @@ if (argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
     theme = process.argv[2] || "学生会退会";
     length = argvClean[3] ? argvClean[3] >= 0 && parseInt(argvClean[3]) : undefined;
     library = new(require(".."))();
-    dict = require(process.argv[4] ? progress.argv[4] : "../src/dict/default/配置")(theme);
+    dict = require(process.argv[4] ? process.argv[4] : "../src/dict/default/配置")(theme);
     article = library.生成(theme, length);
     console.log(article);
 }
