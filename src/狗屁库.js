@@ -40,6 +40,7 @@ class 狗屁库 {
                 .endsWith(":") || 文章.trim()
                 .endsWith(",") || 文章.trim()
                 .endsWith("，")) : false)) {
+            缓冲 = "";
             var 分支 = Math.floor(Math.random() * 100);
             if (分支 < 5 && (this.选项.v3语法改进 ? ((!this.起段 || !文章.endsWith(this.起段)) && !缓冲.trim()
                     .endsWith(",") && !缓冲.trim()
@@ -49,13 +50,12 @@ class 狗屁库 {
                     曾处理过废话 = false;
                 }
             } else if (分支 < 20) {
-                if ((this.选项.之前处理过废话的话不要处理名言) ? 曾处理过废话 : false) {
-                    continue 写文;
-                }
-                缓冲 = this.来点名人名言();
-                if (this.选项.之前处理过废话的话不要处理名言) {
-                    曾处理过废话 = false;
-                }
+                if ((this.选项.之前处理过废话的话不要处理名言) ? !曾处理过废话 : true) {
+                    缓冲 = this.来点名人名言();
+                    if (this.选项.之前处理过废话的话不要处理名言) {
+                        曾处理过废话 = false;
+                    }
+                } else 缓冲 = "";
             } else if ((this.选项.分支大于24时加废话 ? 分支 > 24 : true)) {
                 缓冲 = this.下一句废话[this.下一句废话到哪儿了].replace(/x/g, 主题);
                 if (this.下一句废话.length - 1 == this.下一句废话到哪儿了) { // todo: 这算 v3语法改进吗？
@@ -65,11 +65,10 @@ class 狗屁库 {
                 if (this.选项.之前处理过废话的话不要处理名言) {
                     曾处理过废话 = true;
                 }
-            } else {
-                continue 写文;
-            }
+            } else 缓冲 = "";
             文章 += 缓冲;
         }
+        缓冲 = "";
         文章 = this.起段 + 文章.trim();
         return 文章;
     }
@@ -98,7 +97,7 @@ class 狗屁库 {
         return 言;
     }
     另起一段(以句号结束) {
-        return (以句号结束 ? this.字典.句号 /**"。"**/ : "") + "\n" + this.起段 /**"    "**/ ;
+        return (以句号结束 ? this.字典.句号 : "") + "\n" + this.起段;
     }
     constructor() {}
 }
