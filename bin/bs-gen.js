@@ -28,8 +28,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN ANY WAY CONNECTION WITH THE
 LICENSED WORK OR THE USE OR OTHER DEALINGS IN THE LICENSED WORK.
 
 This is a Node.js port of https://github.com/menzi11/BullshitGenerator`
-var argvClean = process.argv.map((x) => x.trim()
-    .toLowerCase())
+var argvClean = process.argv.map((x) => x.trim().toLowerCase())
 var theme, length, library, dict, article;
 if (argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
     console.log(helpText);
