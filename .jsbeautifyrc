@@ -3,7 +3,7 @@
   "indent_char": " ",
   "max_preserve_newlines": "-1",
   "preserve_newlines": false,
-  "keep_array_indentation": true,
+  "keep_array_indentation": false,
   "break_chained_methods": false,
   "indent_scripts": "keep",
   "brace_style": "none",
