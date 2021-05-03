@@ -1,4 +1,6 @@
 module.exports = function newline(orig) {
-    // TODO NEWVER: in case behaviour changed we have to edit this. see 另起一段
-    return "\n" + "    " + orig;
+    // From the original code we see that when the generator runs into a $
+    // and the paragraph is getting long, it adds a new paragraph.
+    // Tab characters are now hardcoded in config, so this doesn't matter.
+    return orig + "\n" + "    ";
 }
