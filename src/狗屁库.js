@@ -41,8 +41,8 @@ class 狗屁库 {
             var 分支 = Math.floor(Math.random() * 100);
             if (分支 < (this.选项.v3语法改进 ? 30 : 5) && (this.选项.v3语法改进 ? ((!this.起段 || !文章.endsWith(this.起段)) && !(文章.trim()
                     .endsWith(",")) && !(文章.trim()
-                    .endsWith("，")) && 文章.split("\n")[文章.split("\n").length - 1]
-                    .length > (100 + this.起段.length)) : true)) {
+                    .endsWith("，")) && 文章.split("\n")[文章.split("\n")
+                    .length - 1].length > (100 + this.起段.length)) : true)) {
                 if (this.选项.v3语法改进 && this.常用.能否以句号结束(文章.trim())) 缓冲 = this.字典.句号;
                 else 缓冲 = "";
                 缓冲 += "\n";
