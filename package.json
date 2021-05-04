@@ -2,10 +2,9 @@
   "name": "@lwys-pkg-releaser/node-bullshit-generator",
   "version": "1.1.0",
   "description": "Port of menzi11/BullshitGenerator@github.com to JavaScript",
-  "main": "src/狗屁库.js",
-  "module": "src/狗屁库.js",
+  "main": "./src/狗屁库.js",
   "bin": {
-    "bullshit-generator": "bin/bs-gen.js"
+    "bullshit-generator": "./bin/bs-gen.js"
   },
   "directories": {
     "src": "src",
@@ -13,19 +12,19 @@
     "bin": "bin"
   },
   "scripts": {
-    "test": "node bin/bs-gen.js 学生会退会",
+    "test": "node ./bin/bs-gen.js 学生会退会",
     "build": "npm run bundle+min",
-    "clean": "rm lib/*.js && rm lib/*.js.map",
-    "babel": "babel src --out-dir _babel_lib",
-    "bundle": "npm run babel && browserify -e _babel_lib/狗屁库.js -s bullshit -o lib/狗屁库.js",
-    "bundle.nobabel": "browserify -e src/狗屁库.js -s bullshit -o lib/狗屁库.js",
+    "clean": "rm ./lib/*.js && rm ./lib/*.js.map",
+    "babel": "babel src --out-dir ./_babel_lib",
+    "bundle": "npm run babel && browserify -e ./_babel_lib/狗屁库.js -s bullshit -o ./lib/狗屁库.js",
+    "bundle.nobabel": "browserify -e ./src/狗屁库.js -s bullshit -o ./lib/狗屁库.js",
     "build.nonmin": "npm run bundle",
     "build.nonmin.nobabel": "npm run bundle.nobabel",
     "build.nobabel": "npm run bundle.nobabel",
     "bundle+min": "npm run bundle && npm run min-bundle",
     "bundle+min.nobabel": "npm run bundle.nobabel && npm run min-bundle",
-    "min-bundle": "terser lib/狗屁库.js -o lib/狗屁库.min.js -m -c --timings --verbose --warn",
-    "beautify": "js-beautify -r -f src/**/*.js src/dict/**/*.js bin/**/*.js bin/*.js src/*.js"
+    "min-bundle": "terser ./lib/狗屁库.js -o ./lib/狗屁库.min.js -m -c --timings --verbose --warn",
+    "beautify": "js-beautify -r -f ./src/**/*.js ./src/dict/**/*.js ./bin/**/*.js ./bin/*.js ./src/*.js"
   },
   "author": {
     "name": "Liu Wenyuan",
