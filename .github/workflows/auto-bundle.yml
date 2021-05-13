@@ -20,7 +20,7 @@ jobs:
             - run: npm run beautify
               continue-on-error: true
             - run: npm run bundle+min
-              continue-on-error: true
+              #continue-on-error: true
             - run: git add . && git commit -m "[nobundle] Bundle library and beautify"
               id: commit-files
               continue-on-error: true
