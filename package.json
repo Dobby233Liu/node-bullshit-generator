@@ -13,7 +13,7 @@
   },
   "browserslist": [
     "cover 99.5%",
-    "since 2018",
+    "last 5 years",
     "Firefox ESR",
     "not dead",
     "maintained node versions"
