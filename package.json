@@ -11,6 +11,13 @@
     "lib": "lib",
     "bin": "bin"
   },
+  "browserslist": [
+    "cover 99.5%",
+    "since 2018",
+    "Firefox ESR",
+    "not dead",
+    "maintained node versions"
+  ],
   "scripts": {
     "test": "node ./bin/bs-gen.js 学生会退会",
     "build": "npm run bundle+min",
