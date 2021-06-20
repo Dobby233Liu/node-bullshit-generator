@@ -4,10 +4,11 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
-    assignees:
-      - "Dobby233Liu"
+      interval: "weekly"
+    #assignees:
+    #  - "Dobby233Liu"
     #reviewers:
     #  - "Dobby233Liu"
     labels:
       - "dependencies"
+    #versioning-strategy: increase
