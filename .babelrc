@@ -1,11 +1,7 @@
 {
   "presets": [
     [
-      "@babel/preset-env",
-      {
-        "useBuiltIns": "entry",
-	      "corejs": "3.6"
-      }
+      "@babel/preset-env"
     ]
   ],
   "plugins": ["@babel/plugin-transform-classes", "@babel/plugin-proposal-class-properties"]
