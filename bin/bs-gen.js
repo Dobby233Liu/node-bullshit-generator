@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /*
- * bullshit-generator / bs-gen
+ * bullshit-generator / bs-gen CLI
  * @author Dobby233Liu
  * @license Anti-996 License 1.0
  */
