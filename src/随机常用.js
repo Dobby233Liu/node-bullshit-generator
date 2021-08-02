@@ -18,14 +18,12 @@ class 随机常用 {
         let min = 0;
         return 数组[Math.floor(Math.random() * (max - min)) + min];
     }
-    static * 洗牌遍历(数组, 重复度=1) {
+    static * 洗牌遍历(数组, 重复度 = 1) {
         var 次数组 = [];
-        for (var i=0; i < 重复度; i++)
-            次数组.concat(数组);
-        while(1) {
+        for (var i = 0; i < 重复度; i++) 次数组.concat(数组);
+        while (1) {
             var 次次数组 = 洗牌(次数组);
-            for (元素 of 次次数组)
-                yield 元素;
+            for (元素 of 次次数组) yield 元素;
         }
     }
 }
