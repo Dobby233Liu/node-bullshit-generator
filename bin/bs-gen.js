@@ -2,7 +2,6 @@
 
 console.log(require("../src/随机常用").洗牌遍历([1, 2, 3]).next());
 process.exit(1);
-
 /*
  * bullshit-generator / bs-gen CLI
  * @author Dobby233Liu
