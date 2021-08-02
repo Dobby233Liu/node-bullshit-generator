@@ -21,13 +21,14 @@ class 随机常用 {
     static 洗牌遍历(数组, 重复度 = 1) {
         var 次数组 = [];
         for (var ii = 0; ii < 重复度; ii++) 次数组.concat(数组);
+        console.log(次数组);
         次数组 = this.洗牌(次数组);
+        console.log(次数组);
         return {
             next: ((洗牌, _数组) => {
                 var i = 0;
                 var 数组 = _数组.slice();
                 return function __next__() {
-                    console.log(i);
                     if (i >= 次数组.length) {
                         数组 = 洗牌(数组);
                         i = 0;
