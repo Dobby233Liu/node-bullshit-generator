@@ -19,9 +19,10 @@ class 随机常用 {
         return 数组[Math.floor(Math.random() * (max - min)) + min];
     }
     static 洗牌遍历(数组, 重复度 = 1) {
+        console.log(数组);
         var 次数组 = [];
         for (var ii = 0; ii < 重复度; ii++) {
-            次数组.concat(数组);
+            次数组 = 次数组.concat(数组);
             console.log("+1")
         }
         console.log(次数组);
