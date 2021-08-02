@@ -20,8 +20,7 @@ class 随机常用 {
     }
     static 洗牌遍历(数组, 重复度 = 1) {
         var 次数组 = [];
-        for (var ii = 0; ii < 重复度; ii++) 
-            次数组 = 次数组.concat(数组);
+        for (var ii = 0; ii < 重复度; ii++) 次数组 = 次数组.concat(数组);
         次数组 = this.洗牌(次数组);
         return {
             next: ((洗牌, _数组) => {
