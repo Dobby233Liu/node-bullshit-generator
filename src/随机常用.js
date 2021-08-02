@@ -30,10 +30,8 @@ class 随机常用 {
                     数组 = 洗牌(数组);
                     i = 0;
                 }
-                var val = 次数组[i];
-                i++;
                 return {
-                    value: val,
+                    value: 数组[i++],
                     done: false
                 };
             }))(this.洗牌, 次数组)
