@@ -24,10 +24,10 @@ class 随机常用 {
         次数组 = this.洗牌(次数组);
         var i = 0;
         return {
-            next: ((洗牌) => (function __next__() {
+            next: ((洗牌, 数组) => (function __next__() {
                 console.log(i);
                 if (i >= 次数组.length) {
-                    次数组 = 洗牌(次数组);
+                    数组 = 洗牌(数组);
                     i = 0;
                 }
                 var val = 次数组[i];
@@ -36,7 +36,7 @@ class 随机常用 {
                     value: val,
                     done: false
                 };
-            }))(this.洗牌)
+            }))(this.洗牌, 次数组)
         };
     }
 }
