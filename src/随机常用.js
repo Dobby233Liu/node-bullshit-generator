@@ -18,13 +18,21 @@ class 随机常用 {
         let min = 0;
         return 数组[Math.floor(Math.random() * (max - min)) + min];
     }
-    static * 洗牌遍历(数组, 重复度 = 1) {
+    static 洗牌遍历(数组, 重复度 = 1) {
         var 次数组 = [];
-        for (var i = 0; i < 重复度; i++) 次数组.concat(数组);
-        while (true) {
-            var 次次数组 = this.洗牌(次数组);
-            for (元素 of 次次数组) yield 元素;
-        }
+        for (var ii = 0; i < 重复度; i++) 次数组.concat(数组);
+        次数组 = this.洗牌(次数组);
+        var i = 0;
+        return { next: function __next__(){
+            if (i >= 次数组.length) {
+                次数组 = this.洗牌(次数组);
+                i = 0;
+            }
+            var val;
+            val = 次数组[i];
+            i++;
+            return {value: val, done: false};
+        } };
     }
 }
 module.exports = 随机常用;
