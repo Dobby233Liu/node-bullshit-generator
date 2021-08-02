@@ -23,16 +23,21 @@ class 随机常用 {
         for (var ii = 0; i < 重复度; i++) 次数组.concat(数组);
         次数组 = this.洗牌(次数组);
         var i = 0;
-        return { next: function __next__(){
-            if (i >= 次数组.length) {
-                次数组 = this.洗牌(次数组);
-                i = 0;
+        return {
+            next: function __next__() {
+                if (i >= 次数组.length) {
+                    次数组 = this.洗牌(次数组);
+                    i = 0;
+                }
+                var val;
+                val = 次数组[i];
+                i++;
+                return {
+                    value: val,
+                    done: false
+                };
             }
-            var val;
-            val = 次数组[i];
-            i++;
-            return {value: val, done: false};
-        } };
+        };
     }
 }
 module.exports = 随机常用;
