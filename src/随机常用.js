@@ -23,7 +23,7 @@ class 随机常用 {
         for (var ii = 0; ii < 重复度; ii++) 次数组 = 次数组.concat(数组);
         次数组 = this.洗牌(次数组);
         return {
-            next: ((洗牌, _数组) => {
+            next: (function (洗牌, _数组) {
                 var i = 0;
                 var 数组 = _数组.slice();
                 return function __next__() {
@@ -35,7 +35,7 @@ class 随机常用 {
                         value: 数组[i++],
                         done: false,
                     };
-                }
+                };
             })(this.洗牌, 次数组)
         };
     }
