@@ -21,8 +21,8 @@ class 随机常用 {
     static * 洗牌遍历(数组, 重复度 = 1) {
         var 次数组 = [];
         for (var i = 0; i < 重复度; i++) 次数组.concat(数组);
-        while (1) {
-            var 次次数组 = 洗牌(次数组);
+        while (true) {
+            var 次次数组 = this.洗牌(次数组);
             for (元素 of 次次数组) yield 元素;
         }
     }
