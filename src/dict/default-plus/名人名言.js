@@ -11,9 +11,11 @@ var bestQwas982Quotes = ["佚名a，想做事的做不成，想求生存的求�
     //	"佚名a，奴性已经在膝盖上生根发芽，中国又是时候需要出现一些有血性的人物了。b",
     "佚名a，我起码在探索新道路，你做了什么？b", "佚名a，人要锻炼自己的想象力，掌握抽象。b"
 ];
+var pr206 = ["古人a，莫看江面平如镜，要看水底万丈深。b"];
 module.exports = (applyQwas982Quotes = true) => {
     var newFamous = originalFamous;
     newFamous = newFamous.concat(liutongyangFamous);
+    newFamous = newFamous.concat(pr206);
     if (applyQwas982Quotes) newFamous = newFamous.concat(bestQwas982Quotes);
     return newFamous;
 }
