@@ -5,7 +5,6 @@
  * @author Dobby233Liu
  * @license Anti-996 License 1.0
  */
-
 var helpText = `Generates random Chinese bullshit.
 
 bullshit-generator [theme] [length] [dict]
@@ -19,7 +18,6 @@ The source code can be found at https://github.com/Dobby233Liu/node-bullshit-gen
 This program is licensed using the Anti 996 License, version 1.0 (draft),
 inheriting the upstream's license.
 Obtain a copy at https://github.com/996icu/996.ICU/blob/617129b/LICENSE`
-
 var argvClean = process.argv.map((x) => x.trim().toLowerCase())
 var theme, length, library, dict, article;
 if (argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
