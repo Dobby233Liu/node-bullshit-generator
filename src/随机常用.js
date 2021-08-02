@@ -24,9 +24,8 @@ class 随机常用 {
         次数组 = this.洗牌(次数组);
         var i = 0;
         return {
-            next: ((洗牌) => {
-                i = 0;
-                return function __next__() {
+            next: ((洗牌, i) => (
+                function __next__() {
                     if (i >= 次数组.length) {
                         次数组 = 洗牌(次数组);
                         i = 0;
@@ -38,7 +37,7 @@ class 随机常用 {
                         done: false
                     };
                 }
-            })(this.洗牌)
+            ))(this.洗牌, i)
         };
     }
 }
