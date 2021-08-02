@@ -4,7 +4,7 @@ class 随机常用 {
      * @param {Array} _数组
      */
     static 洗牌(_数组) { // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-        var 数组 = _数组;
+        var 数组 = _数组.slice();
         for (let i = 数组.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [数组[i], 数组[j]] = [数组[j],
@@ -22,9 +22,11 @@ class 随机常用 {
         var 次数组 = [];
         for (var ii = 0; i < 重复度; i++) 次数组.concat(数组);
         次数组 = this.洗牌(次数组);
-        var i = 0;
         return {
-            next: ((洗牌, 数组) => (function __next__() {
+            next: ((洗牌, _数组) => {
+                i = 0;
+                var 数组 = _数组.slice();
+                return function __next__() {
                 console.log(i);
                 if (i >= 次数组.length) {
                     数组 = 洗牌(数组);
@@ -32,9 +34,9 @@ class 随机常用 {
                 }
                 return {
                     value: 数组[i++],
-                    done: false
-                };
-            }))(this.洗牌, 次数组)
+                    done: false,
+                };}
+            })(this.洗牌, 次数组)
         };
     }
 }
