@@ -27,15 +27,16 @@ class 随机常用 {
                 i = 0;
                 var 数组 = _数组.slice();
                 return function __next__() {
-                console.log(i);
-                if (i >= 次数组.length) {
-                    数组 = 洗牌(数组);
-                    i = 0;
+                    console.log(i);
+                    if (i >= 次数组.length) {
+                        数组 = 洗牌(数组);
+                        i = 0;
+                    }
+                    return {
+                        value: 数组[i++],
+                        done: false,
+                    };
                 }
-                return {
-                    value: 数组[i++],
-                    done: false,
-                };}
             })(this.洗牌, 次数组)
         };
     }
