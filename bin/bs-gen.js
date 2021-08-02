@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-console.log(require("../src/随机常用").洗牌遍历([1, 2, 3]).next());
+var iter = require("../src/随机常用").洗牌遍历([1, 2, 3]);
+for (i of [0,0,0,0])
+    console.log(iter.next());
 process.exit(1);
 /*
  * bullshit-generator / bs-gen CLI
