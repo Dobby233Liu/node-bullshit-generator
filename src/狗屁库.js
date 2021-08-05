@@ -37,11 +37,11 @@ class 狗屁库 {
                 缓冲 += this.起段.replace(/\{主题\}/g, 主题);
             } else if (分支 < 20) {
                 let 言 = this.下一句名人名言.next().value;
-                言 = 言.replace(/\{前面垫话\}/, (this.选项["menzi11#175"] ? this.下一句前面垫话.next().value : this.随机.瞎选一个(this.前面垫话)).replace(/\{主题\}/g, 主题));
+                言 = 言.replace(/\{前面垫话\}/g, (this.选项["menzi11#175"] ? this.下一句前面垫话.next().value : this.随机.瞎选一个(this.前面垫话)).replace(/\{主题\}/g, 主题));
                 if (!this.选项.有概率不添加后面垫话 || Math.floor(Math.random() * 10) != 1) {
-                    言 = 言.replace(/\{后面垫话\}/, (this.选项["menzi11#175"] ? this.下一句后面垫话.next().value : this.随机.瞎选一个(this.后面垫话)).replace(/\{主题\}/g, 主题));
+                    言 = 言.replace(/\{后面垫话\}/g, (this.选项["menzi11#175"] ? this.下一句后面垫话.next().value : this.随机.瞎选一个(this.后面垫话)).replace(/\{主题\}/g, 主题));
                 } else {
-                    言 = 言.replace(/\{后面垫话\}/, "");
+                    言 = 言.replace(/\{后面垫话\}/g, "");
                 }
                 缓冲 = 言;
             } else {
