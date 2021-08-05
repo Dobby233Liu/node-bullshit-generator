@@ -1,5 +1,4 @@
 module.exports = {
-    return {
         "前面垫话": require("./前面垫话"),
         "后面垫话": require("./后面垫话"),
         "废话": require("./废话"),
