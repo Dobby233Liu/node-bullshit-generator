@@ -25,32 +25,32 @@ class 狗屁库 {
         this.下一句名人名言 = this.随机.洗牌遍历(this.字典.名人名言);
         this.下一句废话 = this.随机.洗牌遍历(this.字典.废话);
         // ------------
-        let 文章 = this.起段.replace(/{主题}/g, 主题);
+        let 文章 = this.起段.replace(/\{主题\}/g, 主题);
         let 缓冲 = "";
         写文: while (文章.length < 长度 || (this.选项.v3语法改进 && (文章.trim().endsWith("：") || 文章.trim().endsWith(":") || 文章.trim().endsWith(",") || 文章.trim().endsWith("，")))) {
             缓冲 = "";
             var 分支 = Math.floor(Math.random() * 100);
             if (分支 < 5 && (!this.选项.v3语法改进 || (!(文章.endsWith(this.起段)) && !(文章.trim().endsWith(",")) && !(文章.trim().endsWith("，"))))) {
-                if (!this.选项.v3语法改进 || this.常用.能否以句号结束(文章.trim())) 缓冲 = this.字典.句号.replace(/{主题}/g, 主题);
+                if (!this.选项.v3语法改进 || this.常用.能否以句号结束(文章.trim())) 缓冲 = this.字典.句号.replace(/\{主题\}/g, 主题);
                 else 缓冲 = "";
                 缓冲 += "\n";
-                缓冲 += this.起段.replace(/{主题}/g, 主题);
+                缓冲 += this.起段.replace(/\{主题\}/g, 主题);
             } else if (分支 < 20) {
                 let 言 = this.下一句名人名言.next().value;
-                言 = 言.replace(/{前面垫话}/, (this.选项["menzi11#175"] ? this.下一句前面垫话.next().value : this.随机.瞎选一个(this.前面垫话)).replace(/{主题}/g, 主题));
+                言 = 言.replace(/\{前面垫话\}/, (this.选项["menzi11#175"] ? this.下一句前面垫话.next().value : this.随机.瞎选一个(this.前面垫话)).replace(/\{主题\}/g, 主题));
                 if (!this.选项.有概率不添加后面垫话 || Math.floor(Math.random() * 10) != 1) {
-                    言 = 言.replace(/{后面垫话}/, (this.选项["menzi11#175"] ? this.下一句后面垫话.next().value : this.随机.瞎选一个(this.后面垫话)).replace(/{主题}/g, 主题));
+                    言 = 言.replace(/\{后面垫话\}/, (this.选项["menzi11#175"] ? this.下一句后面垫话.next().value : this.随机.瞎选一个(this.后面垫话)).replace(/\{主题\}/g, 主题));
                 } else {
-                    言 = 言.replace(/{后面垫话}/, "");
+                    言 = 言.replace(/\{后面垫话\}/, "");
                 }
                 缓冲 = 言;
             } else {
-                缓冲 = this.下一句废话.next().value.replace(/{主题}/g, 主题);
+                缓冲 = this.下一句废话.next().value.replace(/\{主题\}/g, 主题);
             } // else 缓冲 = "";
             文章 += 缓冲;
         }
         缓冲 = "";
-        文章 = this.起段.replace(/{主题}/g, 主题) + 文章.trim();
+        文章 = this.起段.replace(/\{主题\}/g, 主题) + 文章.trim();
         return 文章;
     }
     constructor() {}
