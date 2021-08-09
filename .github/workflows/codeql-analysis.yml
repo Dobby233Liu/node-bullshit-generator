@@ -1,4 +1,4 @@
-name: "CodeQL"
+name: CodeQL
 
 on:
   push:
@@ -43,3 +43,11 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+      with:
+        output: results
+        upload: false
+    - name: Upload SARIF file
+      uses: actions/upload-artifact@v2
+      with:
+        name: results
+        path: results/*.sarif
