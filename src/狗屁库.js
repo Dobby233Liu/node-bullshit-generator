@@ -52,7 +52,8 @@ class 狗屁库 {
             文章 += 缓冲;
         }
         缓冲 = "";
-        文章 = 文章.rtrim();
+        // Only trim start
+        文章 = 文章.trimEnd();
         if (this.选项["允许字典处理字符串"] && this.字典["文章处理"] && typeof this.字典["文章处理"] == "function") 文章 = this.字典["文章处理"](文章, this.字典, this.选项, this.常用, this.随机);
         return 文章;
     }
