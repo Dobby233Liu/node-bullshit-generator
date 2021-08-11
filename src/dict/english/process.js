@@ -4,17 +4,33 @@ roster["onTheme"] = function onTheme(theme)
     return theme.toLowerCase()
 }
 let prefix2Machine = {}
-roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng) {
-    if (seg.indexOf("{prefix2}") > -1) {
-        if (prefix2Machine.length <= 0) prefix2Machine = opt["menzi11#175"] ? rng.洗牌遍历(dict["prefix_2"]) : {
-            next: function () {
-                return {
-                    value: rng.瞎选一个(dict["prefix_2"]),
-                    done: false
-                }
+let examplesMachine = {}
+function oh_noes(arr, opt, rng){
+    return opt["menzi11#175"] ? rng.洗牌遍历(arr) : {
+        next: function () {
+            return {
+                value: rng.瞎选一个(arr),
+                done: false
             }
         }
-        return prefix2Machine.next().value + seg.replace(/\{prefix2\}/g, "")
+    }
+}
+roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
+    if (seg.indexOf("{prefix2}") > -1) {
+        if (prefix2Machine.length <= 0) prefix2Machine = oh_noes(dict["prefix_2"], opt, rng)
+        seg = prefix2Machine.next().value + seg.replace(/\{prefix2\}/g, "")
+    }
+    if (type == "名人名言") {
+        if (examplesMachine.length <= 0) examplesMachine = oh_noes(dict["examples"], opt, rng)
+        seg = examplesMachine.next().value + seg
+    } else if (type == "废话") {
+        if ((Math.floor(Math.random()*100)-20) <= 45){
+        if (addingsMachine.length <= 0) addingsMachine = oh_noes(dict["addings"], opt, rng)
+        seg = contrastsMachine.next().value + seg
+        } else {
+        if (contrastsMachine.length <= 0) contrastsMachine = oh_noes(dict["contrasts"], opt, rng)
+        seg = contrastsMachine.next().value + seg
+        }
     }
     return seg
 }
