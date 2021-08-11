@@ -44,7 +44,7 @@ module.exports = {
         "Some people may disagree with {主题}, ", 
         "To a certain extent, {主题} is right. ", 
         "After seeing this evidence, there is no way we can agree with {主题}. ", 
-        "The evidence presented about {主题} has shown that, "
+        "The evidence presented about {主题} has shown that, ",
         // We don't support these yet
         // addings
         "Furthermore, ", 
@@ -61,7 +61,7 @@ module.exports = {
         "In other words, ", 
         "It is important to note that ", 
         "On the other hand, ", 
-        "On the one hand, "
+        "On the one hand, ",
         // examples
         "That is to say, ", 
         "For example, ", 
@@ -69,7 +69,7 @@ module.exports = {
         "Namely, ", 
         "As in the following example, ", 
         "In particular, ", 
-        "Chiefly, "
+        "Chiefly, ",
         // contrasts
         "By contrasts, ", 
         "Another way of viewing this is, ", 
