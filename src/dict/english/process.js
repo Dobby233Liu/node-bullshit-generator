@@ -16,3 +16,5 @@ roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng){
     }
     return seg
 }
+
+module.exports = roster
