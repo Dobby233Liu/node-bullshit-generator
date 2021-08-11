@@ -5,8 +5,9 @@ roster["onTheme"] = function onTheme(theme)
 }
 let prefix2Machine = {}
 let examplesMachine = {}
-
-function oh_noes(arr, opt, rng) {
+let addingsMachine = {}
+let contrastsMachine = {}
+function oh_noes(arr, opt, rng){
     return opt["menzi11#175"] ? rng.洗牌遍历(arr) : {
         next: function () {
             return {
@@ -25,12 +26,12 @@ roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
         if (examplesMachine.length <= 0) examplesMachine = oh_noes(dict["examples"], opt, rng)
         seg = examplesMachine.next().value + seg
     } else if (type == "废话") {
-        if ((Math.floor(Math.random() * 100) - 20) <= 45) {
-            if (addingsMachine.length <= 0) addingsMachine = oh_noes(dict["addings"], opt, rng)
-            seg = contrastsMachine.next().value + seg
+        if ((Math.floor(Math.random()*100)-20) <= 45){
+        if (addingsMachine.length <= 0) addingsMachine = oh_noes(dict["addings"], opt, rng)
+        seg = addingsMachine.next().value + seg
         } else {
-            if (contrastsMachine.length <= 0) contrastsMachine = oh_noes(dict["contrasts"], opt, rng)
-            seg = contrastsMachine.next().value + seg
+        if (contrastsMachine.length <= 0) contrastsMachine = oh_noes(dict["contrasts"], opt, rng)
+        seg = contrastsMachine.next().value + seg
         }
     }
     return seg
