@@ -16,6 +16,7 @@ class 狗屁库 {
     生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = this.默认字典, _选项 = this.默认选项) {
         this.选项 = this.常用.合并对象(_选项, this.默认选项);
         this.字典 = this.常用.合并对象(_字典, this.默认字典);
+        if (this.选项["允许字典处理字符串"] && this.字典["主题处理"] && typeof this.字典["主题处理"] == "function") 主题 = this.字典["主题处理"](主题, this.字典, this.选项, this.常用, this.随机);
         this.起段 = this.字典.起段;
         this.前面垫话 = this.字典.前面垫话;
         this.后面垫话 = this.字典.后面垫话;
