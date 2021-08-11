@@ -1,5 +1,4 @@
 const db = require("./db")
-
 module.exports = {
     "废话": db["bullshits"],
     "名人名言": require("./名人名言"),
