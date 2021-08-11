@@ -6,7 +6,7 @@ module.exports = {
     "bullshits": [
         "{主题} is a common condition in today\u2019s society, so, ", 
         //"{主题} has become increasingly eviden, ", 
-        "now, the necessity of solving {主题} is becoming more and more apparent, ", 
+        "now, the necessity of solving the problem of {主题} is becoming more and more apparent, ", 
         "we have to face an embarrassing situation, that is, ", 
         "what should we do to give rise to {主题}, and what should we do to prevent {主题}'s happening? ", 
         "but, these are not the most urgent issue. The more pressing issue about {主题} is, ", 
