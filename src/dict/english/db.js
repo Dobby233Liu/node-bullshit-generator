@@ -12,14 +12,10 @@ module.exports = {
         /*"More current studies of people who take {主题} heavily show no evidence of emotional damage. ", 
         "Several studies of the effects of {主题} on the human systems have failed to demonstrate these effects. ", */
         "One of the longest standing arguments against {主题} is that ", "Modern vehement arguments against {主题} alone become suspect. ", "{主题} continues to be a relevant controversial issue in our society today, as ", "From my point of view, {主题} means a lot to me, and ", "We have been thinking about {主题} for a long time.", "What if {主题} happens? Or, what if {主题} does not happen? ", "When facing this difficult choice of {主题}, I rarely slept well. ", "If {主题} takes place in our daily life, we have to consider its consequences. ", "The consequece of {主题} is of great significance to me, and also to many other people. ", "In my opinion, ", "In general, ", "As far as I know, ", "If we think about it from a different point of view, {主题} is inevitable. ", "Under this inevitable circumstance situation, we have to solve {主题}. ", "For me, the emergent rise of {主题} may change my life. ", "Opponents of {主题} claim that, ", "Some people may disagree with {主题}, ", "To a certain extent, {主题} is right. ", "After seeing this evidence, there is no way we can agree with {主题}. ", "The evidence presented about {主题} has shown that, ",
-        ],
-        "addings":[
-        "Furthermore, ", "Moreover, ", "In addition, ", "Besides, ", "Above all, ", "Similarly, ", "With respect to ", "Since that is so, ", "Thus, ", "Therefore, ", "In that case, ", "In other words, ", "It is important to note that ", "On the other hand, ", "On the one hand, ",
-        ],"examples":[
-        "That is to say, ", "For example, ", "For instance, ", "Namely, ", "As in the following example, ", "In particular, ", "Chiefly, ",
-        ],"contrasts":[
-        "By contrasts, ", "Another way of viewing this is, ", "Alternatively, ", "Another possibility is, ", "In comparison, ", "On the contrary, ", "In fact, ", "From a different point of view, ", "It is disappointing that ", "However, ",
     ],
+    "addings": ["Furthermore, ", "Moreover, ", "In addition, ", "Besides, ", "Above all, ", "Similarly, ", "With respect to ", "Since that is so, ", "Thus, ", "Therefore, ", "In that case, ", "In other words, ", "It is important to note that ", "On the other hand, ", "On the one hand, ", ],
+    "examples": ["That is to say, ", "For example, ", "For instance, ", "Namely, ", "As in the following example, ", "In particular, ", "Chiefly, ", ],
+    "contrasts": ["By contrasts, ", "Another way of viewing this is, ", "Alternatively, ", "Another possibility is, ", "In comparison, ", "On the contrary, ", "In fact, ", "From a different point of view, ", "It is disappointing that ", "However, ", ],
     "prefix": [" concluded that ", " attemptted to convince the reader that ", " stated in their book that ", " argued that ", " told us that ", " showed us that ", " mentioned that ", "{prefix_2}, "],
     "prefix_2": ["According to ", "To quote from ", ],
     "suffix": ["That saying enlightened me. ", "That saying inspired me. ", "That saying aroused my imagination. ", "That saying solved my problem. ", "That saying brought a new way of thinking about {主题}. "],
