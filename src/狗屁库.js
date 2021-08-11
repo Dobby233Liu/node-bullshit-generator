@@ -29,14 +29,17 @@ class 狗屁库 {
         // ------------
         let 文章 = this.起段.replace(/\{主题\}/g, 主题);
         let 缓冲 = "";
+        let 类型 = "忽略";
         写文: while (文章.length < 长度 || (this.选项.v3语法改进 && (文章.trim().endsWith("：") || 文章.trim().endsWith(":") || 文章.trim().endsWith(",") || 文章.trim().endsWith("，")))) {
             缓冲 = "";
+            类型 = "忽略";
             var 分支 = Math.floor(Math.random() * 100);
             if (分支 < 5 && (!this.选项.v3语法改进 || (!(文章.endsWith(this.起段)) && !(文章.trim().endsWith(",")) && !(文章.trim().endsWith("，"))))) {
                 if (!this.选项.v3语法改进 || this.常用.能否以句号结束(文章.trim())) 缓冲 = this.字典.句号.replace(/\{主题\}/g, 主题);
                 else 缓冲 = "";
                 缓冲 += "\n";
                 缓冲 += this.起段.replace(/\{主题\}/g, 主题);
+                类型 = "新行";
             } else if (分支 < 20) {
                 let 言 = this.下一句名人名言.next().value;
                 言 = 言.replace(/\{前面垫话\}/g, (this.选项["menzi11#175"] ? this.下一句前面垫话.next().value : this.随机.瞎选一个(this.前面垫话)).replace(/\{主题\}/g, 主题));
@@ -46,10 +49,12 @@ class 狗屁库 {
                     言 = 言.replace(/\{后面垫话\}/g, "");
                 }
                 缓冲 = 言;
+                类型 = "名人名言";
             } else {
                 缓冲 = this.下一句废话.next().value.replace(/\{主题\}/g, 主题);
+                类型 = "废话";
             } // else 缓冲 = "";
-            if (this.选项["允许字典处理字符串"] && this.字典["缓冲处理"] && typeof this.字典["缓冲处理"] == "function") 缓冲 = this.字典["缓冲处理"](缓冲, this.字典, this.选项, this.常用, this.随机);
+            if (this.选项["允许字典处理字符串"] && this.字典["缓冲处理"] && typeof this.字典["缓冲处理"] == "function") 缓冲 = this.字典["缓冲处理"](缓冲, this.字典, this.选项, this.常用, this.随机, 类型);
             文章 += 缓冲;
         }
         缓冲 = "";
