@@ -6,12 +6,12 @@ roster["onTheme"] = function onTheme(theme)
 }
 
 const db = require("./db")
-let prefix2Machine = "lel"
+let prefix2Machine = {}
 
 roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng){
     if (seg.indexOf("{prefix2}") > -1) {
-        if (prefix2Machine == "lel") prefix2Machine = rng.洗牌遍历(db["prefix_2"])
-        return seg.replace(/\{prefix2\}/g, prefix2Machine.next().value)
+        if (prefix2Machine == {}) prefix2Machine = rng.洗牌遍历(db["prefix_2"])
+        return prefix2Machine.next().value + seg.replace(/\{prefix2\}/g, "")
     }
     return seg
 }
