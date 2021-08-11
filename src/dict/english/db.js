@@ -20,7 +20,7 @@ module.exports = {
         // contrasts
         "By contrasts, ", "Another way of viewing this is, ", "Alternatively, ", "Another possibility is, ", "In comparison, ", "On the contrary, ", "In fact, ", "From a different point of view, ", "It is disappointing that ", "However, ",
     ],
-    "prefix": ["concluded that, ", "attemptted to convince the reader that, ", "stated in his book that, ", "argued that, ", "told us that, ", "showed us that, ", "mentioned that, ", "{prefix_2}, "],
+    "prefix": [" concluded that ", " attemptted to convince the reader that ", " stated in their book that ", " argued that ", " told us that ", " showed us that ", " mentioned that ", "{prefix_2}, "],
     "prefix_2": ["According to ", "To quote from ", ],
     "suffix": ["That saying enlightened me. ", "That saying inspired me. ", "That saying aroused my imagination. ", "That saying solved my problem. ", "That saying brought a new way of thinking about {主题}. "],
     "author": ["Lao Tzu", "Plato", "Jacqueline Carey", "Napoleon Bonaparte", "Plato", "James Thurber", "Emil Cioran", "David Mamet", "Mokokoma Mokhonoana", "Franz Kafka", "Steve Wozniak",
