@@ -45,10 +45,9 @@ function sentences(str) {
 }
 roster["onArticle"] = function onArticle(article) {
     article = article.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
-    sentencesLst = sentences(article)
-    let ret = []
-    for (i of sentencesLst) {
-        ret.push(i[0].replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim())
+    let sentencesLst = sentences(article)
+    for (i in sentencesLst) {
+        sentencesLst[i] = sentencesLst[i].replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
     }
     return ret.join(' ')
 }
