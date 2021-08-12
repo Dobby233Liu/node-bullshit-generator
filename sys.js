@@ -1,5 +1,4 @@
 window._config_ = {
-	devStuff: false,
 	historyApi: true,
 	errorHndl: true
 };
@@ -7,7 +6,7 @@ function 获取网址参数(参数) {
     return new URL(window.location.href).searchParams.get(参数);
 }
 function appendParamToUrlString(name, cnt, url = window.location.href){
-	var fussyURL = new URL(url);
+    var fussyURL = new URL(url);
 	if (!fussyURL.searchParams.has(name)) {
 		fussyURL.searchParams.append(name, cnt);
 	} else {
@@ -19,17 +18,6 @@ window.$ = function (selector) {
     return document.querySelector(selector);
 }
 if(!window.bullshitClass) window.bullshitClass = new(window.bullshit)(); // allow hijacking
-function _dev_initByCfg(cfg = window._config_){
-	if (cfg.devStuff){
-		var _devHelp = `_dev_customRng(rngFuncWrp, fussado = window.bullshitClass): define rng (used when LCG is enabled, else please inject Math.random)`;
-		window._dev_stuff_help = function (){
-			console.info(_devHelp);
-		}
-		window._dev_customRng = function (rngFuncWrp, fussado = window.bullshitClass){
-			fussado.LCG = { 来个小小数: rngFuncWrp };
-		}
-	}
-}
 function wArtAppender(文章){
 	for (i in 文章){
 		let newOwn = document.createElement('div');
