@@ -41,10 +41,7 @@ roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
 }
 roster["onArticle"] = function onArticle(article) {
     article = article.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.')
-    const lst = article.split(' ')
-    for (i in lst) {
-        if ((lst[i].endsWith(',') || lst[i].endsWith(':')) && (i + 1) < lst.length) lst[i + 1] = lst[i + 1].toLowerCase()
-    }
-    return lst.join(' ')
+    article = article.toLowerCase().replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
+    return article
 }
 module.exports = roster
