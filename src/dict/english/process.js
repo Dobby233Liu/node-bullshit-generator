@@ -25,7 +25,8 @@ roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
         if (lseg.includes("{prefix_2}")) {
             if (!prefix2Machine) prefix2Machine = ohNoes(dict["prefix_2"], opt, rng)
             return examplesMachine.next().value + prefix2Machine.next().value + lseg.replace(/\{prefix_2\}/g, "")
-        }else {return examplesMachine.next().value + lseg
+        } else {
+            return examplesMachine.next().value + lseg
         }
     } else if (type == "废话") {
         if ((Math.floor(Math.random() * 100) - 20) <= 45) {
