@@ -18,26 +18,24 @@ function ohNoes(arr, opt, rng) {
         }
     }
 }
-roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
-    var ret = seg
+roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
+    var seg = _seg
     if (type == "名人名言") {
         if (!examplesMachine) examplesMachine = ohNoes(dict["examples"], opt, rng)
         if (seg.includes("{prefix_2}")) {
             if (!prefix2Machine) prefix2Machine = ohNoes(dict["prefix_2"], opt, rng)
-            ret = examplesMachine.next().value + prefix2Machine.next().value + seg.replace(/\{prefix_2\}/g, "")
-        } else {
-            ret = examplesMachine.next().value + seg
+            return examplesMachine.next().value + prefix2Machine.next().value + seg.replace(/\{prefix_2\}/g, "")
         }
+        return examplesMachine.next().value + seg
     } else if (type == "废话") {
         if ((Math.floor(Math.random() * 100) - 20) <= 45) {
             if (!addingsMachine) addingsMachine = ohNoes(dict["addings"], opt, rng)
-            ret = addingsMachine.next().value + seg
-        } else {
-            if (!contrastsMachine) contrastsMachine = ohNoes(dict["contrasts"], opt, rng)
-            ret = contrastsMachine.next().value + seg
+            return addingsMachine.next().value + seg
         }
+        if (!contrastsMachine) contrastsMachine = ohNoes(dict["contrasts"], opt, rng)
+        return contrastsMachine.next().value + seg
     }
-    return ret
+    throw new Error()
 }
 
 function sentences(str) {
