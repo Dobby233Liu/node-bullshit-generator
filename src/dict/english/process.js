@@ -23,6 +23,8 @@ function ohNoes(arr, opt, rng) {
 roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
     if (seg.indexOf("{prefix_2}") > -1) {
         if (!prefix2Machine) prefix2Machine = ohNoes(dict["prefix_2"], opt, rng)
+        let val = prefix2Machine.next().value
+        console.log(val)
         seg = prefix2Machine.next().value + seg.replace(/\{prefix_2\}/g, "")
     }
     if (type == "名人名言") {
