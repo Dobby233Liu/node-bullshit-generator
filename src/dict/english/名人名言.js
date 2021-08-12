@@ -9,7 +9,7 @@ module.exports = (function () {
     let ret = []
     for (i in sayings)
     {
-        ret.push(format(authors[i], saying[i]))
+        ret.push(format(authors[i], sayings[i]))
     }
     return ret
 })()
