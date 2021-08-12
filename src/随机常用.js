@@ -27,12 +27,13 @@ class 随机常用 {
                 var i = 0;
                 var 数组 = _数组.slice();
                 return function __next__() {
-                    if (i >= 次数组.length) {
+                    const ret = 数组[i++];
+                    if (!(i < 次数组.length)) {
                         数组 = 洗牌(数组);
                         i = 0;
                     }
                     return {
-                        value: 数组[i++],
+                        value: ret,
                         done: false,
                     };
                 };
