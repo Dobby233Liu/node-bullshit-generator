@@ -46,8 +46,8 @@ function sentences(str) {
 roster["onArticle"] = function onArticle(article) {
     article = article.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
     sentencesLst = sentences(article)
-    console.log(sentencesLst)
-    for (i in sentencesLst) sentencesLst[i] = sentencesLst[i].replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
-    return sentencesLst.join(' ')
+    let ret = []
+    for (i of sentencesLst) ret.push(i.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim())
+    return ret.join(' ')
 }
 module.exports = roster
