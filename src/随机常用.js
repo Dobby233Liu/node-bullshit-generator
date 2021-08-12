@@ -2,8 +2,10 @@ class 随机常用 {
     constructor() {}
     /**
      * @param {Array} _数组
+     *
+     * https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
      */
-    static 洗牌(_数组) { // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+    static 洗牌(_数组) {
         var 数组 = _数组.slice();
         for (let i = 数组.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
