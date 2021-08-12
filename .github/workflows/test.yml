@@ -1,7 +1,7 @@
 on:
     push:
     workflow_dispatch:
-    #pull_request:
+    pull_request:
 
 jobs:
     test-cli:
@@ -9,7 +9,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                dict: [classic, default-plus, default, internet-industry-terms, qwas982, english]
+                dict: [classic, default-plus, default, internet-industry-terms, qwas982, english, japanese]
         steps:
         - uses: actions/checkout@v2
-        - run: node bin/bs-gen.js 学生会退会 30000 ${{ github.workspace }}/src/dict/${{ matrix.dict }}/配置.js
+        - run: node bin/bs-gen.js 学生会退会 6000 ${{ github.workspace }}/src/dict/${{ matrix.dict }}/配置.js
