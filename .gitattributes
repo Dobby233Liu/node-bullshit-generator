@@ -1,0 +1,4 @@
+src/dict -linguist-generated
+bin -linguist-generated
+lib linguist-generated
+src -linguist-generated

@@ -9,7 +9,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                dict: [classic, default-plus, default, internet-industry-terms, qwas982]
+                dict: [classic, default-plus, default, internet-industry-terms, qwas982, english]
         steps:
         - uses: actions/checkout@v2
         - run: node bin/bs-gen.js 学生会退会 30000 ${{ github.workspace }}/src/dict/${{ matrix.dict }}/配置.js
