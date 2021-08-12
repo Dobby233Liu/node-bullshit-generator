@@ -9,7 +9,7 @@ let addingsMachine = {}
 let contrastsMachine = {}
 
 function oh_noes(arr, opt, rng) {
-    return opt["menzi11#175"] ? rng.洗牌遍历(arr) : {
+    let ret = opt["menzi11#175"] ? rng.洗牌遍历(arr) : {
         next: function () {
             return {
                 value: rng.瞎选一个(arr),
@@ -17,6 +17,8 @@ function oh_noes(arr, opt, rng) {
             }
         }
     }
+    console.log(ret)
+    return ret
 }
 roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
     if (seg.indexOf("{prefix2}") > -1) {
