@@ -1,7 +1,6 @@
 // Source: https://github.com/JIUYANGZH/BullshitGenerator-English/blob/master/bullshitgenerator_English/bullshit_generator.csv
 // HEAVY modifications by Dobby233Liu
 // Not gonna split this
-
 module.exports = {
     "bullshits": ["{主题} is a common condition in today’s society, so, ",
         //"{主题} has become increasingly eviden, ", 
