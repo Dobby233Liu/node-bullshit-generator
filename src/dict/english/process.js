@@ -37,7 +37,7 @@ roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
             lseg = contrastsMachine.next().value + lseg
         }
     }
-    return seg
+    return lseg
 }
 
 function sentences(str) {
