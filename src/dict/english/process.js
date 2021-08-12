@@ -21,9 +21,9 @@ function oh_noes(arr, opt, rng) {
     return ret
 }
 roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
-    if (seg.indexOf("{prefix2}") > -1) {
+    if (seg.indexOf("{prefix_2}") > -1) {
         if (!prefix2Machine) prefix2Machine = oh_noes(dict["prefix_2"], opt, rng)
-        seg = prefix2Machine.next().value + seg.replace(/\{prefix2\}/g, "")
+        seg = prefix2Machine.next().value + seg.replace(/\{prefix_2\}/g, "")
     }
     if (type == "名人名言") {
         if (!examplesMachine) examplesMachine = oh_noes(dict["examples"], opt, rng)
