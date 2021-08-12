@@ -41,7 +41,7 @@ roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
 }
 
 function sentences(str) {
-    return str.split(/(?=[\.\!\?]+)\s*|\n+\s*/)
+    return str.match(/\(?[A-Z][^\.]+[\.!\?]\)?(\s+|$)/g)
 }
 roster["onArticle"] = function onArticle(article) {
     article = article.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
