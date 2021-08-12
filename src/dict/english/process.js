@@ -21,22 +21,23 @@ function ohNoes(arr, opt, rng) {
     return ret
 }
 roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
-    if (seg.indexOf("{prefix_2}") > -1) {
+    let lseg = seg
+    if (lseg.indexOf("{prefix_2}") > -1) {
         if (!prefix2Machine) prefix2Machine = ohNoes(dict["prefix_2"], opt, rng)
         let val = prefix2Machine.next().value
         console.log(val)
-        seg = prefix2Machine.next().value + seg.replace(/\{prefix_2\}/g, "")
+        lseg = val + lseg.replace(/\{prefix_2\}/g, "")
     }
     if (type == "名人名言") {
         if (!examplesMachine) examplesMachine = ohNoes(dict["examples"], opt, rng)
-        seg = examplesMachine.next().value + seg
+        lseg = examplesMachine.next().value + lseg
     } else if (type == "废话") {
         if ((Math.floor(Math.random() * 100) - 20) <= 45) {
             if (!addingsMachine) addingsMachine = ohNoes(dict["addings"], opt, rng)
-            seg = addingsMachine.next().value + seg
+            lseg = addingsMachine.next().value + lseg
         } else {
             if (!contrastsMachine) contrastsMachine = ohNoes(dict["contrasts"], opt, rng)
-            seg = contrastsMachine.next().value + seg
+            lseg = contrastsMachine.next().value + lseg
         }
     }
     return seg
