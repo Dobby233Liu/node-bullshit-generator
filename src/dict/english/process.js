@@ -41,13 +41,15 @@ roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
 }
 
 function sentences(str) {
-    return str.matchAll(/([.?!])\s*(?=[A-Z])/g)
+    return str.matchAll(/(!?\b)([A-Za-z,;'"\s]+[.?!])/g)
 }
 roster["onArticle"] = function onArticle(article) {
     article = article.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
     sentencesLst = sentences(article)
     let ret = []
-    for (i of sentencesLst) ret.push(i.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim())
+    for (i of sentencesLst) {
+        ret.push(i.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim())
+    }
     return ret.join(' ')
 }
 module.exports = roster
