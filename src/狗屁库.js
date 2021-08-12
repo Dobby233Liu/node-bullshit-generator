@@ -27,9 +27,9 @@ class 狗屁库 {
         this.下一句名人名言 = this.随机.洗牌遍历(this.字典.名人名言);
         this.下一句废话 = this.随机.洗牌遍历(this.字典.废话);
         // ------------
-        let 文章 = this.起段.replace(/\{主题\}/g, 主题);
-        let 缓冲 = "";
-        let 类型 = "忽略";
+        var 文章 = this.起段.replace(/\{主题\}/g, 主题);
+        var 缓冲 = "";
+        var 类型 = "忽略";
         写文: while (文章.length < 长度 || (this.选项.v3语法改进 && (文章.trim().endsWith("：") || 文章.trim().endsWith(":") || 文章.trim().endsWith(",") || 文章.trim().endsWith("，")))) {
             缓冲 = "";
             类型 = "忽略";
@@ -56,7 +56,6 @@ class 狗屁库 {
             } // else 缓冲 = "";
             if (this.选项["允许字典处理字符串"] && this.字典["缓冲处理"] && typeof this.字典["缓冲处理"] == "function") {
                 缓冲 = this.字典["缓冲处理"](缓冲, this.字典, this.选项, this.常用, this.随机, 类型);
-                console.log(缓冲);
             }
             文章 += 缓冲;
         }
