@@ -48,6 +48,7 @@ roster["onArticle"] = function onArticle(article) {
     sentencesLst = sentences(article)
     let ret = []
     for (i of sentencesLst) {
+        console.log(i)
         ret.push(i.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim())
     }
     return ret.join(' ')
