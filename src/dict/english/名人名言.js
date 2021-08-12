@@ -7,7 +7,7 @@ module.exports = (function () {
         return a + "{前面垫话}" + b + " {后面垫话}"
     }
     let ret = []
-    for (i in saying)
+    for (i in sayings)
     {
         ret.push(format(authors[i], saying[i]))
     }
