@@ -8,7 +8,7 @@ let examplesMachine = null
 let addingsMachine = null
 let contrastsMachine = null
 
-function oh_noes(arr, opt, rng) {
+function ohNoes(arr, opt, rng) {
     let ret = opt["menzi11#175"] ? rng.洗牌遍历(arr) : {
         next: function () {
             return {
@@ -22,18 +22,18 @@ function oh_noes(arr, opt, rng) {
 }
 roster["onSegment"] = function onSegment(seg, dict, opt, useless, rng, type) {
     if (seg.indexOf("{prefix_2}") > -1) {
-        if (!prefix2Machine) prefix2Machine = oh_noes(dict["prefix_2"], opt, rng)
+        if (!prefix2Machine) prefix2Machine = ohNoes(dict["prefix_2"], opt, rng)
         seg = prefix2Machine.next().value + seg.replace(/\{prefix_2\}/g, "")
     }
     if (type == "名人名言") {
-        if (!examplesMachine) examplesMachine = oh_noes(dict["examples"], opt, rng)
+        if (!examplesMachine) examplesMachine = ohNoes(dict["examples"], opt, rng)
         seg = examplesMachine.next().value + seg
     } else if (type == "废话") {
         if ((Math.floor(Math.random() * 100) - 20) <= 45) {
-            if (!addingsMachine) addingsMachine = oh_noes(dict["addings"], opt, rng)
+            if (!addingsMachine) addingsMachine = ohNoes(dict["addings"], opt, rng)
             seg = addingsMachine.next().value + seg
         } else {
-            if (!contrastsMachine) contrastsMachine = oh_noes(dict["contrasts"], opt, rng)
+            if (!contrastsMachine) contrastsMachine = ohNoes(dict["contrasts"], opt, rng)
             seg = contrastsMachine.next().value + seg
         }
     }
@@ -49,6 +49,6 @@ roster["onArticle"] = function onArticle(article) {
     for (i in sentencesLst) {
         sentencesLst[i] = sentencesLst[i].replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
     }
-    return ret.join(' ')
+    return sentencesLst.join(' ')
 }
 module.exports = roster
