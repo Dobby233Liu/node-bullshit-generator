@@ -9,7 +9,7 @@ module.exports = {
     "addings": db["addings"],
     "examples": db["examples"],
     "contrasts": db["contrasts"],
-    "主题处理": processser["onTheme"],
-    "缓冲处理": processser["onSegment"],
-    "文章处理": processser["onArticle"],
+    "主题处理": processer["onTheme"],
+    "缓冲处理": processer["onSegment"],
+    "文章处理": processer["onArticle"],
 }
