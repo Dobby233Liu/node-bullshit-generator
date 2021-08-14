@@ -6,10 +6,10 @@ A Node.js library & program that generates meaningless Chinese bullshit when run
 
 Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
 
-# Usage
-## As a library ("libBullshit")
+## Usage
+### As a library ("libBullshit")
 
-If you're installing the library using `npm` from the offical registery, the package is `@lwys-pkg-releaser/node-bullshit-generator`, and you get it.
+If you're installing the library using `npm` from the official registery, the package is `@lwys-pkg-releaser/node-bullshit-generator`, and you get it.
 
 For browsers, the library should be in `/lib/狗屁库(.min).js` in the source tree, which only includes the library itself and the `default` dict.
 TODO CDN
@@ -22,7 +22,7 @@ Simply call the function with the parameters you would like to supply.
 
 *todo: Document the parameters. <s>I am too lazy so do this later.</s>*
 
-## As a simple app
+### As a simple app
 
 ```
 bullshit-generator [theme] [length] [dict]
@@ -32,16 +32,15 @@ bullshit-generator [theme] [length] [dict]
 You can also specify a "-h" or "--help" in place of anywhere to display a help message
 ```
 
-## As a (Chinese) web page
+### As a (Chinese) web page
 https://Dobby233Liu.github.io/node-bullshit-generator
 
 Note: It uses the master version with the `default` dict.
 
-# License
+## License
 
 ```
-This program is licensed using the Anti 996 License, version 1.0 (draft),
-inheriting the upstream's license.
+This program is licensed with the Anti 996 License, version 1.0 (draft), inheriting the upstream's license.
 Obtain a copy at https://github.com/996icu/996.ICU/blob/617129b/LICENSE
 
 THE LICENSED WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
