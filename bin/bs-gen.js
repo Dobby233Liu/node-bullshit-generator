@@ -9,8 +9,8 @@ var helpText = `Generates random Chinese bullshit.
 
 bullshit-generator [theme] [length] [dict]
     theme: Article/bullshit theme (string)
-    length: Article/bullshit length (must be a positive integer, or script)
-    dict: Path leading to a "dict config" file. Export must be a function.
+    length: Article/bullshit length (must be a positive integer)
+    dict: Path leading to a "dict config" file. Export must be a object.
 You can also specify a "-h" or "--help" parameter in place of anywhere to display a help message (this)
 
 The source code can be found at https://github.com/Dobby233Liu/node-bullshit-generator
