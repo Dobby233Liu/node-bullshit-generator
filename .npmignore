@@ -9,3 +9,5 @@ new_version.bat
 .gitpod.yml
 .jsbeautifyrc
 #lib
+.babelrc
+.gitattributes
