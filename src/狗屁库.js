@@ -11,10 +11,8 @@ class 狗屁库 {
         "允许字典处理字符串": true
     }
     默认字典 = require("./dict/default/配置");
-
     常用 = require("./常用");
     随机 = require("./随机常用");
-
     生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = this.默认字典, _选项 = this.默认选项) {
         this.选项 = this.常用.合并对象(_选项, this.默认选项);
         this.字典 = this.常用.合并对象(_字典, this.默认字典);
@@ -67,7 +65,6 @@ class 狗屁库 {
         return 文章;
     }
     generate = 生成;
-
     constructor() {}
 }
 module.exports = 狗屁库;
