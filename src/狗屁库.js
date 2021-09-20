@@ -34,7 +34,7 @@ class 狗屁库 {
             缓冲 = "";
             类型 = "忽略";
             let 分支 = Math.floor(Math.random() * 100);
-            if (分支 < 5 && (!this.选项.v3语法改进 || (!(文章.endsWith(this.起段)) && !(文章.trim().endsWith(",")) && !(文章.trim().endsWith("，"))))) {
+            if (分支 < 5 && (!this.选项.v3语法改进 || !(文章.endsWith(this.起段)||文章.trim().endsWith(",")||文章.trim().endsWith("，")))) {
                 if (!this.选项.v3语法改进 || this.常用.能否以句号结束(文章.trim())) 缓冲 = this.字典.句号.replace(/\{主题\}/g, 主题);
                 else 缓冲 = "";
                 缓冲 += "\n";
@@ -64,7 +64,7 @@ class 狗屁库 {
         if (this.选项["允许字典处理字符串"] && this.字典["文章处理"] && typeof this.字典["文章处理"] == "function") 文章 = this.字典["文章处理"](文章, this.字典, this.选项, this.常用, this.随机);
         return 文章;
     }
-    generate = 生成;
+    generate = this.生成;
     constructor() {}
 }
 module.exports = 狗屁库;
