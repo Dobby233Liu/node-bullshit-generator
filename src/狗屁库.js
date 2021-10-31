@@ -26,7 +26,9 @@ class 狗屁库 {
         }
         return 列表;
     }
-    最后一项(列表) { return 列表[列表.length - 1]; }
+    最后一项(列表) {
+        return 列表[列表.length - 1];
+    }
     总长(列表) {
         var 长 = 0;
         for (var i in 列表) 长 += 列表[i].length;
