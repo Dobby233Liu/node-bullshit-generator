@@ -20,7 +20,7 @@ class 狗屁库 {
         return 段.indexOf("\n") > 0;
     }
     加段(列表, 段) {
-        var 分 = 段.trimEnd().spilt("\n");
+        var 分 = 段.trimEnd().split("\n");
         for (i in 分) {
             列表.push(分[i]);
         }
