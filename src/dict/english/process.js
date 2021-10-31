@@ -36,13 +36,20 @@ roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
         return contrastsMachine.next().value + seg
     }
     // debug hack
-    throw new Error()
+    throw new Error("???")
 }
 
 function sentences(str) {
     return str.match(/([^\.!\?]+[\.!\?]+)|([^\.!\?]+$)/g);
 }
-roster["onArticle"] = function onArticle(article) {
+roster["onArticle"] = function fakeOnArticle(article) {
+    var a = [];
+    for (i in article) {
+        a.push(onArticle(article[i]))
+    }
+    return a;
+}
+function onArticle(article) {
     article = article.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
     let sentencesLst = sentences(article)
     for (i in sentencesLst) {
