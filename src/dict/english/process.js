@@ -20,6 +20,7 @@ function ohNoes(arr, opt, rng) {
 }
 roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
     var seg = _seg
+    console.log(type)
     if (type == "名人名言") {
         if (!examplesMachine) examplesMachine = ohNoes(dict["examples"], opt, rng)
         if (seg.includes("{prefix_2}")) {
