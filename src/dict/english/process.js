@@ -18,31 +18,44 @@ function ohNoes(arr, opt, rng) {
         }
     }
 }
+
+function chanceTime(opt, rng) {
+    return opt["v3语法改进"] ? rng.瞎选一个([true, true, false, true, false]) : true
+}
 roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
     var seg = _seg
-    if (type == "名人名言") {
-        if (!examplesMachine) examplesMachine = ohNoes(dict["examples"], opt, rng)
-        if (seg.includes("{prefix_2}")) {
-            if (!prefix2Machine) prefix2Machine = ohNoes(dict["prefix_2"], opt, rng)
-            return examplesMachine.next().value + prefix2Machine.next().value + seg.replace(/\{prefix_2\}/g, "")
+    if (chanceTime(opt, rng)) {
+        if (type == "名人名言") {
+            if (!examplesMachine) examplesMachine = ohNoes(dict["examples"], opt, rng)
+            if (seg.includes("{prefix_2}")) {
+                if (!prefix2Machine) prefix2Machine = ohNoes(dict["prefix_2"], opt, rng)
+                return examplesMachine.next().value + prefix2Machine.next().value + seg.replace(/\{prefix_2\}/g, "")
+            }
+            return examplesMachine.next().value + seg
+        } else if (type == "废话") {
+            if ((Math.floor(Math.random() * 100) - 20) <= 45) {
+                if (!addingsMachine) addingsMachine = ohNoes(dict["addings"], opt, rng)
+                return addingsMachine.next().value + seg
+            }
+            if (!contrastsMachine) contrastsMachine = ohNoes(dict["contrasts"], opt, rng)
+            return contrastsMachine.next().value + seg
         }
-        return examplesMachine.next().value + seg
-    } else if (type == "废话") {
-        if ((Math.floor(Math.random() * 100) - 20) <= 45) {
-            if (!addingsMachine) addingsMachine = ohNoes(dict["addings"], opt, rng)
-            return addingsMachine.next().value + seg
-        }
-        if (!contrastsMachine) contrastsMachine = ohNoes(dict["contrasts"], opt, rng)
-        return contrastsMachine.next().value + seg
     }
-    // debug hack
-    throw new Error()
+    return seg
 }
 
 function sentences(str) {
     return str.match(/([^\.!\?]+[\.!\?]+)|([^\.!\?]+$)/g);
 }
-roster["onArticle"] = function onArticle(article) {
+roster["onArticle"] = function fakeOnArticle(article) {
+    var a = [];
+    for (i in article) {
+        a.push(onArticle(article[i]))
+    }
+    return a;
+}
+
+function onArticle(article) {
     article = article.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
     let sentencesLst = sentences(article)
     for (i in sentencesLst) {
