@@ -5,7 +5,6 @@
  */
 class 狗屁库 {
     constructor() {}
-
     默认选项 = {
         "有概率不添加后面垫话": false,
         "v3语法改进": true,
@@ -16,7 +15,6 @@ class 狗屁库 {
     默认字典 = require("./dict/default/配置");
     常用 = require("./常用");
     随机 = require("./随机常用");
-
     // TODO：移入常用，随机数也统一一下
     能加段(段) {
         return 段.indexOf("\n") > 0;
@@ -26,7 +24,7 @@ class 狗屁库 {
         for (i in 分) {
             列表.push(分[i]);
         }
-        return 列表;   
+        return 列表;
     }
     // 最后一项(列表) { return 列表[列表.length - 1]; }
     总长(列表) {
@@ -34,7 +32,6 @@ class 狗屁库 {
         for (i in 列表) 长 += 列表[i].length;
         return 长;
     }
-
     生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = this.默认字典, _选项 = this.默认选项) {
         this.选项 = this.常用.合并对象(_选项, this.默认选项);
         this.字典 = this.常用.合并对象(_字典, this.默认字典);

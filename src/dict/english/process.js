@@ -49,6 +49,7 @@ roster["onArticle"] = function fakeOnArticle(article) {
     }
     return a;
 }
+
 function onArticle(article) {
     article = article.replace('  ', ' ').replace('. .', '.').replace('? .', '?').replace(', .', ',').replace('..', '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
     let sentencesLst = sentences(article)
