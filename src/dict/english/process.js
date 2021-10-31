@@ -35,6 +35,7 @@ roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
         if (!contrastsMachine) contrastsMachine = ohNoes(dict["contrasts"], opt, rng)
         return contrastsMachine.next().value + seg
     }
+    return seg
 }
 
 function sentences(str) {
