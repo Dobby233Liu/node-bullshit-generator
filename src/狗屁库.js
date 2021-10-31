@@ -26,13 +26,14 @@ class 狗屁库 {
         }
         return 列表;
     }
-    // 最后一项(列表) { return 列表[列表.length - 1]; }
+    最后一项(列表) { return 列表[列表.length - 1]; }
     总长(列表) {
         var 长 = 0;
         for (var i in 列表) 长 += 列表[i].length;
         return 长;
     }
     生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = this.默认字典, _选项 = this.默认选项) {
+        var 这是啥我也不知道 = (主要的, 次要的) => 主要的.length <= 0 ? this.最后一项(次要的) : 主要的 // 申密函数
         this.选项 = this.常用.合并对象(_选项, this.默认选项);
         this.字典 = this.常用.合并对象(_字典, this.默认字典);
         if (this.选项["允许字典处理字符串"] && this.字典["主题处理"] && typeof this.字典["主题处理"] == "function") 主题 = this.字典["主题处理"](主题, this.字典, this.选项, this.常用, this.随机);
@@ -50,7 +51,7 @@ class 狗屁库 {
         var 起段 = this.起段.replace(/\{主题\}/g, 主题);
         var 段缓冲 = "";
         var 类型 = "忽略";
-        while (this.总长(文章) < 长度) { // || (this.选项.v3语法改进 && (this.最后一项(文章).trim().endsWith("：") || 文章.trim().endsWith(":") || 文章.trim().endsWith(",") || 文章.trim().endsWith("，")))) {
+        while (this.总长(文章) < 长度) || (this.选项.v3语法改进 && (这是啥我也不知道(段缓冲, 文章).trim().endsWith("：") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith(":") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith(",") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith("，")))) {
             var 缓冲 = "";
             类型 = "忽略";
             let 分支 = Math.floor(Math.random() * 100);
