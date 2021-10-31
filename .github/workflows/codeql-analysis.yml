@@ -34,20 +34,5 @@ jobs:
     - name: Autobuild
       uses: github/codeql-action/autobuild@v1
 
-    # If the Autobuild fails above, remove it and uncomment the following three lines
-    # and modify them (or add more) to build your code if your project
-    # uses a compiled language
-    #- run: |
-    #   make bootstrap
-    #   make release
-
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
-      with:
-        output: results
-        upload: false
-    - name: Upload SARIF file
-      uses: actions/upload-artifact@v2
-      with:
-        name: results
-        path: results/*.sarif
