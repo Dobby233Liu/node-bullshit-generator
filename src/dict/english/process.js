@@ -18,8 +18,12 @@ function ohNoes(arr, opt, rng) {
         }
     }
 }
+function chanceTime(opt, rng) {
+    return opt["v3语法改进"] ? rng.瞎选一个([true, true, false, true, false]) : true
+}
 roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
     var seg = _seg
+    if (chanceTime(opt, rng))
     if (type == "名人名言") {
         if (!examplesMachine) examplesMachine = ohNoes(dict["examples"], opt, rng)
         if (seg.includes("{prefix_2}")) {
