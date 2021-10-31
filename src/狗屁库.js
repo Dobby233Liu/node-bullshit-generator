@@ -21,7 +21,7 @@ class 狗屁库 {
     }
     加段(列表, 段) {
         var 分 = 段.trimEnd().split("\n");
-        for (i in 分) {
+        for (var i in 分) {
             列表.push(分[i]);
         }
         return 列表;
@@ -29,7 +29,7 @@ class 狗屁库 {
     // 最后一项(列表) { return 列表[列表.length - 1]; }
     总长(列表) {
         var 长 = 0;
-        for (i in 列表) 长 += 列表[i].length;
+        for (var i in 列表) 长 += 列表[i].length;
         return 长;
     }
     生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = this.默认字典, _选项 = this.默认选项) {
