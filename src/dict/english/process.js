@@ -24,7 +24,7 @@ function chanceTime(opt, rng) {
 }
 roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
     var seg = _seg
-    if (chanceTime(opt, rng)){
+    if (chanceTime(opt, rng)) {
         if (type == "名人名言") {
             if (!examplesMachine) examplesMachine = ohNoes(dict["examples"], opt, rng)
             if (seg.includes("{prefix_2}")) {
@@ -33,13 +33,14 @@ roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
             }
             return examplesMachine.next().value + seg
         } else if (type == "废话") {
-        if ((Math.floor(Math.random() * 100) - 20) <= 45) {
-            if (!addingsMachine) addingsMachine = ohNoes(dict["addings"], opt, rng)
-            return addingsMachine.next().value + seg
+            if ((Math.floor(Math.random() * 100) - 20) <= 45) {
+                if (!addingsMachine) addingsMachine = ohNoes(dict["addings"], opt, rng)
+                return addingsMachine.next().value + seg
+            }
+            if (!contrastsMachine) contrastsMachine = ohNoes(dict["contrasts"], opt, rng)
+            return contrastsMachine.next().value + seg
         }
-        if (!contrastsMachine) contrastsMachine = ohNoes(dict["contrasts"], opt, rng)
-        return contrastsMachine.next().value + seg
-    }}
+    }
     return seg
 }
 
