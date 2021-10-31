@@ -51,7 +51,7 @@ class 狗屁库 {
         var 起段 = this.起段.replace(/\{主题\}/g, 主题);
         var 段缓冲 = "";
         var 类型 = "忽略";
-        while (this.总长(文章) < 长度) || (this.选项.v3语法改进 && (这是啥我也不知道(段缓冲, 文章).trim().endsWith("：") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith(":") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith(",") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith("，")))) {
+        while (this.总长(文章) < 长度 || (this.选项.v3语法改进 && (这是啥我也不知道(段缓冲, 文章).trim().endsWith("：") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith(":") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith(",") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith("，")))) {
             var 缓冲 = "";
             类型 = "忽略";
             let 分支 = Math.floor(Math.random() * 100);
