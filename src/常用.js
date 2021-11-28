@@ -2,11 +2,12 @@
 // @author Dobby233Liu
 class 常用 {
     static 是否以字符串结束(字符串, 检测列表) {
-        for (var i of 检测列表){
+        for (var i of 检测列表) {
             if (字符串.endsWith(i)) {
                 return true
                 break
-            }}
+            }
+        }
         return false
     }
     static 能否以句号结束(段落) {
@@ -21,7 +22,6 @@ class 常用 {
         }
         return 合成;
     }
-
     // 分段系统实用函数
     static 能加段(段) {
         return 段.indexOf("\n") > 0;
