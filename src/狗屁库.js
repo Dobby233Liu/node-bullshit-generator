@@ -54,11 +54,11 @@ class 狗屁库 {
         var 起段 = this.起段.replace(/\{主题\}/g, 主题);
         var 段缓冲 = "";
         var 类型 = "忽略";
-        while ((this.总长(文章) < 长度 && (!this.选项["能写少就写少"] || this.总长(文章) + 段缓冲.length < 长度)) || (this.选项.v3语法改进 && (这是啥我也不知道(段缓冲, 文章).trim().endsWith("：") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith(":") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith(",") || 这是啥我也不知道(段缓冲, 文章).trim().endsWith("，")))) {
+        while ((this.总长(文章) < 长度 && (!this.选项["能写少就写少"] || this.总长(文章) + 段缓冲.length < 长度)) || (this.选项.v3语法改进 && this.常用.是否以字符串结束(这是啥我也不知道(段缓冲, 文章).trim(), ["：", ":", ",", "，"])))) {
             var 缓冲 = "";
             类型 = "忽略";
             let 分支 = Math.floor(Math.random() * 100);
-            if (分支 < 5 && ((!this.选项.v3语法改进) || !(段缓冲.length <= 0 || 段缓冲.trim().endsWith(",") || 段缓冲.trim().endsWith("，") || 段缓冲.trim().endsWith("、")))) {
+            if (分支 < 5 && ((!this.选项.v3语法改进) || !(段缓冲.length <= 0 || this.常用.是否以字符串结束(段缓冲.trim(), [",", "，", "、"])))) {
                 if (!this.选项.v3语法改进 || this.常用.能否以句号结束(段缓冲.trim())) 缓冲 = this.字典.句号.replace(/\{主题\}/g, 主题);
                 类型 = "新行";
             } else if (分支 < 20) {
