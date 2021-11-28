@@ -3,7 +3,7 @@
 class 常用 {
     static 是否以字符串结束(字符串, 列表) { // endsWith
         var ret = false;
-        for (i of 列表)
+        for (var i of 列表)
             if (字符串.endsWith(i)) {
                 ret = true
                 break
