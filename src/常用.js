@@ -41,5 +41,8 @@ class 常用 {
         for (var i in 列表) 长 += 列表[i].length;
         return 长;
     }
+    static 这是啥我也不知道(主要的, 次要的) { // 申密函数
+        return 主要的.length <= 0 ? this.最后一项(次要的) : 主要的
+    }
 }
 module.exports = 常用;
