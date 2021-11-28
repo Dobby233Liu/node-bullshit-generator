@@ -9,7 +9,7 @@ Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
 ## Usage
 ### As a library ("libBullshit")
 
-If you're installing the library using `npm` from the official registery, the package is `@lwys-pkg-releaser/node-bullshit-generator`, and you get it.
+If you're installing the library using `npm` from the official registry, the package is `@lwys-pkg-releaser/node-bullshit-generator`, and you get it.
 
 For browsers, the library should be in `/lib/狗屁库(.min).js` in the source tree, which only includes the library itself and the `default` dict.
 TODO CDN
