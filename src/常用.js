@@ -36,9 +36,10 @@ class 常用 {
     static 最后一项(列表) {
         return 列表[列表.length - 1];
     }
-    static 总长(列表) {
+    static 总长(列表, 加换行符长度 = true) {
         var 长 = 0;
-        for (var i in 列表) 长 += 列表[i].length;
+        const 特别长 = "\n".length;
+        for (var i in 列表) 长 += 列表[i].length + (加换行符长度 ? 特别长 : 0);
         return 长;
     }
     static 这是啥我也不知道(主要的, 次要的) { // 申密函数
