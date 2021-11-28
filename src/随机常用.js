@@ -1,6 +1,8 @@
 class 随机常用 {
     constructor() {}
-    static 取随机小数() { return Math.random() }
+    static 取随机小数() {
+        return Math.random()
+    }
     /**
      * @param {Array} _数组
      *
