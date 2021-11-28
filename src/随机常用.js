@@ -1,5 +1,6 @@
 class 随机常用 {
     constructor() {}
+    static 取随机小数() { return Math.random() }
     /**
      * @param {Array} _数组
      *
@@ -8,7 +9,7 @@ class 随机常用 {
     static 洗牌(_数组) {
         var 数组 = _数组.slice();
         for (let i = 数组.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
+            const j = Math.floor(this.取随机小数() * (i + 1));
             [数组[i], 数组[j]] = [数组[j],
                 数组[i]
             ];
@@ -18,7 +19,7 @@ class 随机常用 {
     static 瞎选一个(数组) {
         let max = 数组.length;
         let min = 0;
-        return 数组[Math.floor(Math.random() * (max - min)) + min];
+        return 数组[Math.floor(this.取随机小数() * (max - min)) + min];
     }
     static 洗牌遍历(数组, 重复度 = 1) {
         var 次数组 = [];
@@ -41,6 +42,9 @@ class 随机常用 {
                 };
             })(this.洗牌, 次数组)
         };
+    }
+    static 取随机数(最大数) {
+        return Math.floor(this.取随机小数() * 最大数)
     }
 }
 module.exports = 随机常用;
