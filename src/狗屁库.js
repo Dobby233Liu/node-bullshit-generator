@@ -44,17 +44,17 @@ class 狗屁库 {
             } else if (分支 < 20) {
                 let 言 = this.下一句名人名言.next().value;
                 言 = 言.replace(/\{前面垫话\}/g, (this.选项["menzi11#175"] ? this.下一句前面垫话.next().value : this.随机.瞎选一个(this.前面垫话)).replace(/\{主题\}/g, 主题));
+                let 替换 = "";
                 if (!this.选项.有概率不添加后面垫话 || this.随机.取随机数(10) != 1) {
-                    言 = 言.replace(/\{后面垫话\}/g, (this.选项["menzi11#175"] ? this.下一句后面垫话.next().value : this.随机.瞎选一个(this.后面垫话)).replace(/\{主题\}/g, 主题));
-                } else {
-                    言 = 言.replace(/\{后面垫话\}/g, "");
+                    替换 = (this.选项["menzi11#175"] ? this.下一句后面垫话.next().value : this.随机.瞎选一个(this.后面垫话)).replace(/\{主题\}/g, 主题);
                 }
+                言 = 言.replace(/\{后面垫话\}/g, 替换);
                 缓冲 = 言;
                 类型 = "名人名言";
             } else {
                 缓冲 = this.下一句废话.next().value.replace(/\{主题\}/g, 主题);
                 类型 = "废话";
-            } // else 缓冲 = "";
+            }
             // hack
             if (this.选项["允许字典处理字符串"] && this.字典["缓冲处理"] && typeof this.字典["缓冲处理"] == "function") {
                 段缓冲 += this.字典["缓冲处理"](缓冲, this.字典, this.选项, this.常用, this.随机, 类型);
