@@ -3,6 +3,7 @@ on:
         paths:
           - 'src/**'
           - 'bin/**'
+          - '**/*.json'
 
 jobs:
     beautify:
