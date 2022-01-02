@@ -22,13 +22,13 @@
   "scripts": {
     "test": "node ./bin/bs-gen.js 学生会退会",
     "build": "npm run bundle+min",
-    "clean": "rm ./dist/*.js && rm -r ./_babel_lib",
+    "clean": "rm -r ./dist ./_babel_lib",
     "babel": "babel src --out-dir ./_babel_lib",
     "bundle": "npm run babel && browserify -e ./_babel_lib/狗屁库.js -s bullshit -o ./dist/狗屁库.js",
     "bundle+min": "npm run bundle && npm run min-bundle",
     "min-bundle": "terser ./dist/狗屁库.js -o ./dist/狗屁库.min.js -m -c --timings --verbose --warn",
     "beautify": "js-beautify -r -f ./src/**/*.js ./src/dict/**/*.js ./bin/**/*.js ./bin/*.js ./src/*.js",
-    "prepublish": "npm run bundle+min"
+    "prepare": "npm run bundle+min"
   },
   "author": {
     "name": "Liu Wenyuan",
