@@ -13,7 +13,7 @@ jobs:
                 email: 41898282+github-actions[bot]@users.noreply.github.com
             - run: npm install
             - run: npm run beautify
-            - run: git add . && git commit -m "[nobundle] Bundle library and beautify"
+            - run: git add . && git commit -m "Beautify source files"
               id: commit-files
               continue-on-error: true
             - uses: ad-m/github-push-action@master
