@@ -13,9 +13,12 @@ const Bullshit = require("@lwys-pkg-releaser/node-bullshit-generator")
 ```
 
 For browsers, you can use the recommended bundled versions (`/dist/狗屁库(.min).js`), which only includes the library itself and the `default` dict.
-You can also use unpkg or any other CDN to get this library, like: `https://unpkg.com/@lwys-pkg-releaser/node-bullshit-generator`.
+You can also use unpkg or any other CDN to get this library, like:
+```html
+<script src="https://unpkg.com/@lwys-pkg-releaser/node-bullshit-generator"></script>
+```
 
-Now, the `Bullshit` (`window.bullshit` with the bundled version in browser) variable should be populated with the 狗屁库 class. Construct it:
+Now, the `Bullshit` (`window.bullshit` with the bundled version in a browser) variable should be populated with the 狗屁库 class. Construct it to get a generator instance:
 ```js
 const bullshit = new Bullshit()
 ```
@@ -25,4 +28,8 @@ Now you can use functions like:
 bullshit.生成()
 ```
 
-## Using the library
+## Using the Library
+
+### Basic Usage
+
+### Function Reference
