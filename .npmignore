@@ -2,12 +2,11 @@ node_modules
 _babel_lib
 .github
 .vscode
+docs
 *.md
-!README*.md
-new_version.bat
+!README.md
 .gitpod.Dockerfile
 .gitpod.yml
 .jsbeautifyrc
-#lib
 .babelrc
 .gitattributes
