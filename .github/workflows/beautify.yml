@@ -1,5 +1,8 @@
 on:
     push:
+        paths:
+          - 'src/**'
+          - 'bin/**'
 
 jobs:
     beautify:
