@@ -6,36 +6,15 @@ A Node.js library/program that generates meaningless Chinese bullshit.
 
 Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
 
-## Usage
-### As a library ("libBullshit")
+## Documentation
 
-If you're installing the library using `npm` from the official registry, the package is `@lwys-pkg-releaser/node-bullshit-generator`, and you get it.
+A very basic documentation is in the [docs folder](docs).
 
-For browsers, the library should be in `/dist/狗屁库(.min).js` in the source tree, which only includes the library itself and the `default` dict.
-You can also use unpkg or any other CDN to get this file, like: `https://unpkg.com/@lwys-pkg-releaser/node-bullshit-generator`
+## (Chinese) web page demo
 
-The library gives a class to you (`window.libBullshit` in browser; `require` users should know where to find it). There should be a function inside after you construct it:
-```javascript
-this.生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = {...}, _选项 = {...})
-```
-Simply call the function with the parameters you would like to supply.
+A demo can be found at: https://Dobby233Liu.github.io/node-bullshit-generator
 
-*todo: Document the parameters. <s>I am too lazy so do this later.</s>*
-
-### As a simple app
-
-```
-bullshit-generator [theme] [length] [dict]
-[theme] = Article/bullshit theme, as a string.
-[length] = Bullshit length. Must be a positive integer, or the value is ignored.
-[dict] = Path leading to a "dict config" file. Export must be a object.
-You can also specify a "-h" or "--help" in place of anywhere to display a help message
-```
-
-### As a (Chinese) web page
-https://Dobby233Liu.github.io/node-bullshit-generator
-
-**Note:** This is essentially unmaintained now.
+**Note:** This demo is not actively maintained.
 
 ## License
 
