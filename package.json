@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "Port of menzi11/BullshitGenerator@github.com to JavaScript",
   "main": "./src/狗屁库.js",
-  "unpkg": "./lib/狗屁库.js",
+  "unpkg": "./dist/狗屁库.js",
   "bin": {
     "bullshit-generator": "./bin/bs-gen.js"
   },
@@ -22,16 +22,11 @@
   "scripts": {
     "test": "node ./bin/bs-gen.js 学生会退会",
     "build": "npm run bundle+min",
-    "clean": "rm ./lib/*.js && rm ./lib/*.js.map",
+    "clean": "rm ./dist/*.js && rm -r ./_babel_lib",
     "babel": "babel src --out-dir ./_babel_lib",
-    "bundle": "npm run babel && browserify -e ./_babel_lib/狗屁库.js -s bullshit -o ./lib/狗屁库.js",
-    "bundle.nobabel": "browserify -e ./src/狗屁库.js -s bullshit -o ./lib/狗屁库.js",
-    "build.nonmin": "npm run bundle",
-    "build.nonmin.nobabel": "npm run bundle.nobabel",
-    "build.nobabel": "npm run bundle.nobabel",
+    "bundle": "npm run babel && browserify -e ./_babel_lib/狗屁库.js -s bullshit -o ./dist/狗屁库.js",
     "bundle+min": "npm run bundle && npm run min-bundle",
-    "bundle+min.nobabel": "npm run bundle.nobabel && npm run min-bundle",
-    "min-bundle": "terser ./lib/狗屁库.js -o ./lib/狗屁库.min.js -m -c --timings --verbose --warn",
+    "min-bundle": "terser ./dist/狗屁库.js -o ./dist/狗屁库.min.js -m -c --timings --verbose --warn",
     "beautify": "js-beautify -r -f ./src/**/*.js ./src/dict/**/*.js ./bin/**/*.js ./bin/*.js ./src/*.js",
     "prepublish": "npm run bundle+min"
   },
@@ -64,11 +59,12 @@
     "@babel/plugin-transform-classes": "^7.14.5",
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
+    //"babel-plugin-transform-class-properties": "^6.24.1",
     "browserify": "^17.0.0",
     "core-js": "^3.6.4",
     "js-beautify": "^1.10.3",
     "terser": "^5.7.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": ["*", "dist"]
 }
