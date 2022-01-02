@@ -2,7 +2,7 @@
 
 # node-bullshit-generator
 
-A Node.js library & program that generates meaningless Chinese bullshit when run.
+A Node.js library/program that generates meaningless Chinese bullshit.
 
 Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
 
@@ -12,7 +12,6 @@ Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
 If you're installing the library using `npm` from the official registry, the package is `@lwys-pkg-releaser/node-bullshit-generator`, and you get it.
 
 For browsers, the library should be in `/lib/狗屁库(.min).js` in the source tree, which only includes the library itself and the `default` dict.
-TODO CDN
 
 The library gives a class to you (`window.libBullshit` in browser; `require` users should know where to find it). There should be a function inside after you construct it:
 ```javascript
