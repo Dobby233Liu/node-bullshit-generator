@@ -6,7 +6,9 @@ on:
 jobs:
     bundle_plus_min:
         runs-on: ubuntu-latest
-        if: "!contains(github.event.head_commit.message, '[nobundle]')"
+        #if: "!contains(github.event.head_commit.message, '[nobundle]')"
+        ### THIS WORKFLOW IS PROVED USELESS, SO IT HAVE BEEN DISABLED
+        if: false
         steps:
             - uses: actions/checkout@v2
             - uses: fregante/setup-git-token@v1
