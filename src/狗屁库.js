@@ -3,7 +3,6 @@
  * @author Dobby233Liu
  * @license Anti-996 License 1.0
  */
-
 const 逗号 = [",", "，", "、"];
 const 冒号 = ["：", ":"];
 const 非结段符号 = [...逗号, ...冒号];
@@ -16,7 +15,6 @@ const 默认选项 = {
     "能写少就写少": true
 }
 const 默认字典 = require("./dict/default/配置");
-
 class 狗屁库 {
     constructor() {}
     常用 = require("./常用");
