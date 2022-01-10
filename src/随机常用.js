@@ -24,14 +24,16 @@ class 随机常用 {
         return 数组[Math.floor(this.取随机小数() * (max - min)) + min];
     }
     static 洗牌遍历(数组, 重复度 = 1) {
-        var 次数组 = [];
+        let 次数组 = [];
+        let i = 0;
+        const 洗牌 = this.洗牌;
         for (var ii = 0; ii < 重复度; ii++) 次数组 = 次数组.concat(数组);
         次数组 = this.洗牌(次数组);
         return {
             next: function __next__() {
                 const ret = 次数组[i++];
                 if (!(i < 次数组.length)) {
-                    次数组 = this.洗牌(次数组);
+                    次数组 = 洗牌(次数组);
                     i = 0;
                 }
                 return {
