@@ -31,7 +31,7 @@ class 随机常用 {
             next: function __next__() {
                 const ret = 次数组[i++];
                 if (!(i < 次数组.length)) {
-                    次数组 = this.随机.洗牌(次数组);
+                    次数组 = this.洗牌(次数组);
                     i = 0;
                 }
                 return {
