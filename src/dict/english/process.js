@@ -1,14 +1,13 @@
 let roster = {}
-
 roster["onTheme"] = function onTheme(theme)
 {
     return theme.toLowerCase()
 }
-
 var prefix2Machine = null
 var examplesMachine = null
 var addingsMachine = null
 var contrastsMachine = null
+
 function ohNoes(arr, opt, rng) {
     return opt["menzi11#175"] ? rng.洗牌遍历(arr) : {
         next: function () {
@@ -19,6 +18,7 @@ function ohNoes(arr, opt, rng) {
         }
     }
 }
+
 function chanceTime(opt, rng) {
     return opt["v3语法改进"] ? rng.瞎选一个([true, true, false, true, false]) : true
 }
@@ -47,21 +47,21 @@ roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
 function sentences(str) {
     return str.match(/([^\.!\?]+[\.!\?]+)|([^\.!\?]+$)/g);
 }
-function clean(str){
-return str.replace(/  /, ' ').replace(/\. \./, '.').replace(/\? \./, '?').replace(/, \./, ',').replace(/\.\./, '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
+
+function clean(str) {
+    return str.replace(/  /, ' ').replace(/\. \./, '.').replace(/\? \./, '?').replace(/, \./, ',').replace(/\.\./, '.').replace(/[a-z]/i, (x) => x.toUpperCase()).trim()
 }
 roster["onArticle"] = function fakeOnArticle(article) {
     var articleNew = [];
     for (i in article) {
         let part = article[i]
-    part = clean(part)
-    let sentencesLst = sentences(part)
-    for (i in sentencesLst) {
-        sentencesLst[i] = clean(sentencesLst[i])
-    }
-    articleNew.push(sentencesLst.join(' '))
+        part = clean(part)
+        let sentencesLst = sentences(part)
+        for (i in sentencesLst) {
+            sentencesLst[i] = clean(sentencesLst[i])
+        }
+        articleNew.push(sentencesLst.join(' '))
     }
     return articleNew
 }
-
 module.exports = roster
