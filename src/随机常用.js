@@ -26,7 +26,6 @@ class 随机常用 {
     static 洗牌遍历(数组, 重复度 = 1) {
         let 次数组 = [];
         let i = 0;
-        const 洗牌 = this.洗牌;
         for (var ii = 0; ii < 重复度; ii++) 次数组 = 次数组.concat(数组);
         次数组 = this.洗牌(次数组);
         return {
@@ -40,7 +39,7 @@ class 随机常用 {
                     value: ret,
                     done: false,
                 };
-            }
+            }.bind(this)
         };
     }
     static 取随机数(最大数) {
