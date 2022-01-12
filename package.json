@@ -22,7 +22,7 @@
         "bundle": "npm run babel && browserify -e ./_babel_lib/狗屁库.js -s bullshit -o ./dist/狗屁库.js",
         "bundle+min": "npm run bundle && npm run min-bundle",
         "min-bundle": "terser ./dist/狗屁库.js -o ./dist/狗屁库.min.js -m -c --timings --verbose --warn",
-        "beautify": "js-beautify -r -f ./src/**/*.js ./src/dict/**/*.js ./bin/**/*.js ./bin/*.js ./src/*.js package.json",
+        "beautify": "echo "NOTE: This script is supposed to be used by the CI to check formatting. Humans like you can just run: prettier --write ." && prettier --check .",
         "prepack": "npm run bundle+min",
         "postpack": "npm run clean"
     },
