@@ -57,8 +57,8 @@ For example, putting `a` as `主题` produces the following text:
 You can use a premade `字典`, for example:
 
 ```js
-const engDict = require("@lwys-pkg-releaser/node-bullshit-generator/src/dict/english/配置.js")
-bullshit.生成("the world ending", 3000, engDict)
+const engDict = require("@lwys-pkg-releaser/node-bullshit-generator/src/dict/english/配置.js");
+bullshit.生成("the world ending", 3000, engDict);
 ```
 
 will produce an 3000 characters long article in English with a "the world ending" theme.
