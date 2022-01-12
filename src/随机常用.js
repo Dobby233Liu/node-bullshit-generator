@@ -1,7 +1,7 @@
 class 随机常用 {
     constructor() {}
     static 取随机小数() {
-        return Math.random()
+        return Math.random();
     }
     /**
      * @param {Array} _数组
@@ -12,9 +12,7 @@ class 随机常用 {
         var 数组 = _数组.slice();
         for (let i = 数组.length - 1; i > 0; i--) {
             const j = Math.floor(this.取随机小数() * (i + 1));
-            [数组[i], 数组[j]] = [数组[j],
-                数组[i]
-            ];
+            [数组[i], 数组[j]] = [数组[j], 数组[i]];
         }
         return 数组;
     }
@@ -40,11 +38,11 @@ class 随机常用 {
                     value: ret,
                     done: false,
                 };
-            }.bind(this)
+            }.bind(this),
         };
     }
     static 取随机数(最大数) {
-        return Math.floor(this.取随机小数() * 最大数)
+        return Math.floor(this.取随机小数() * 最大数);
     }
 }
 module.exports = 随机常用;

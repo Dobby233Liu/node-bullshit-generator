@@ -4,6 +4,6 @@
 
 ## Table of Contents
 
-* [Library Usage](lib.md)
-  * [Making Dictionaries](dict.md)
-* [CLI Usage](cli.md)
+-   [Library Usage](lib.md)
+    -   [Making Dictionaries](dict.md)
+-   [CLI Usage](cli.md)

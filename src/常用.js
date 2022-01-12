@@ -4,14 +4,26 @@ class 常用 {
     static 是否以字符串结束(字符串, 检测列表) {
         for (var i of 检测列表) {
             if (字符串.endsWith(i)) {
-                return true
-                break
+                return true;
+                break;
             }
         }
-        return false
+        return false;
     }
     static 能否以句号结束(段落) {
-        return !this.是否以字符串结束(段落.trim(), ["。", ".", "：", ":", "？", "?", "！", "!", ",", "，", "、"]);
+        return !this.是否以字符串结束(段落.trim(), [
+            "。",
+            ".",
+            "：",
+            ":",
+            "？",
+            "?",
+            "！",
+            "!",
+            ",",
+            "，",
+            "、",
+        ]);
     }
     static 合并对象(对象, 镜像) {
         var 合成 = 镜像;
@@ -42,8 +54,9 @@ class 常用 {
         for (var i in 列表) 长 += 列表[i].length + (加换行符长度 ? 特别长 : 0);
         return 长;
     }
-    static 这是啥我也不知道(主要的, 次要的) { // 申密函数
-        return 主要的.length <= 0 ? this.最后一项(次要的) : 主要的
+    static 这是啥我也不知道(主要的, 次要的) {
+        // 申密函数
+        return 主要的.length <= 0 ? this.最后一项(次要的) : 主要的;
     }
 }
 module.exports = 常用;
