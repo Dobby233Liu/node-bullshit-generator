@@ -2,7 +2,7 @@ on: [push]
 
 permissions:
     # We beautify everything, including workflows
-    workflow: write
+    actions: write
 
 jobs:
     beautify:
