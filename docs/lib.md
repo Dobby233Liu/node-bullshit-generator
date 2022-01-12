@@ -56,7 +56,7 @@ For example, putting `a` as `主题` produces the following text:
 `字典` is a object that contains data that the library creates the article from.
 You can use a premade `字典`, for example:
 
-```
+```js
 const engDict = require("@lwys-pkg-releaser/node-bullshit-generator/src/dict/english/配置.js")
 bullshit.生成("the world ending", 3000, engDict)
 ```
@@ -65,4 +65,6 @@ will produce an 3000 characters long article in English with a "the world ending
 
 `选项` is a object that contains configurations for the generation. You usually don't need to mess with it, but if you think you do, read the next section for all options.
 
-### Function Reference
+### Reference
+
+See [Library Reference](libref.md).
