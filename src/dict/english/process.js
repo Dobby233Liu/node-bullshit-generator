@@ -61,11 +61,11 @@ function sentences(str) {
 
 function clean(str) {
     return str
-        .replace(/  /, " ")
-        .replace(/\. \./, ".")
-        .replace(/\? \./, "?")
-        .replace(/, \./, ",")
-        .replace(/\.\./, ".")
+        .replace(/  /g, " ")
+        .replace(/\. \./g, ".")
+        .replace(/\? \./g, "?")
+        .replace(/, \./g, ",")
+        .replace(/\.\./g, ".")
         .replace(/[a-z]/i, (x) => x.toUpperCase())
         .trim();
 }
