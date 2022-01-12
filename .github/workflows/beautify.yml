@@ -16,10 +16,10 @@ jobs:
                 name: github-actions[bot]
                 email: 41898282+github-actions[bot]@users.noreply.github.com
             - run: npm install
-            - run: npx prettier --check .
+            - run: "npx prettier --check ."
               id: check-beautify
               continue-on-error: true
-            - run: npx prettier --write .
+            - run: "npx prettier --write ."
               if: "steps.check-beautify.outcome == 'failure' && !contains(github.event.head_commit.message, '[skip beautify]')"
             - run: git add . && git commit -m "Beautify source files"
               id: commit-files
