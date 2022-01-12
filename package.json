@@ -13,7 +13,13 @@
         "lib": "lib",
         "bin": "bin"
     },
-    "browserslist": ["cover 99.5%", "last 5 years", "Firefox ESR", "not dead", "maintained node versions"],
+    "browserslist": [
+        "cover 99.5%",
+        "last 5 years",
+        "Firefox ESR",
+        "not dead",
+        "maintained node versions"
+    ],
     "scripts": {
         "test": "node ./bin/bs-gen.js 学生会退会",
         "build": "npm run bundle+min",
@@ -35,7 +41,14 @@
         "type": "git",
         "url": "git+https://github.com/Dobby233Liu/node-bullshit-generator.git"
     },
-    "keywords": ["text", "generator", "bullshit", "chinese", "nonsense", "meaningless"],
+    "keywords": [
+        "text",
+        "generator",
+        "bullshit",
+        "chinese",
+        "nonsense",
+        "meaningless"
+    ],
     "license": "SEE LICENSE IN LICENSE.txt",
     "bugs": {
         "url": "https://github.com/Dobby233Liu/node-bullshit-generator/issues"
@@ -46,13 +59,14 @@
         "@babel/core": "^7.9.0",
         "@babel/plugin-proposal-class-properties": "^7.14.5",
         "@babel/plugin-transform-classes": "^7.14.5",
-        "@babel/polyfill": "^7.8.7",
         "@babel/preset-env": "^7.9.0",
         "browserify": "^17.0.0",
         "core-js": "^3.6.4",
         "js-beautify": "^1.10.3",
         "terser": "^5.7.0"
     },
-    "dependencies": {},
-    "files": ["*", "dist"]
+    "files": [
+        "*",
+        "dist"
+    ]
 }
