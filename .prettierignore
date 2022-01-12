@@ -1,2 +1,4 @@
 _babel_lib
 dist
+# I don't bother, Actions doesn't let me change workflows anyway
+.github/workflows/*
