@@ -62,7 +62,7 @@
         "@babel/preset-env": "^7.9.0",
         "browserify": "^17.0.0",
         "core-js": "^3.6.4",
-        "js-beautify": "^1.10.3",
+        "prettier": "2.5.1",
         "terser": "^5.7.0"
     },
     "files": [
