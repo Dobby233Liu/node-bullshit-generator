@@ -1,3 +1,2 @@
 site_name: node-bullshit-generator
-theme:
-    name: readthedocs
+theme: readthedocs
