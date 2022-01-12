@@ -1,5 +1,9 @@
 on: [push]
 
+permissions:
+    # We beautify everything, including workflows
+    workflows: write
+
 jobs:
     beautify:
         runs-on: ubuntu-latest
