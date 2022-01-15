@@ -27,7 +27,7 @@ Now, the `Bullshit` (`window.bullshit` with the bundled version in a browser) va
 const bullshit = new Bullshit();
 ```
 
-Now you can use functions like:
+Now you can generate an article with:
 
 ```js
 bullshit.生成();
@@ -37,14 +37,14 @@ bullshit.生成();
 
 ### Basic Usage
 
-Usually, you mostly just use the `生成` function.
+Usually, you just use the `生成` function.
 Here's all of the parameters for it:
 
 ```js
 生成(主题, 长度, 字典, 选项);
 ```
 
-For example, putting `a` as `主题` produces the following text:
+For example, passing `a` as `主题` produces the following text:
 
 ```
 这样看来，这是不可避免的。我认为，a似乎是一种巧合，但如果我们从一个更大的角度看待问题，这似乎是一种不可避免的事实。所谓a，关键是a需要如何写。带着这些问题，我们来审视一下a。到底应该如何实现a？生活中，若a出现了，我们就不得不考虑它出现了的事实。
@@ -63,8 +63,4 @@ bullshit.生成("the world ending", 3000, engDict);
 
 will produce an 3000 characters long article in English with a "the world ending" theme.
 
-`选项` is a object that contains configurations for the generation. You usually don't need to mess with it, but if you think you do, read the next section for all options.
-
-### Reference
-
-See [Library Reference](libref.md).
+`选项` is a object that contains configurations for the generation. You usually don't need to mess with it, but if you think you do, read the [Library Reference](libref.md) for all options.
