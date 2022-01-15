@@ -20,4 +20,4 @@ This is a basic documentation of it.
 
 ### Other Stuff
 
--   [Included Dicts](packeddicts.md)
+-   [Included Dictionaries](packeddicts.md)
