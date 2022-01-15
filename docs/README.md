@@ -4,7 +4,7 @@
 
 This is a basic documentation of it.
 
-> Note that the word `dict` used throughout the documentation is a internal term in the library, used for convenience while writing this documentation. It means `dictionary`.
+> Note that an abbreviation of `dictionary`, `dict` (and also an internal term in the library), is used for convenience while writing this documentation.
 
 ## Table of Contents
 
