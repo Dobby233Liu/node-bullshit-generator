@@ -8,7 +8,7 @@ Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
 
 ## Documentation
 
-A very basic documentation is in the [docs folder](docs) and hosted with [Read The Docs](https://node-bullshit-generator.readthedocs.io/).
+A very basic documentation is in the [docs folder](docs), which is hosted on [Read The Docs](https://node-bullshit-generator.readthedocs.io/).
 
 ## (Chinese) web page demo
 
