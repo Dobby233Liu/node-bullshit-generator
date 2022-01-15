@@ -11,8 +11,8 @@ This is a basic documentation of it.
 ### Using the Library
 
 -   [Library Usage](lib.md)
-    -   [Making Dictionaries](dict.md)
-    -   [Library Reference](libref.md)
+-   [Making Dictionaries](dict.md)
+-   [Library Reference](libref.md)
 
 ### CLI Usage
 
