@@ -3,9 +3,9 @@ theme: readthedocs
 nav:
     - Home: "README.md"
     - "Using the Library":
-        - "lib.md"
-        #- 'dict.md'
-        #- 'libref.md'
+          - "lib.md"
+          #- 'dict.md'
+          #- 'libref.md'
     - "cli.md"
     #- "Other Stuff":
-        #- 'packeddicts.md'
+    #- 'packeddicts.md'
