@@ -9,12 +9,15 @@ This is a basic documentation of it.
 ## Table of Contents
 
 ### Using the Library
+
 -   [Library Usage](lib.md)
     -   [Making Dictionaries](dict.md)
     -   [Library Reference](libref.md)
 
 ### CLI Usage
+
 -   [CLI Usage](cli.md)
 
 ### Other Stuff
+
 -   [Included Dicts](packeddicts.md)
