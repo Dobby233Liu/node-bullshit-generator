@@ -1,9 +1,9 @@
 site_name: node-bullshit-generator
 theme: readthedocs
 nav:
-    - Home: 'README.md'
-    - 'Using the Library':
-        - 'lib.md'
-        #- 'dict.md'
-        #- 'libref.md'
-    - 'cli.md'
+    - Home: "README.md"
+    - "Using the Library":
+          - "lib.md"
+          #- 'dict.md'
+          #- 'libref.md'
+    - "cli.md"
