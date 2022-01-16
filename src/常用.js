@@ -10,21 +10,6 @@ class 常用 {
         }
         return false;
     }
-    static 能否以句号结束(段落) {
-        return !this.是否以字符串结束(段落.trim(), [
-            "。",
-            ".",
-            "：",
-            ":",
-            "？",
-            "?",
-            "！",
-            "!",
-            ",",
-            "，",
-            "、",
-        ]);
-    }
     static 合并对象(对象, 镜像) {
         var 合成 = 镜像;
         for (var i in 对象) {
@@ -50,13 +35,9 @@ class 常用 {
     }
     static 总长(列表, 加换行符长度 = true) {
         var 长 = 0;
-        const 特别长 = "\n".length;
-        for (var i in 列表) 长 += 列表[i].length + (加换行符长度 ? 特别长 : 0);
+        const 换行符号长 = "\n".length;
+        for (var i in 列表) 长 += 列表[i].length + (加换行符长度 ? 换行符号长 : 0);
         return 长;
-    }
-    static 这是啥我也不知道(主要的, 次要的) {
-        // 申密函数
-        return 主要的.length <= 0 ? this.最后一项(次要的) : 主要的;
     }
 }
 module.exports = 常用;
