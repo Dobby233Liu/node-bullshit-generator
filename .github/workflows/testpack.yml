@@ -1,4 +1,4 @@
-on: [workflow_dispatch]
+on: [push]
 
 jobs:
     pack:
@@ -13,4 +13,4 @@ jobs:
         - uses: actions/upload-artifact@v2
           with:
               name: pack
-              path: *.tgz
+              path: "*.tgz"
