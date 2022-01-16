@@ -36,7 +36,8 @@ class 常用 {
     static 总长(列表, 加换行符长度 = true) {
         var 长 = 0;
         const 换行符号长 = "\n".length;
-        for (var i in 列表) 长 += 列表[i].length + (加换行符长度 ? 换行符号长 : 0);
+        for (var i in 列表)
+            长 += 列表[i].length + (加换行符长度 ? 换行符号长 : 0);
         return 长;
     }
 }
