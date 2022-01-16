@@ -1,6 +1,6 @@
-# Contributing guide
+Minor notes:
 
-While contributing, always follow our [License](LICENSE).
+Use common sense.
 
 If you modified a JS/JSON file, make sure to also format it using prettier:
 
