@@ -1,8 +1,9 @@
-on: [push]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
     beautify:
         runs-on: ubuntu-latest
+        concurrency: beautify-${{ github.ref }}
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
@@ -18,7 +19,7 @@ jobs:
               id: check-beautify
               continue-on-error: true
             - run: "npx prettier --write ."
-              if: "steps.check-beautify.outcome == 'failure' && !contains(github.event.head_commit.message, '[skip beautify]')"
+              if: "steps.check-beautify.outcome == 'failure' && !contains(github.event.head_commit.message, '[skip beautify]') && (github.event == 'workflow_dispatch' || github.actor == 'Dobby233Liu')"
             - run: git add . && git commit -m "Beautify source files"
               id: commit-files
               continue-on-error: true
