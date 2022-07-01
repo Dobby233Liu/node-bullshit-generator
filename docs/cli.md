@@ -1,6 +1,6 @@
 # CLI Usage
 
-`bullshit-generator` is a very simple CLI of `node-bullshit-generator`, allowing you to do basic article generation.
+`bullshit-generator` is a very simple CLI interface of `node-bullshit-generator` that comes with the library, allowing you to do basic article generations.
 
 > This page assumes you have installed the `node-bullshit-generator` NPM package globally.
 > In some cases, you may need to use this CLI with `npx`, like this:
@@ -11,7 +11,7 @@ npx bullshit-generator [...]
 
 ## Usage
 
-This CLI is used like this, in your command line:
+This CLI is used like this in your command line:
 
 ```bash
 $ bullshit-generator [theme] [length] [dict]
