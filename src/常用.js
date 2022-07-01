@@ -16,7 +16,7 @@ class 常用 {
         return false;
     }
     /**
-     * 把对象中所有元素覆盖到镜像上，不影响镜像的原内容
+     * 把对象中所有元素覆盖到镜像上，不影响传入的镜像
      * @param {Object} 对象
      * @param {Object} 镜像
      * @returns {Object}
