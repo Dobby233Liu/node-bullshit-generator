@@ -24,7 +24,7 @@ Almost accurate to the original dict in the original Python version of `Bullshit
 
 **Tip:** Disable the `v3语法改进` option to make the output of the library closer to the original Python version.
 
-## Default Plus
+## Default+
 
 -   Codename: `default-plus`
 -   Sources:
@@ -36,7 +36,7 @@ Almost accurate to the original dict in the original Python version of `Bullshit
     -   https://github.com/menzi11/BullshitGenerator/pull/175
     -   Dobby233Liu's scrapped modifications of the `default` dict
 
-`default`, with more exciting stuff packed.
+The Default dict, but with some *new* stuff inside.
 It is recommended to use compotents to this dict in your own dict configurations, rather than just using the pre-made configuration.
 
 ## Chinese Internet Industry Terms
@@ -46,23 +46,23 @@ It is recommended to use compotents to this dict in your own dict configurations
 
 A compliation of random confusing terms that Chinese internet industry people use, for some reason.
 
-## English Dict
+## English Translation
 
 -   Codename: `english`
 -   Source: Heavliy modified version of https://github.com/JIUYANGZH/BullshitGenerator-English/blob/master/bullshitgenerator_English/bullshit_generator.csv
 
-Near-perfect translation of the `classic` dict to English. Relys on the `允许字典处理字符串` option being enabled a lot, also turns the theme into lower case by default. It is suggested that you set the `结段强制带标点符号` option to true while using this dict.
+This dict is based on a translation and fork of the `classic` dict to English. Relys on the `允许字典处理字符串` option being enabled a lot, also turns the theme into lower case by default. It is suggested that you set the `结段强制带标点符号` option to true while using this dict.
 
-## Japanese Dict
+## Japanese Translation
 
 -   Codename: `japanese`
 -   Source: https://github.com/garily/BullshitGenerator-Japanese/blob/master/index.html
 
-Translation of the `classic` dict to Japanese.
+This dict is based on a translation of the `classic` dict to Japanese.
 
 ## qwas982
 
 -   Codename: `qwas982`
 -   Source: https://github.com/qwas982
 
-Compilation of some infamous quotes fron the infamous Hanzi-based... Uh, no, "mandarin symbol" programming language pionner qwas982.
+A compilation of some infamous quotes fron the infamous Hanzi-based... Uh, no, "mandarin symbol" programming language pionner qwas982.
