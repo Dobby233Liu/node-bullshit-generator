@@ -71,7 +71,7 @@ function clean(str) {
         .replace(/\? \./g, "?")
         .replace(/, \./g, ",")
         .replace(/\.\./g, ".")
-        .replace(/[a-z]/, (x) => x.toUpperCase())
+        .replace(/[a-z]/i, (x) => x.toUpperCase())
         .trim();
 }
 roster["onArticle"] = function onArticle(article) {
