@@ -9,6 +9,7 @@ Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
 ## Installation
 
 Through `npm`:
+
 ```bash
 npm install @lwys-pkg-releaser/node-bullshit-generator
 ```
