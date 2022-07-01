@@ -2,13 +2,13 @@
 
 ## Installing the Library
 
-This package can be installed through `npm`.
+This package can be installed through `npm`, like this:
 
 ```bash
 npm install @lwys-pkg-releaser/node-bullshit-generator
 ```
 
-After that, in Node.js code, you can require the library with:
+After that, in Node.js code, you can `require` the main class of the library with:
 
 ```js
 const Bullshit = require("@lwys-pkg-releaser/node-bullshit-generator");
@@ -61,6 +61,6 @@ const engDict = require("@lwys-pkg-releaser/node-bullshit-generator/src/dict/eng
 bullshit.生成("the world ending", 3000, engDict);
 ```
 
-will produce an 3000 characters long article in English with a "the world ending" theme.
+will produce an 3000 characters long article with the English dict, with "the world ending" as the theme.
 
 `选项` is a object that contains configurations for the generation. You usually don't need to mess with it, but if you think you do, read the [Library Reference](libref.md) for all options.
