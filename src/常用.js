@@ -3,8 +3,8 @@
 class 常用 {
     /**
      * 检测字符串结尾是否有检测列表中的任意一段文字
-     * @param {String} 字符串 
-     * @param {String[]} 检测列表 
+     * @param {String} 字符串
+     * @param {String[]} 检测列表
      * @returns {Boolean}
      */
     static 是否以字符串结束(字符串, 检测列表) {
@@ -17,8 +17,8 @@ class 常用 {
     }
     /**
      * 把对象中所有元素覆盖到镜像上，不影响镜像的原内容
-     * @param {Object} 对象 
-     * @param {Object} 镜像 
+     * @param {Object} 对象
+     * @param {Object} 镜像
      * @returns {Object}
      */
     static 合并对象(对象, 镜像) {
@@ -32,7 +32,7 @@ class 常用 {
     }
     /**
      * 检测段落是否有换行符（适合使用加段函数）
-     * @param {string} 段 
+     * @param {string} 段
      * @returns {boolean}
      * @see 加段
      */
@@ -41,8 +41,8 @@ class 常用 {
     }
     /**
      * 将段中的所有段落添加到文章里
-     * @param {string[]} 文章 
-     * @param {string} 段 
+     * @param {string[]} 文章
+     * @param {string} 段
      * @returns {string}
      */
     static 加段(文章, 段) {
@@ -52,7 +52,7 @@ class 常用 {
     }
     /**
      * 返回数组中的最后一个元素
-     * @param {any[]} 数组 
+     * @param {any[]} 数组
      * @returns {any}
      */
     static 最后一项(数组) {
@@ -61,8 +61,8 @@ class 常用 {
     /**
      * 返回文章中所有段落的长度，如果加换行符长度为真，
      * 把隐性的换行符也算在内
-     * @param {string[]} 文章 
-     * @param {boolean} 加换行符长度 
+     * @param {string[]} 文章
+     * @param {boolean} 加换行符长度
      * @returns {number}
      */
     static 总长(文章, 加换行符长度 = true) {

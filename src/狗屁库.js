@@ -3,11 +3,7 @@
  * @author Dobby233Liu
  * @license Anti-996 License 1.0
  */
-const {
-    逗号,
-    非结段符号,
-    使不能以句号结段的结段符号,
-} = require("./符号常量");
+const { 逗号, 非结段符号, 使不能以句号结段的结段符号 } = require("./符号常量");
 const 默认选项 = {
     有概率不添加后面垫话: false,
     v3语法改进: true,
@@ -23,8 +19,8 @@ class 狗屁库 {
     constructor() {}
     /**
      * 生成一篇废话文章
-     * @param {string} 主题 
-     * @param {number} 长度 
+     * @param {string} 主题
+     * @param {number} 长度
      * @param {Object} 字典 - 应包含的属性见{@link dict/default/配置.js}
      * @param {Object} 选项 - 可用选项见 {@link 默认选项}
      * @returns {string|array} 如果选项中的 `返回段落列表` 属性为真，返回 array，否则为 string
