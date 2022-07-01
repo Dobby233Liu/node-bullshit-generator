@@ -21,7 +21,7 @@ class 随机常用 {
         let min = 0;
         return 数组[Math.floor(this.取随机小数() * (max - min)) + min];
     }
-    static 洗牌遍历(数组, 重复度 = 1) {
+    static 洗牌遍历(数组, 重复度 = 2) {
         if (数组.length < 1) throw Error("Invaild array");
         let 次数组 = [];
         let i = 0;
