@@ -35,7 +35,7 @@ roster["onSegment"] = function onSegment(seg, dict, opt, _, rng, type) {
             );
         }
         return examplesMachine.next().value + seg;
-    } else if (type == "废话") {
+    } else if (type == "废话" && (!opt.v3语法改进 || rng.取随机小数() > 0.3)) {
         if (rng.取随机数(100) - 20 <= 45) {
             if (!addingsMachine)
                 addingsMachine = generateIterator(dict["addings"], opt, rng);
