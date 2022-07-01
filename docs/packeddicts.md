@@ -13,14 +13,14 @@ bullshit.生成("coding", 3000, dict);
 -   Codename: `default`
 -   Source: https://github.com/menzi11/BullshitGenerator/blob/master/data.json (with some modifications)
 
-The default dict, used if none is specified. Slightly improved version of the `classic` dict.
+The default dict that is used if none is specified. It is a slightly improved version of the dict from the original Python version.
 
 ## Classic
 
 -   Codename: `classic`
 -   Source: https://github.com/menzi11/BullshitGenerator/blob/master/data.json
 
-Almost accurate to the original dict in the original Python version of `BullshitGenerator`.
+A recreation of the dict in the original Python `BullshitGenerator`.
 
 **Tip:** Disable the `v3语法改进` option to make the output of the library closer to the original Python version.
 
@@ -36,15 +36,15 @@ Almost accurate to the original dict in the original Python version of `Bullshit
     -   https://github.com/menzi11/BullshitGenerator/pull/175
     -   Dobby233Liu's scrapped modifications of the `default` dict
 
-The Default dict, but with some _new_ stuff inside.
-It is recommended to use compotents to this dict in your own dict configurations, rather than just using the pre-made configuration.
+The Default dict, but with some _new and cool_ stuff inside.
+It is recommended to use components in this dict in your own dict configurations, rather than just using the pre-made configuration.
 
 ## Chinese Internet Industry Terms
 
 -   Codename: `internet-industry-terms`
 -   Source: https://github.com/shadowings-zy/internet-industry-terms-generator/blob/master/index.js
 
-A compliation of random confusing terms that Chinese internet industry people use, for some reason.
+A compliation of random confusing terms that Chinese IT people use, for some reason.
 
 ## English Translation
 
