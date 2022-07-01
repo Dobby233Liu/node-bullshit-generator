@@ -2,9 +2,9 @@
 
 `node-bullshit-generator` is a port of the original Python `BullshitGenerator`, which outputs Chinese nonsense, to JavaScript, with added features and improvements.
 
-This is a basic documentation of it.
+This is a basic and **unfinished** documentation of it. **Due of this document's unfinished nature, please be very careful while using it.**
 
-> Note that an abbreviation of `dictionary`, `dict` (and also an internal term in the library), is used for convenience while writing this documentation.
+> Note that an abbreviation of `dictionary`, `dict` (and also an internal term in the library), is used for convenience when this documentation was written.
 
 ## Table of Contents
 
@@ -20,4 +20,5 @@ This is a basic documentation of it.
 
 ### Other Stuff
 
+<!-- -   [Differences to `BullshitGenerator`](improvments.md) -->
 -   [Included Dictionaries](packeddicts.md)
