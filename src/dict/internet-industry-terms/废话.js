@@ -1,4 +1,4 @@
-var newline = require("./newline");
+let newline = require("./newline");
 // 论述
 module.exports = [
     "既然如此，",
@@ -16,7 +16,7 @@ module.exports = [
     "要想清楚，{主题}，到底是对标一种什么样的存在？",
     "{主题}，到底到底该如何落地？",
     // newline phrases
-    newline("了解清楚{主题}到底存在于哪条赛道，是解决一切问题的痛点。"), // oh boy wrong word?
+    newline("了解清楚{主题}到底存在于哪条赛道，是解决一切问题的痛点。"),
     newline("打造业务和数据的闭环对{主题}的解决意义重大。"),
     newline("我们都必须串联相关生态，去思考有关{主题}的问题。"),
     newline("我们认为，找到抓手，形成方法论，{主题}则会迎刃而解。"),

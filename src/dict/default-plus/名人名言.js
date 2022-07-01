@@ -1,5 +1,5 @@
-var originalFamous = require("../default/名人名言");
-var liutongyangFamous = [
+let originalFamous = require("../default/名人名言");
+let liutongyangFamous = [
     "墨子{前面垫话}，言不信者，行不果。{后面垫话}",
     "帕利克{前面垫话}，美德大都包含在良好的习惯之内。{后面垫话}",
     "奥斯特洛夫斯基{前面垫话}，真正的朋友应该说真话，不管那话多么尖锐。{后面垫话}",
@@ -10544,7 +10544,7 @@ var liutongyangFamous = [
     "谢觉哉{前面垫话}，神圣的工作在每个人的日常事务里，理想的前途在于一点一滴做起。{后面垫话}",
     "萨迪{前面垫话}，事业常成于坚忍，毁于急躁。{后面垫话}",
 ];
-var bestQwas982Quotes = [
+let bestQwas982Quotes = [
     //"佚名{前面垫话}，想做事的做不成，想求生存的求不了。{后面垫话}",
     //	"佚名{前面垫话}，马善被人骑，人善被人欺，这天底下还是行恶者居多，地狱空荡荡，恶鬼在人间。{后面垫话}",
     //	"佚名{前面垫话}，对待邪鬼恶毒有癫瘾的\"人\"，真的是要以牙还牙，以眼还眼，以血还血；以其人之道还治其人之身，否则就天下善良的人过不下去。{后面垫话}",
@@ -10557,9 +10557,9 @@ var bestQwas982Quotes = [
     "佚名{前面垫话}，我起码在探索新道路，你做了什么？{后面垫话}",
     "佚名{前面垫话}，人要锻炼自己的想象力，掌握抽象。{后面垫话}",
 ];
-var pr206 = ["古人{前面垫话}，莫看江面平如镜，要看水底万丈深。{后面垫话}"];
+let pr206 = ["古人{前面垫话}，莫看江面平如镜，要看水底万丈深。{后面垫话}"];
 module.exports = (applyQwas982Quotes = true) => {
-    var newFamous = originalFamous;
+    let newFamous = originalFamous;
     newFamous = newFamous.concat(liutongyangFamous);
     newFamous = newFamous.concat(pr206);
     if (applyQwas982Quotes) newFamous = newFamous.concat(bestQwas982Quotes);

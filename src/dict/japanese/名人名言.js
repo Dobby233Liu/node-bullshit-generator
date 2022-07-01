@@ -1,5 +1,5 @@
 module.exports = (function (arr) {
-    var ret = [];
+    let ret = [];
     for (心に残る言葉 of arr) {
         ret.push(
             "昔" +

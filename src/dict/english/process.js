@@ -2,10 +2,10 @@ let roster = {};
 roster["onTheme"] = function onTheme(theme) {
     return theme.toLowerCase();
 };
-var prefix2Machine = null;
-var examplesMachine = null;
-var addingsMachine = null;
-var contrastsMachine = null;
+let prefix2Machine = null;
+let examplesMachine = null;
+let addingsMachine = null;
+let contrastsMachine = null;
 
 function ohNoes(arr, opt, rng) {
     return opt["menzi11#175"]
@@ -21,7 +21,7 @@ function ohNoes(arr, opt, rng) {
 }
 
 roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
-    var seg = _seg;
+    let seg = _seg;
     if (!opt["v3语法改进"] || rng.取随机数(5) <= 3) {
         if (type == "名人名言") {
             if (!examplesMachine)
@@ -65,7 +65,7 @@ function clean(str) {
         .trim();
 }
 roster["onArticle"] = function onArticle(article) {
-    var articleNew = [];
+    let articleNew = [];
     for (i in article) {
         let part = article[i];
         part = clean(part);
