@@ -6,9 +6,16 @@ A Node.js library/program that generates meaningless Chinese bullshit.
 
 Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
 
+## Installation
+
+Through `npm`:
+```bash
+npm install @lwys-pkg-releaser/node-bullshit-generator
+```
+
 ## Documentation
 
-A very basic documentation is in the [docs folder](docs), which is hosted on [Read The Docs](https://node-bullshit-generator.readthedocs.io/).
+A very basic and **unfinished** documentation is in the [docs folder](docs), which is also hosted on [Read The Docs](https://node-bullshit-generator.readthedocs.io/). **Due of the document's unfinished nature, please be very careful while using it.**
 
 ## (Chinese) web page demo
 
