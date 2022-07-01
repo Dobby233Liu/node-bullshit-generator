@@ -36,7 +36,7 @@ Almost accurate to the original dict in the original Python version of `Bullshit
     -   https://github.com/menzi11/BullshitGenerator/pull/175
     -   Dobby233Liu's scrapped modifications of the `default` dict
 
-The Default dict, but with some *new* stuff inside.
+The Default dict, but with some _new_ stuff inside.
 It is recommended to use compotents to this dict in your own dict configurations, rather than just using the pre-made configuration.
 
 ## Chinese Internet Industry Terms
