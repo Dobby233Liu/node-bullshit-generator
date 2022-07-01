@@ -37,7 +37,7 @@ class 常用 {
      * @see 加段
      */
     static 能加段(段) {
-        return 段.indexOf("\n") > 0;
+        return 段.includes("\n");
     }
     /**
      * 将段中的所有段落添加到文章里

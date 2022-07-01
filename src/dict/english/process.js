@@ -7,7 +7,7 @@ let examplesMachine = null;
 let addingsMachine = null;
 let contrastsMachine = null;
 
-function ohNoes(arr, opt, rng) {
+function generateIterator(arr, opt, rng) {
     return opt["menzi11#175"]
         ? rng.洗牌遍历(arr)
         : {
@@ -20,15 +20,14 @@ function ohNoes(arr, opt, rng) {
           };
 }
 
-roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
-    let seg = _seg;
+roster["onSegment"] = function onSegment(seg, dict, opt, _, rng, type) {
     if (!opt["v3语法改进"] || rng.取随机数(5) <= 3) {
         if (type == "名人名言") {
             if (!examplesMachine)
-                examplesMachine = ohNoes(dict["examples"], opt, rng);
+                examplesMachine = generateIterator(dict["examples"], opt, rng);
             if (seg.includes("{prefix_2}")) {
                 if (!prefix2Machine)
-                    prefix2Machine = ohNoes(dict["prefix_2"], opt, rng);
+                    prefix2Machine = generateIterator(dict["prefix_2"], opt, rng);
                 return (
                     examplesMachine.next().value +
                     prefix2Machine.next().value +
@@ -37,13 +36,13 @@ roster["onSegment"] = function onSegment(_seg, dict, opt, useless, rng, type) {
             }
             return examplesMachine.next().value + seg;
         } else if (type == "废话") {
-            if (Math.floor(Math.random() * 100) - 20 <= 45) {
+            if (rng.取随机数(100) - 20 <= 45) {
                 if (!addingsMachine)
-                    addingsMachine = ohNoes(dict["addings"], opt, rng);
+                    addingsMachine = generateIterator(dict["addings"], opt, rng);
                 return addingsMachine.next().value + seg;
             }
             if (!contrastsMachine)
-                contrastsMachine = ohNoes(dict["contrasts"], opt, rng);
+                contrastsMachine = generateIterator(dict["contrasts"], opt, rng);
             return contrastsMachine.next().value + seg;
         }
     }
@@ -61,14 +60,14 @@ function clean(str) {
         .replace(/\? \./g, "?")
         .replace(/, \./g, ",")
         .replace(/\.\./g, ".")
-        .replace(/[a-z]/i, (x) => x.toUpperCase())
+        .replace(/[a-z]/, (x) => x.toUpperCase())
         .trim();
 }
 roster["onArticle"] = function onArticle(article) {
     let articleNew = [];
     for (i in article) {
         let part = article[i];
-        part = clean(part);
+        // part = clean(part);
         let sentencesLst = sentences(part);
         for (i in sentencesLst) {
             sentencesLst[i] = clean(sentencesLst[i]);
