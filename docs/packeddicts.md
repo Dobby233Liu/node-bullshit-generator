@@ -20,19 +20,19 @@ The default dict, used if none is specified. Slightly improved version of the `c
 -   Codename: `classic`
 -   Source: https://github.com/menzi11/BullshitGenerator/blob/master/data.json
 
-Almost accurate to the original dict in the original `BullshitGenerator`.
+Almost accurate to the original dict in the original Python version of `BullshitGenerator`.
 
-**Tip:** Disable `v3语法改进` to make the result even more close to it.
+**Tip:** Disable the `v3语法改进` option to make the output of the library closer to the original Python version.
 
 ## Default Plus
 
 -   Codename: `default-plus`
 -   Sources:
     -   https://github.com/menzi11/BullshitGenerator/pull/110
-    -   https://github.com/aetherwu (LOST)
+    -   A fork of the Python version by https://github.com/aetherwu (original repo can no longer be found)
     -   https://github.com/menzi11/BullshitGenerator/pull/107
     -   https://github.com/menzi11/BullshitGenerator/pull/209
-    -   https://github.com/qwas982 (his quotes can be disabled)
+    -   https://github.com/qwas982 (their quotes can be disabled)
     -   https://github.com/menzi11/BullshitGenerator/pull/175
     -   Dobby233Liu's scrapped modifications of the `default` dict
 
@@ -51,14 +51,14 @@ A compliation of random confusing terms that Chinese internet industry people us
 -   Codename: `english`
 -   Source: Heavliy modified version of https://github.com/JIUYANGZH/BullshitGenerator-English/blob/master/bullshitgenerator_English/bullshit_generator.csv
 
-Near-perfect translation of the `classic` dict to English. Relys on the `允许字典处理字符串` option being enabled a lot, also turns the theme into lower case by default. It is suggested that you set the `结段强制带标点符号` to true while using this dict.
+Near-perfect translation of the `classic` dict to English. Relys on the `允许字典处理字符串` option being enabled a lot, also turns the theme into lower case by default. It is suggested that you set the `结段强制带标点符号` option to true while using this dict.
 
 ## Japanese Dict
 
 -   Codename: `japanese`
 -   Source: https://github.com/garily/BullshitGenerator-Japanese/blob/master/index.html
 
-Near-perfect translation of the `classic` dict to Japanese.
+Translation of the `classic` dict to Japanese.
 
 ## qwas982
 
