@@ -21,42 +21,41 @@ function generateIterator(arr, opt, rng) {
 }
 
 roster["onSegment"] = function onSegment(seg, dict, opt, _, rng, type) {
-    if (!opt["v3语法改进"] || rng.取随机数(5) <= 3) {
-        if (type == "名人名言") {
-            if (!examplesMachine)
-                examplesMachine = generateIterator(dict["examples"], opt, rng);
-            if (seg.includes("{prefix_2}")) {
-                if (!prefix2Machine)
-                    prefix2Machine = generateIterator(
-                        dict["prefix_2"],
-                        opt,
-                        rng
-                    );
-                return (
-                    examplesMachine.next().value +
-                    prefix2Machine.next().value +
-                    seg.replace(/\{prefix_2\}/g, "")
-                );
-            }
-            return examplesMachine.next().value + seg;
-        } else if (type == "废话") {
-            if (rng.取随机数(100) - 20 <= 45) {
-                if (!addingsMachine)
-                    addingsMachine = generateIterator(
-                        dict["addings"],
-                        opt,
-                        rng
-                    );
-                return addingsMachine.next().value + seg;
-            }
-            if (!contrastsMachine)
-                contrastsMachine = generateIterator(
-                    dict["contrasts"],
+    if (type == "名人名言") {
+        if (!examplesMachine)
+            examplesMachine = generateIterator(dict["examples"], opt, rng);
+        // if not random.random() > 0.3: - there is no weighted random here
+        if (seg.includes("{prefix_2}")) {
+            if (!prefix2Machine)
+                prefix2Machine = generateIterator(
+                    dict["prefix_2"],
                     opt,
                     rng
                 );
-            return contrastsMachine.next().value + seg;
+            return (
+                examplesMachine.next().value +
+                prefix2Machine.next().value +
+                seg.replace(/\{prefix_2\}/g, "")
+            );
         }
+        return examplesMachine.next().value + seg;
+    } else if (type == "废话") {
+        if (rng.取随机数(100) - 20 <= 45) {
+            if (!addingsMachine)
+                addingsMachine = generateIterator(
+                    dict["addings"],
+                    opt,
+                    rng
+                );
+            return addingsMachine.next().value + seg;
+        }
+        if (!contrastsMachine)
+            contrastsMachine = generateIterator(
+                dict["contrasts"],
+                opt,
+                rng
+            );
+        return contrastsMachine.next().value + seg;
     }
     return seg;
 };
