@@ -1,5 +1,4 @@
 class 随机常用 {
-    constructor() {}
     /**
      * 返回0-1之间的随机小数
      * @returns {number}
