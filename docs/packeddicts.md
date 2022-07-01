@@ -65,4 +65,4 @@ Translation of the `classic` dict to Japanese.
 -   Codename: `qwas982`
 -   Source: https://github.com/qwas982
 
-Compilation of some infamous quotes fron the infamous Hanzi-based... Eh no, "Mandarin symbol" programming language pionner qwas982.
+Compilation of some infamous quotes fron the infamous Hanzi-based... Uh, no, "mandarin symbol" programming language pionner qwas982.
