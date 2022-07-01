@@ -53,8 +53,8 @@ For example, passing `a` as `主题` produces the following text:
 
 `长度` is the length of the article. For example, when you put `8000`, the library will try to make the article 8000 characters long.
 
-`字典` is a object that contains data that the library creates the article from.
-You can use a premade `字典`, for example:
+`字典` (dict) is a object that contains data that the library creates the article from.
+You can use a pre-made dict, for example:
 
 ```js
 const engDict = require("@lwys-pkg-releaser/node-bullshit-generator/src/dict/english/配置.js");
@@ -62,5 +62,6 @@ bullshit.生成("the world ending", 3000, engDict);
 ```
 
 will produce an 3000 characters long article with the English dict, with "the world ending" as the theme.
+A list of pre-made dicts can be found in [Included Dictionaries](packeddicts.md).
 
 `选项` is a object that contains configurations for the generation. You usually don't need to mess with it, but if you think you do, read the [Library Reference](libref.md) for all options.
