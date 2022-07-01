@@ -51,7 +51,7 @@ A compliation of random confusing terms that Chinese internet industry people us
 -   Codename: `english`
 -   Source: Heavliy modified version of https://github.com/JIUYANGZH/BullshitGenerator-English/blob/master/bullshitgenerator_English/bullshit_generator.csv
 
-Near-perfect translation of the `classic` dict to English. Relys on the `允许字典处理字符串` option being enabled a lot, also turns the theme into lower case by default.
+Near-perfect translation of the `classic` dict to English. Relys on the `允许字典处理字符串` option being enabled a lot, also turns the theme into lower case by default. It is suggested that you set the `结段强制带标点符号` to true while using this dict.
 
 ## Japanese Dict
 
