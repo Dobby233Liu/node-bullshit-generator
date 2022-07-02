@@ -1,5 +1,5 @@
 /**
- * libBullshit / 狗屁库
+ * node-bullshit-generator
  * @author Dobby233Liu
  * @license Anti-996 License 1.0
  */
