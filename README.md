@@ -26,4 +26,4 @@ A demo can be found at: https://Dobby233Liu.github.io/node-bullshit-generator
 
 ## License
 
-This program is licensed under the Anti 996 License, version 1.0 (draft). See [LICENSE](LICENSE) or [LICENSE_CN](LICENSE_CN).
+This program is licensed under the Anti 996 License, version 1.0 (draft). See [LICENSE](LICENSE) or [LICENSE_CN](LICENSE_CN). For license notices for dict data, see [Included Dictionaries](docs/packeddicts.md) in the documentation.
