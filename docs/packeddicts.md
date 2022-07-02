@@ -36,6 +36,7 @@ A recreation of the dict in the original Python `BullshitGenerator`.
     -   https://github.com/menzi11/BullshitGenerator/pull/175
     -   https://github.com/Windy-Dance/BullShitGenerator2.0
     -   https://github.com/Acfboy/BullshitGenerator/blob/master/data.json
+    -   https://github.com/yubaoquan/BullshitGenerator
     -   Dobby233Liu's scrapped modifications of the `default` dict
 
 The Default dict, but with some _new and cool_ stuff inside.
@@ -78,6 +79,7 @@ Copyright (c) 2020-present Dobby233Liu
 Copyright (c) 2020 PyBird/Windy-Dance
 Copyright (c) 2020 Acfboy
 Copyright (c) 2020 shadowings-zy
+Copyright (c) 2020 yubaoquan
 
 "Anti 996" License Version 1.0 (Draft)
 
