@@ -13,7 +13,7 @@ build:
 mkdocs:
   configuration: mkdocs.yml
 
-# We pin the jinja2 and mkdocs version in order to fix mkdocs/mkdocs#2799
+# We pin jinja2 and mkdocs in order to fix mkdocs/mkdocs#2799
 python:
    install:
    - requirements: docs/requirements.txt
