@@ -54,6 +54,7 @@ A compliation of random confusing terms that Chinese IT people use, for some rea
 -   Codename: `english`
 -   Sources:
     -   Heavliy modified version of https://github.com/JIUYANGZH/BullshitGenerator-English/blob/master/bullshitgenerator_English/bullshit_generator.csv
+    -   https://github.com/JIUYANGZH/bullshitgenerator
     -   https://github.com/chengtianyue/Steve-s-lowAP4-generator
     -   https://github.com/nextchentong/BullshitGenerator-English
 

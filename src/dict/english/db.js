@@ -46,6 +46,7 @@ module.exports = {
         "to a certain extent, {主题} is right. ",
         "after seeing this evidence, there is no way we can agree with {主题}. ",
         "the evidence presented about {主题} has shown that, ",
+        "the evidence presented about this assignment has shown that, ",
         "after the above discussion, we can see that ",
     ],
     addings: [
