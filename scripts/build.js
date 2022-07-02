@@ -84,6 +84,8 @@ const runBundle = () =>
         libBrowserName,
         "-o",
         libFileDistTemp,
+        // ignore the nasty browser field that is just for stupid cdns
+        "--no-bf",
     ]);
 
 // TODO: probably rewrite this to use terser api
