@@ -4,8 +4,8 @@ nav:
     - Home: "README.md"
     - "Using the Library":
           - "lib.md"
-          #- 'dict.md'
-          #- 'libref.md'
+          - "dict.md"
+          - "libref.md"
     - "cli.md"
-    #- "Other Stuff":
-    #- 'packeddicts.md'
+    - "Other Stuff":
+          - "packeddicts.md"

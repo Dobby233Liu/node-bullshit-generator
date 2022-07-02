@@ -2,8 +2,8 @@ node_modules
 .github
 .vscode
 *.md
-docs
 !README.md
+docs
 .gitpod.Dockerfile
 .gitpod.yml
 .prettierrc.json
