@@ -10559,9 +10559,7 @@ const bestQwas982Quotes = [
 ];
 const pr206 = ["古人{前面垫话}，莫看江面平如镜，要看水底万丈深。{后面垫话}"];
 module.exports = (applyQwas982Quotes = true) => {
-    let newFamous = originalFamous;
-    newFamous = newFamous.concat(liutongyangFamous);
-    newFamous = newFamous.concat(pr206);
+    let newFamous = originalFamous.concat(liutongyangFamous).concat(pr206);
     if (applyQwas982Quotes) newFamous = newFamous.concat(bestQwas982Quotes);
     return newFamous;
 };

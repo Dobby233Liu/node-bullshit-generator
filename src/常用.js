@@ -10,7 +10,7 @@ class 常用 {
      * @returns {Boolean}
      */
     static 是否以字符串结束(字符串, 检测列表) {
-        for (let i of 检测列表) {
+        for (const i of 检测列表) {
             if (字符串.endsWith(i)) {
                 return true;
             }

@@ -38,7 +38,7 @@ class 随机常用 {
     static 洗牌(数组) {
         let 洗牌后数组 = 数组.slice();
         for (let i = 洗牌后数组.length - 1; i > 0; i--) {
-            let j = this.取随机数(i + 1);
+            const j = this.取随机数(i + 1);
             [洗牌后数组[i], 洗牌后数组[j]] = [洗牌后数组[j], 洗牌后数组[i]];
         }
         return 洗牌后数组;

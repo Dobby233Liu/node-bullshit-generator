@@ -14,7 +14,7 @@ const cwdTrue = path.join(__dirname, "..");
 
 const exec = (cmd, args = [], cwd = cwdTrue) => {
     console.log(`> ${cmd} ${args.join(" ")}`);
-    let data = spawnSync(cmd, args, {
+    const data = spawnSync(cmd, args, {
         stdio: "inherit",
         shell: true,
         cwd: cwd,
@@ -121,9 +121,9 @@ const steps = {
 };
 
 function main() {
-    let param = process.argv[2];
+    const param = process.argv[2];
     console.log(`> ${param}`);
-    let step = steps[param];
+    const step = steps[param];
     if (step)
         if (typeof step == "function") step();
         else for (func of step) func();

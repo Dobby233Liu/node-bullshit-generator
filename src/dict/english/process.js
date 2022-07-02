@@ -1,12 +1,24 @@
 let roster = {};
-roster["onTheme"] = function onTheme(theme) {
+
+/**
+ * @param {string} theme
+ * @returns {string}
+ */
+roster.onTheme = function onTheme(theme) {
     return theme.toLowerCase();
 };
+
 let prefix2Machine = null;
 let examplesMachine = null;
 let addingsMachine = null;
 let contrastsMachine = null;
 
+/**
+ * @param {any[]} arr
+ * @param {Object} opt
+ * @param {Object} rng
+ * @returns {Obsject}
+ */
 function generateIterator(arr, opt, rng) {
     return opt["menzi11#175"]
         ? rng.洗牌遍历(arr)
@@ -20,7 +32,16 @@ function generateIterator(arr, opt, rng) {
           };
 }
 
-roster["onSegment"] = function onSegment(seg, dict, opt, _, rng, type) {
+/**
+ * @param {string} seg
+ * @param {Object} dict
+ * @param {Object} opt
+ * @param {Object} _
+ * @param {Object} rng
+ * @param {string} type
+ * @returns {string}
+ */
+roster.onSegment = function onSegment(seg, dict, opt, _, rng, type) {
     if (type == "名人名言") {
         if (!examplesMachine)
             examplesMachine = generateIterator(dict["examples"], opt, rng);
@@ -48,10 +69,17 @@ roster["onSegment"] = function onSegment(seg, dict, opt, _, rng, type) {
     return seg;
 };
 
+/**
+ * @param {string} str
+ * @returns {string[]}
+ */
 function sentences(str) {
     return str.match(/([^\.!\?]+[\.!\?]+)|([^\.!\?]+$)/g);
 }
-
+/**
+ * @param {string} str
+ * @returns {string}
+ */
 function clean(str) {
     return str
         .replace(/  /g, " ")
@@ -62,17 +90,17 @@ function clean(str) {
         .replace(/[a-z]/i, (x) => x.toUpperCase())
         .trim();
 }
-roster["onArticle"] = function onArticle(article) {
-    let articleNew = [];
-    for (i in article) {
-        let part = article[i];
-        // part = clean(part);
-        let sentencesLst = sentences(part);
-        for (i in sentencesLst) {
-            sentencesLst[i] = clean(sentencesLst[i]);
-        }
-        articleNew.push(sentencesLst.join(" "));
-    }
-    return articleNew;
+
+/**
+ * @param {string[]} article
+ * @returns {string[]}
+ */
+roster.onArticle = function onArticle(article) {
+    return article.map((part) =>
+        sentences(part)
+            .map((i) => clean(i))
+            .join(" ")
+    );
 };
+
 module.exports = roster;
