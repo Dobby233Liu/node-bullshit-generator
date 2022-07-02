@@ -81,7 +81,6 @@ let runBundle = () =>
         libBrowserName,
         "-o",
         libFileDistTemp,
-        "--no-bf", // this is due of how our package.json is configured
     ]);
 
 let runMinifyBundle = () =>

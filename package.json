@@ -3,7 +3,6 @@
     "version": "1.2.0",
     "description": "Port of menzi11/BullshitGenerator@github.com to JavaScript",
     "main": "lib/狗屁库.js",
-    "browser": "dist/狗屁库.js",
     "unpkg": "dist/狗屁库.js",
     "bin": {
         "bullshit-generator": "bin/bs-gen.js"
