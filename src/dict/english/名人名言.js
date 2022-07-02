@@ -1,6 +1,6 @@
 module.exports = (function (db) {
-    let authors = db["author"];
-    let sayings = db["saying"];
+    const authors = db["author"];
+    const sayings = db["saying"];
 
     let ret = [];
     for (let i in sayings) {

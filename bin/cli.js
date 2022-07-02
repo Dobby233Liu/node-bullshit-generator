@@ -6,7 +6,7 @@
  * @license Anti-996 License 1.0
  */
 
-let helpText = `Generates random Chinese bullshit.
+const helpText = `Generates random Chinese bullshit.
 
 bullshit-generator [theme] [length] [dict]
     theme: Article/bullshit theme (string)
@@ -19,19 +19,17 @@ The source code can be found at https://github.com/Dobby233Liu/node-bullshit-gen
 This program is licensed under the Anti 996 License, version 1.0 (draft).
 See https://github.com/996icu/996.ICU/blob/617129b/LICENSE`;
 
-let argvClean = process.argv.map((x) => x.trim().toLowerCase());
+let argvClean = process.argv.slice(2);
 let theme, length, library, dict, article;
 if (argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
     console.log(helpText);
     process.exit(1);
 } else {
-    theme = process.argv[2] || "学生会退会";
-    length = argvClean[3]
-        ? argvClean[3] >= 0 && parseInt(argvClean[3])
+    theme = process.argv[0] || "学生会退会";
+    length = argvClean[1]
+        ? argvClean[1] >= 0 && parseInt(argvClean[1])
         : undefined;
-    dict = require(process.argv[4]
-        ? process.argv[4]
-        : "../lib/dict/default/配置");
+    dict = require(argvClean[2] ? argvClean[2] : "../lib/dict/default/配置");
 
     library = new (require(".."))();
     article = library.生成(theme, length, dict);

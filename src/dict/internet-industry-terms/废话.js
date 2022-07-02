@@ -1,4 +1,4 @@
-let newline = require("./newline");
+const newline = require("./newline");
 // 论述
 module.exports = [
     "既然如此，",

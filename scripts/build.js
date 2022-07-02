@@ -4,15 +4,15 @@
  * @see {@link https://docgov.dev/posts/npm-scripts/}
  */
 
-let { spawnSync } = require("child_process");
-let rimraf = require("rimraf");
 const process = require("process");
+const { spawnSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
+const rimraf = require("rimraf");
 
-let cwdTrue = path.join(__dirname, "..");
+const cwdTrue = path.join(__dirname, "..");
 
-let exec = (cmd, args = [], cwd = cwdTrue) => {
+const exec = (cmd, args = [], cwd = cwdTrue) => {
     console.log(`> ${cmd} ${args.join(" ")}`);
     let data = spawnSync(cmd, args, {
         stdio: "inherit",
@@ -68,11 +68,11 @@ function findExecutable(exe) {
         } catch (e) {}
     throw new Error("Did not find executable: " + exe);
 }
-let npx = `"${findExecutable("npx")}"`;
+const npx = `"${findExecutable("npx")}"`;
 
-let runBabel = () => exec(npx, ["babel", srcDir, "--out-dir", libDir]);
+const runBabel = () => exec(npx, ["babel", srcDir, "--out-dir", libDir]);
 
-let runBundle = () =>
+const runBundle = () =>
     exec(npx, [
         "browserify",
         "-e",
@@ -83,7 +83,7 @@ let runBundle = () =>
         libFileDistTemp,
     ]);
 
-let runMinifyBundle = () =>
+const runMinifyBundle = () =>
     exec(npx, [
         "terser",
         libFileDistTemp,
@@ -94,25 +94,25 @@ let runMinifyBundle = () =>
         "--warn",
     ]);
 
-let doMoveFile = (fnOld, fnNew) => {
+const doMoveFile = (fnOld, fnNew) => {
     console.log(`> mv "${fnOld}" "${fnNew}"`);
     fs.renameSync(fnOld, fnNew);
 };
-let fixFilenames = () => {
+const fixFilenames = () => {
     doMoveFile(libFileDistTemp, libFileDist);
     doMoveFile(libMinifiedFileTemp, libMinifiedFile);
 };
 
-let doRm = (dir) => {
+const doRm = (dir) => {
     console.log(`> rm -rf "${dir}"`);
     rimraf.sync(dir);
 };
-let runClean = () => {
+const runClean = () => {
     doRm(libDir);
     doRm(distDir);
 };
 
-let steps = {
+const steps = {
     babel: runBabel,
     bundle: [runBabel, runBundle, fixFilenames],
     "minify-bundle": [runMinifyBundle, fixFilenames],
@@ -120,13 +120,16 @@ let steps = {
     clean: runClean,
 };
 
-let param = process.argv[2];
-console.log(`> ${param}`);
-let step = steps[param];
-if (step)
-    if (typeof step == "function") step();
-    else for (func of step) func();
-else {
-    console.error("No such step: " + step);
-    process.exit(1);
+function main() {
+    let param = process.argv[2];
+    console.log(`> ${param}`);
+    let step = steps[param];
+    if (step)
+        if (typeof step == "function") step();
+        else for (func of step) func();
+    else {
+        console.error("No such step: " + step);
+        process.exit(1);
+    }
 }
+main();
