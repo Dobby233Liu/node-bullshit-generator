@@ -15,6 +15,7 @@ class 常用 {
         }
         return false;
     }
+
     /**
      * 把对象中所有元素覆盖到镜像上，不影响传入的镜像
      * @param {Object} 对象
@@ -30,6 +31,7 @@ class 常用 {
         }
         return 合成;
     }
+
     /**
      * 检测段落是否有换行符（适合使用加段函数）
      * @param {string} 段
@@ -39,6 +41,7 @@ class 常用 {
     static 能加段(段) {
         return 段.includes("\n");
     }
+
     /**
      * 将段中的所有段落添加到文章里
      * @param {string[]} 文章
@@ -50,6 +53,7 @@ class 常用 {
         文章 = 文章.concat(分段);
         return 文章;
     }
+
     /**
      * 返回数组中的最后一个元素
      * @param {any[]} 数组
@@ -58,6 +62,7 @@ class 常用 {
     static 最后一项(数组) {
         return 数组[数组.length - 1];
     }
+
     /**
      * 返回文章中所有段落的长度，如果加换行符长度为真，
      * 把隐性的换行符也算在内

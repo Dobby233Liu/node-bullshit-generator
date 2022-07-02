@@ -79,6 +79,7 @@ let runBabel = () =>
         "--only",
         onlyCompileFiles,
     ]);
+
 let runBundle = () =>
     exec(npx, [
         "browserify",
@@ -89,6 +90,7 @@ let runBundle = () =>
         "-o",
         `${libFileDistTemp}`,
     ]);
+
 let runMinifyBundle = () =>
     exec(npx, [
         "terser",
@@ -99,6 +101,7 @@ let runMinifyBundle = () =>
         "-c",
         "--warn",
     ]);
+
 let doMoveFile = (fnOld, fnNew) => {
     console.log(`> mv "${fnOld}" "${fnNew}"`);
     fs.renameSync(fnOld, fnNew);
@@ -107,13 +110,14 @@ let fixFilenames = () => {
     doMoveFile(libFileDistTemp, libFileDist);
     doMoveFile(libMinifiedFileTemp, libMinifiedFile);
 };
-let doRimraf = (dir) => {
-    console.log(`> rimraf "${dir}"`);
+
+let doRm = (dir) => {
+    console.log(`> rm -rf "${dir}"`);
     rimraf.sync(dir);
 };
 let runClean = () => {
-    doRimraf(libDir);
-    doRimraf(distDir);
+    doRm(libDir);
+    doRm(distDir);
 };
 
 let steps = {
@@ -130,4 +134,7 @@ let step = steps[param];
 if (step)
     if (typeof step == "function") step();
     else for (func of step) func();
-else console.error("No such step");
+else {
+    console.error("No such step: " + step);
+    process.exit(1);
+}

@@ -25,7 +25,9 @@ const 默认选项 = {
 const 默认字典 = require("./dict/default/配置");
 
 class 狗屁库 {
+    // FIXME: trash this
     constructor() {}
+
     /**
      * 生成一篇废话文章
      * @param {string} 主题
@@ -143,6 +145,7 @@ class 狗屁库 {
         if (!选项.返回段落列表) 文章 = 文章.join("\n");
         return 文章;
     }
+
     generate = this.生成;
 }
 module.exports = 狗屁库;
