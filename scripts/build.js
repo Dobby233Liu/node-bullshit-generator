@@ -13,6 +13,7 @@ let exec = (cmd, args = []) => {
     console.log(`> ${cmd} ${args.join(" ")}`);
     let data = spawnSync(cmd, args, {
         stdio: "inherit",
+        shell: true,
     });
     if (data.status != 0 || data.signal) {
         console.log("");
@@ -63,9 +64,21 @@ function findExecutable(exe) {
         } catch (e) {}
     throw new Error("Did not find executable: " + exe);
 }
-let npx = findExecutable("npx");
+let npx = `"${findExecutable("npx")}"`;
 
-let runBabel = () => exec(npx, ["babel", srcDir, "--out-dir", libDir]);
+// browserify will only bundle these files
+let onlyCompileFiles = ["src/*.js", "src/dict/default/*.js"]
+    .map((v) => `"${v}"`)
+    .join(",");
+let runBabel = () =>
+    exec(npx, [
+        "babel",
+        srcDir,
+        "--out-dir",
+        libDir,
+        "--only",
+        onlyCompileFiles,
+    ]);
 let runBundle = () =>
     exec(npx, [
         "browserify",

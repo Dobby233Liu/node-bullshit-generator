@@ -46,11 +46,13 @@ class 随机常用 {
      */
     static 洗牌遍历(数组, 重复度 = 2) {
         if (数组.length < 1) throw Error("Invaild array");
+
         let 洗牌后数组 = [];
         let i = 0;
         for (let ii = 0; ii < 重复度; ii++)
             洗牌后数组 = 洗牌后数组.concat(数组);
         洗牌后数组 = this.洗牌(洗牌后数组);
+
         return {
             next: function __next__() {
                 const ret = 洗牌后数组[i++];
