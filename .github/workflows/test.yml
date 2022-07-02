@@ -30,4 +30,4 @@ jobs:
           with:
               node-version: '16'
         - run: npm install
-        - run: node bin/bs-gen.js 学生会退会 6000 ${{ github.workspace }}/lib/dict/${{ matrix.dict }}/配置.js
+        - run: node bin/cli.js 学生会退会 6000 ${{ github.workspace }}/lib/dict/${{ matrix.dict }}/配置.js

@@ -33,9 +33,9 @@ let exec = (cmd, args = [], cwd = cwdTrue) => {
     }
 };
 
-const srcDir = "./src";
-const libDir = "./lib";
-const distDir = "./dist";
+const srcDir = "src";
+const libDir = "lib";
+const distDir = "dist";
 const libBrowserName = "bullshit";
 
 /* not 狗屁库.js, otherwise when the script gets to the

@@ -5,7 +5,7 @@
     "main": "lib/狗屁库.js",
     "unpkg": "dist/狗屁库.js",
     "bin": {
-        "bullshit-generator": "bin/bs-gen.js"
+        "bullshit-generator": "bin/cli.js"
     },
     "directories": {
         "src": "src",
@@ -20,13 +20,13 @@
         "maintained node versions"
     ],
     "scripts": {
-        "test": "node ./bin/bs-gen.js 学生会退会",
+        "test": "node bin/cli.js 学生会退会",
         "build": "npm run bundle+min",
-        "clean": "node ./scripts/build.js clean",
-        "babel": "node ./scripts/build.js babel",
-        "bundle": "node ./scripts/build.js bundle",
-        "bundle+min": "node ./scripts/build.js bundle+min",
-        "minify-bundle": "node ./scripts/build.js minify-bundle",
+        "clean": "node scripts/build.js clean",
+        "babel": "node scripts/build.js babel",
+        "bundle": "node scripts/build.js bundle",
+        "bundle+min": "node scripts/build.js bundle+min",
+        "minify-bundle": "node scripts/build.js minify-bundle",
         "prepare": "npm run bundle+min"
     },
     "author": {
