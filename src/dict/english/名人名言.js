@@ -7,7 +7,7 @@ module.exports = (function (db) {
 
     let ret = [];
     for (let i in authors) {
-        ret.push(authors[i] + "{前面垫话}" + sayings[i] + " {后面垫话}");
+        ret.push(`${authors[i]}{前面垫话}${sayings[i]} {后面垫话}`);
     }
     return ret;
 })(require("./db"));
