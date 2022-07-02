@@ -83,7 +83,7 @@ Copyright (c) 2020 PyBird/Windy-Dance
 Copyright (c) 2020 Acfboy
 Copyright (c) 2020 shadowings-zy
 Copyright (c) 2020 yubaoquan
-Copyright (c) 2020 nextchentong
+Copyright (c) 2019 nextchentong
 
 "Anti 996" License Version 1.0 (Draft)
 
