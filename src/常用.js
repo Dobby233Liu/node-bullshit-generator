@@ -1,5 +1,7 @@
-// 常用类
-// @author Dobby233Liu
+/**
+ * 常用类
+ * @author Dobby233Liu
+ */
 class 常用 {
     /**
      * 检测字符串结尾是否有检测列表中的任意一段文字
@@ -78,4 +80,5 @@ class 常用 {
         return 长;
     }
 }
+
 module.exports = 常用;

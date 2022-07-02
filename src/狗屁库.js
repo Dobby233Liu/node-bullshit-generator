@@ -25,7 +25,7 @@ const 默认选项 = {
 const 默认字典 = require("./dict/default/配置");
 
 class 狗屁库 {
-    // FIXME: trash this
+    // FIXME: 把这个去掉
     constructor() {}
 
     /**
@@ -148,4 +148,5 @@ class 狗屁库 {
 
     generate = this.生成;
 }
+
 module.exports = 狗屁库;
