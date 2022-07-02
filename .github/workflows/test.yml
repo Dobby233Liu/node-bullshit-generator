@@ -4,11 +4,15 @@ on:
           - 'src/**'
           - 'bin/**'
           - 'package.json'
+          - 'package-lock.json'
+          - '.github/workflows/test.yml'
     pull_request:
         paths:
           - 'src/**'
           - 'bin/**'
           - 'package.json'
+          - 'package-lock.json'
+          - '.github/workflows/test.yml'
     workflow_dispatch:
 
 jobs:

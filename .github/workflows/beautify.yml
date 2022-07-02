@@ -1,4 +1,17 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+    push:
+        paths:
+          - '*.md'
+          - '*.js'
+          - '*.json'
+          - '*.yml'
+    pull_request:
+        paths:
+          - '*.md'
+          - '*.js'
+          - '*.json'
+          - '*.yml'
+    workflow_dispatch:
 
 jobs:
     beautify:

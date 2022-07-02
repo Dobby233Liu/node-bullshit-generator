@@ -26,9 +26,8 @@
         "clean": "rm -r ./dist ./_babel_lib",
         "babel": "babel src --out-dir ./_babel_lib",
         "bundle": "npm run babel && browserify -e ./_babel_lib/狗屁库.js -s bullshit -o ./dist/狗屁库.js",
-        "bundle+min": "npm run bundle && npm run min-bundle",
-        "min-bundle": "terser ./dist/狗屁库.js -o ./dist/狗屁库.min.js -m -c --timings --verbose --warn",
-        "beautify": "echo \"WARNING: Please stop using this.\" && prettier --write .",
+        "bundle+min": "npm run bundle && npm run minify-bundle",
+        "minify-bundle": "terser ./dist/狗屁库.js -o ./dist/狗屁库.min.js -m -c --timings --verbose --warn",
         "prepack": "npm run bundle+min",
         "postpack": "npm run clean"
     },
