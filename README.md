@@ -1,41 +1,28 @@
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Dobby233Liu/node-bullshit-generator) 
-
 # node-bullshit-generator
 
-A Node.js library & program that generates meaningless Chinese bullshit when run.
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Dobby233Liu/node-bullshit-generator)
+
+A Node.js library/program that generates meaningless Chinese bullshit.
 
 Basically, it's http://github.com/menzi11/BullshitGenerator but for Node.js.
 
-## Usage
-### As a library ("libBullshit")
+## Installation
 
-If you're installing the library using `npm` from the official registry, the package is `@lwys-pkg-releaser/node-bullshit-generator`, and you get it.
+Through `npm`:
 
-For browsers, the library should be in `/lib/狗屁库(.min).js` in the source tree, which only includes the library itself and the `default` dict.
-TODO CDN
-
-The library gives a class to you (`window.libBullshit` in browser; `require` users should know where to find it). There should be a function inside after you construct it:
-```javascript
-this.生成(主题 = "学生会退会", 长度 = 6000 * 主题.length, _字典 = {...}, _选项 = {...})
-```
-Simply call the function with the parameters you would like to supply.
-
-*todo: Document the parameters. <s>I am too lazy so do this later.</s>*
-
-### As a simple app
-
-```
-bullshit-generator [theme] [length] [dict]
-[theme] = Article/bullshit theme, as a string.
-[length] = Bullshit length. Must be a positive integer, or the value is ignored.
-[dict] = Path leading to a "dict config" file. Export must be a object.
-You can also specify a "-h" or "--help" in place of anywhere to display a help message
+```bash
+npm install @lwys-pkg-releaser/node-bullshit-generator
 ```
 
-### As a (Chinese) web page
-https://Dobby233Liu.github.io/node-bullshit-generator
+## Documentation
 
-Note: It uses the master version with the `default` dict.
+A very basic and **unfinished** documentation is in the [docs folder](docs), which is also hosted on [Read The Docs](https://node-bullshit-generator.readthedocs.io/). **Due of the document's unfinished nature, please be very careful while using it.**
+
+## (Chinese) web page demo
+
+A demo can be found at: https://Dobby233Liu.github.io/node-bullshit-generator
+
+**Note:** This demo is not actively maintained.
 
 ## License
 

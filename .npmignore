@@ -3,11 +3,13 @@ _babel_lib
 .github
 .vscode
 *.md
-!README*.md
-new_version.bat
+docs
+!README.md
 .gitpod.Dockerfile
 .gitpod.yml
-.jsbeautifyrc
-#lib
+.prettierrc.json
 .babelrc
 .gitattributes
+.readthedocs.yml
+mkdocs.yml
+.*ignore

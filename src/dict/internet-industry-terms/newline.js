@@ -3,4 +3,4 @@ module.exports = function newline(orig) {
     // and the paragraph is getting long, it finishes the paragraph.
     // Make the generator make a new line for us.
     return orig + "\n";
-}
+};

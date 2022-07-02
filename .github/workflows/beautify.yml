@@ -1,27 +1,26 @@
-on:
-    push:
-    # This workflow doesn't do anything with a PR
-    #pull_request:
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
-    bundle_plus_min:
+    beautify:
         runs-on: ubuntu-latest
-        if: "!contains(github.event.head_commit.message, '[nobundle]')"
+        concurrency: beautify-${{ github.ref }}
         steps:
             - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '16'
             - uses: fregante/setup-git-token@v1
               with:
                 token: ${{ secrets.GITHUB_TOKEN }}
-                # use bot creds rather than org creds
                 name: github-actions[bot]
                 email: 41898282+github-actions[bot]@users.noreply.github.com
             - run: npm install
-            #- run: "git pull --tags -f" # checklater
-            - run: npm run beautify
+            - run: "npx prettier --check ."
+              id: check-beautify
               continue-on-error: true
-            - run: npm run bundle+min
-              #continue-on-error: true
-            - run: git add . && git commit -m "[nobundle] Bundle library and beautify"
+            - run: "npx prettier --write ."
+              if: "steps.check-beautify.outcome == 'failure' && !contains(github.event.head_commit.message, '[skip beautify]') && (github.event == 'workflow_dispatch' || github.actor == 'Dobby233Liu')"
+            - run: git add . && git commit -m "Beautify source files"
               id: commit-files
               continue-on-error: true
             - uses: ad-m/github-push-action@master
@@ -30,3 +29,6 @@ jobs:
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
                 branch: ${{ github.ref }}
+            - name: Error now if errored before
+              run: exit 1
+              if: "steps.check-beautify.outcome == 'failure'"

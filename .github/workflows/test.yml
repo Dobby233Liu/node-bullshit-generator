@@ -1,7 +1,15 @@
 on:
     push:
-    workflow_dispatch:
+        paths:
+          - 'src/**'
+          - 'bin/**'
+          - 'package.json'
     pull_request:
+        paths:
+          - 'src/**'
+          - 'bin/**'
+          - 'package.json'
+    workflow_dispatch:
 
 jobs:
     test-cli:
@@ -12,4 +20,8 @@ jobs:
                 dict: [classic, default-plus, default, internet-industry-terms, qwas982, english, japanese]
         steps:
         - uses: actions/checkout@v2
+        - uses: actions/setup-node@v2
+          with:
+              node-version: '16'
+        - run: npm install
         - run: node bin/bs-gen.js 学生会退会 6000 ${{ github.workspace }}/src/dict/${{ matrix.dict }}/配置.js

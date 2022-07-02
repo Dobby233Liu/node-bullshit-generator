@@ -1,14 +1,14 @@
 version: 2
 
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    #assignees:
-    #  - "Dobby233Liu"
-    #reviewers:
-    #  - "Dobby233Liu"
-    labels:
-      - "dependencies"
-    #versioning-strategy: increase
+    - package-ecosystem: "npm"
+      directory: "/"
+      schedule:
+          interval: "weekly"
+      #assignees:
+      #  - "Dobby233Liu"
+      #reviewers:
+      #  - "Dobby233Liu"
+      labels:
+          - "dependencies"
+      #versioning-strategy: increase
