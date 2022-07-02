@@ -31,12 +31,15 @@ let exec = (cmd, args = []) => {
 const srcDir = "./src";
 const libDir = "./lib";
 const distDir = "./dist";
+const libBrowserName = "bullshit";
+
+/* not 狗屁库.js, otherwise when the script gets to the
+   browserify step, it would just fail mysteriously */
 const libFile = "bullshit.js";
 const libFileDistTemp = `${distDir}/bullshit.js`;
 const libMinifiedFileTemp = `${distDir}/bullshit.min.js`;
 const libFileDist = `${distDir}/狗屁库.js`;
 const libMinifiedFile = `${distDir}/狗屁库.min.js`;
-const libBrowserName = "bullshit";
 
 /**
  * @param {string} exe executable name (without extension if on Windows)
@@ -61,6 +64,7 @@ function findExecutable(exe) {
     throw new Error("Did not find executable: " + exe);
 }
 let npx = findExecutable("npx");
+
 let runBabel = () => exec(npx, ["babel", srcDir, "--out-dir", libDir]);
 let runBundle = () =>
     exec(npx, [
