@@ -23,13 +23,12 @@
         "test": "node ./bin/bs-gen.js 学生会退会",
         "build": "npm run bundle+min",
         "clean": "node ./scripts/build.js clean",
-        "clean-bundle": "node ./scripts/build.js clean-bundle",
         "babel": "node ./scripts/build.js babel",
         "bundle": "node ./scripts/build.js bundle",
         "bundle+min": "node ./scripts/build.js bundle+min",
         "minify-bundle": "node ./scripts/build.js minify-bundle",
-        "prepack": "npm run bundle+min",
-        "postpack": "npm run clean-bundle"
+        "prepare": "npm run bundle+min",
+        "postpack": "npm run clean"
     },
     "author": {
         "name": "Liu Wenyuan",

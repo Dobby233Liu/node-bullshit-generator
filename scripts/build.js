@@ -111,9 +111,6 @@ let runClean = () => {
     doRm(libDir);
     doRm(distDir);
 };
-let runCleanBundle = () => {
-    doRm(distDir);
-};
 
 let steps = {
     babel: runBabel,
@@ -121,7 +118,6 @@ let steps = {
     "minify-bundle": [runMinifyBundle, fixFilenames],
     "bundle+min": [runBabel, runBundle, runMinifyBundle, fixFilenames],
     clean: runClean,
-    "clean-bundle": runCleanBundle,
 };
 
 let param = process.argv[2];
