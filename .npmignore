@@ -11,4 +11,4 @@ docs
 .gitattributes
 .readthedocs.yml
 mkdocs.yml
-.*ignore
+.*ignore*
