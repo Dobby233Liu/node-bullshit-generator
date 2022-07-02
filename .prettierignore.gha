@@ -1,0 +1,4 @@
+lib
+dist
+# Actions won't let the beautify workflow modify workflows
+.github/workflows/*

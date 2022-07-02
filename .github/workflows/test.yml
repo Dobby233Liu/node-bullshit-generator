@@ -1,20 +1,21 @@
+name: Test CLI
 on:
     push:
         paths:
-          - 'src/**'
-          - 'bin/**'
-          - 'package.json'
-          - 'package-lock.json'
-          - '.babelrc'
-          - '.github/workflows/test.yml'
+            - "src/**"
+            - "bin/**"
+            - "package.json"
+            - "package-lock.json"
+            - ".babelrc"
+            - ".github/workflows/test.yml"
     pull_request:
         paths:
-          - 'src/**'
-          - 'bin/**'
-          - 'package.json'
-          - 'package-lock.json'
-          - '.babelrc'
-          - '.github/workflows/test.yml'
+            - "src/**"
+            - "bin/**"
+            - "package.json"
+            - "package-lock.json"
+            - ".babelrc"
+            - ".github/workflows/test.yml"
     workflow_dispatch:
 
 jobs:
@@ -23,11 +24,20 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                dict: [classic, default-plus, default, internet-industry-terms, qwas982, english, japanese]
+                dict:
+                    [
+                        classic,
+                        default-plus,
+                        default,
+                        internet-industry-terms,
+                        qwas982,
+                        english,
+                        japanese,
+                    ]
         steps:
-        - uses: actions/checkout@v2
-        - uses: actions/setup-node@v2
-          with:
-              node-version: '16'
-        - run: npm install
-        - run: node bin/cli.js 学生会退会 6000 ${{ github.workspace }}/lib/dict/${{ matrix.dict }}/配置.js
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "16"
+            - run: npm install
+            - run: node bin/cli.js 学生会退会 6000 ${{ github.workspace }}/lib/dict/${{ matrix.dict }}/配置.js

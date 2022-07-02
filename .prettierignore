@@ -1,4 +1,2 @@
 lib
 dist
-# I don't bother, Actions won't let the beautify workflow modify workflows anyway
-.github/workflows/*

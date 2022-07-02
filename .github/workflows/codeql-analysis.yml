@@ -1,36 +1,36 @@
 name: CodeQL
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-  schedule:
-    - cron: '42 22 * * 5'
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
+    schedule:
+        - cron: "42 22 * * 5"
 
 jobs:
-  analyze:
-    name: Analyze
-    
-    runs-on: ubuntu-latest
-    
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
+    analyze:
+        name: Analyze
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+        runs-on: ubuntu-latest
 
-    # Initializes the CodeQL tools for scanning.
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
-      with:
-        languages: "javascript"
+        permissions:
+            actions: read
+            contents: read
+            security-events: write
 
-    - run: |
-        npm install
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
 
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v2
+            # Initializes the CodeQL tools for scanning.
+            - name: Initialize CodeQL
+              uses: github/codeql-action/init@v2
+              with:
+                  languages: "javascript"
+
+            - run: |
+                  npm install
+
+            - name: Perform CodeQL Analysis
+              uses: github/codeql-action/analyze@v2

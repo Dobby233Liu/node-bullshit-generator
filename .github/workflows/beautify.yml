@@ -1,20 +1,21 @@
+name: Beautify source files
 on:
     push:
         paths:
-          - '**/*.md'
-          - '**/*.js'
-          - '**/*.json'
-          - '.babelrc'
-          - '**/*.yml'
-          - '.github/workflows/beautify.yml'
+            - "**/*.md"
+            - "**/*.js"
+            - "**/*.json"
+            - ".babelrc"
+            - "**/*.yml"
+            - ".github/workflows/beautify.yml"
     pull_request:
         paths:
-          - '**/*.md'
-          - '**/*.js'
-          - '**/*.json'
-          - '.babelrc'
-          - '**/*.yml'
-          - '.github/workflows/beautify.yml'
+            - "**/*.md"
+            - "**/*.js"
+            - "**/*.json"
+            - ".babelrc"
+            - "**/*.yml"
+            - ".github/workflows/beautify.yml"
     workflow_dispatch:
 
 jobs:
@@ -25,17 +26,17 @@ jobs:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
               with:
-                  node-version: '16'
+                  node-version: "16"
             - uses: fregante/setup-git-token@v1
               with:
-                token: ${{ secrets.GITHUB_TOKEN }}
-                name: github-actions[bot]
-                email: 41898282+github-actions[bot]@users.noreply.github.com
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  name: github-actions[bot]
+                  email: 41898282+github-actions[bot]@users.noreply.github.com
             - run: npm install
-            - run: "npx prettier --check ."
+            - run: "npx prettier --check . --ignore-path .prettierignore.gha"
               id: check-beautify
               continue-on-error: true
-            - run: "npx prettier --write ."
+            - run: "npx prettier --write . --ignore-path .prettierignore.gha"
               if: "steps.check-beautify.outcome == 'failure' && !contains(github.event.head_commit.message, '[skip beautify]') && (github.event == 'workflow_dispatch' || github.actor == 'Dobby233Liu')"
             - run: git add . && git commit -m "Beautify source files"
               id: commit-files
@@ -44,8 +45,8 @@ jobs:
               continue-on-error: true
               if: "steps.commit-files.outcome != 'failure'"
               with:
-                github_token: ${{ secrets.GITHUB_TOKEN }}
-                branch: ${{ github.ref }}
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  branch: ${{ github.ref }}
             - name: Error now if errored before
               run: exit 1
               if: "steps.check-beautify.outcome == 'failure'"
