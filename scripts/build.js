@@ -9,7 +9,6 @@ const { spawnSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
 const rimraf = require("rimraf");
-const browserify = require("browserify");
 
 const cwdTrue = path.join(__dirname, "..");
 
@@ -72,17 +71,20 @@ function findExecutable(exe) {
 const npx = `"${findExecutable("npx")}"`;
 
 // TODO: probably rewrite this to use babel api
+// when my brain is ready
 const runBabel = () => exec(npx, ["babel", srcDir, "--out-dir", libDir]);
 
-const runBundle = () => {
-    console.log(
-        `> browserify "${libDir}/${libFile}" -s "${libBrowserName}" > "${libFileDistTemp}"`
-    );
-    let bundler = browserify(`${libDir}/${libFile}`, {
-        standalone: libBrowserName,
-    });
-    fs.writeFileSync(libFileDistTemp, bundler.bundle());
-};
+// TODO: probably rewrite this to use browserify api
+const runBundle = () =>
+    exec(npx, [
+        "browserify",
+        "-e",
+        `${libDir}/${libFile}`,
+        "-s",
+        libBrowserName,
+        "-o",
+        libFileDistTemp,
+    ]);
 
 // TODO: probably rewrite this to use terser api
 const runMinifyBundle = (bundleFile, outputFile) => () =>
