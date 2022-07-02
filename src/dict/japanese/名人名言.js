@@ -1,6 +1,6 @@
 module.exports = (function (arr) {
     let ret = [];
-    for (心に残る言葉 of arr) {
+    for (let 心に残る言葉 of arr) {
         ret.push(
             "昔" +
                 心に残る言葉[0] +
