@@ -69,7 +69,7 @@ This dict is based on a translation of the `classic` dict to Japanese.
 
 Badly made dict with data based on some infamous quotes from the infamous Hanzi-based... Uh, no, "mandarin symbol" programming language pionner qwas982.
 
-## License Notice
+## License Notices
 
 ```
 Copyright (c) 2019 meng ke and contributors
