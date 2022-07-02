@@ -1,6 +1,6 @@
 {
     "name": "@lwys-pkg-releaser/node-bullshit-generator",
-    "version": "1.2.0",
+    "version": "1.4.0",
     "description": "Port of menzi11/BullshitGenerator@github.com to JavaScript",
     "main": "lib/狗屁库.js",
     "unpkg": "dist/狗屁库.js",
