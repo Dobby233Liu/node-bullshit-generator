@@ -83,16 +83,8 @@ const runBundle = () =>
         libFileDistTemp,
     ]);
 
-const runMinifyBundle = () =>
-    exec(npx, [
-        "terser",
-        libFileDistTemp,
-        "-o",
-        libMinifiedFileTemp,
-        "-m",
-        "-c",
-        "--warn",
-    ]);
+const runMinifyBundle = (bundleFile, outputFile) => () =>
+    exec(npx, ["terser", bundleFile, "-o", outputFile, "-m", "-c", "--warn"]);
 
 const doMoveFile = (fnOld, fnNew) => {
     console.log(`> mv "${fnOld}" "${fnNew}"`);
@@ -115,8 +107,16 @@ const runClean = () => {
 const steps = {
     babel: runBabel,
     bundle: [runBabel, runBundle, fixFilenames],
-    "minify-bundle": [runMinifyBundle, fixFilenames],
-    "bundle+min": [runBabel, runBundle, runMinifyBundle, fixFilenames],
+    "minify-bundle": [
+        runMinifyBundle(libFileDistTemp, libMinifiedFileTemp),
+        fixFilenames,
+    ],
+    "bundle+min": [
+        runBabel,
+        runBundle,
+        runMinifyBundle(libFileDistTemp, libMinifiedFileTemp),
+        fixFilenames,
+    ],
     clean: runClean,
 };
 
