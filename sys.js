@@ -38,7 +38,7 @@ function _gen_wrapper(__主题) {
     try {
         if (__主题) $("#主题 input").value = __主题;
         let 主题 = $("#主题 input").value;
-        let 文章 = bullshitClass.生成(主题, 6000, {
+        let 文章 = bullshitClass.生成(主题, 6000, undefined, {
             返回段落列表: true,
         });
         $("#文章").appendChild(document.createElement("hr"));

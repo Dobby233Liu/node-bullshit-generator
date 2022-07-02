@@ -32,7 +32,7 @@
 	  vertical-align: baseline;
 	  margin-left: 6px;
 	}
-	#主题 input{
+	form[name="主题输入"] input[type="text"]{
 	  border: none;
 	  border-bottom: #666666 2px solid;
 	  padding: 1px 0 0 0;
@@ -44,7 +44,7 @@
 	  text-align: center;
 	  min-width: 20%;
 	}
-	#主题 button{
+	form[name="主题输入"] input[type="submit"]{
 	  border: 0;
 	  padding: 3px 7px 3px 7px;
 	  margin: 0;
@@ -123,7 +123,7 @@
 	  vertical-align: baseline;
 	  margin-left: 20px;
 	}
-	#主题 input{
+	form[name="主题输入"] input[type="text"]{
 	  border: none;
 	  border-bottom: #666666 2px solid;
 	  padding: 1px 0 0 0;
@@ -135,7 +135,7 @@
 	  text-align: center;
 	  min-width: 20%;
 	}
-	#主题 button{
+	form[name="主题输入"] input[type="submit"]{
 	  border: 0;
 	  padding: 5px 15px 5px 15px;
 	  margin: 0;

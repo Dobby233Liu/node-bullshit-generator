@@ -10,7 +10,7 @@
 	<link rel="icon" href="data:image/ico;base64,aWNv">
 	<link rel="stylesheet" href="./style.css">
 	<script
-		src="https://cdn.jsdelivr.net/gh/Dobby233Liu/node-bullshit-generator@latest/dist/%E7%8B%97%E5%B1%81%E5%BA%93.min.js"></script>
+		src="https://cdn.jsdelivr.net/npm/@lwys-pkg-releaser/node-bullshit-generator@latest/dist/%E7%8B%97%E5%B1%81%E5%BA%93.min.js"></script>
 	<script src="escape-html.js"></script>
 	<script src="./sys.js"></script>
 </head>
@@ -19,8 +19,10 @@
 	<div id="主体">
 		<div id="标题">“文章”生成器（node-bullshit-generator/狗屁库体验页面）</div>
 		<div id="主题">
-			<span>主题</span><input></input>
-			<button onclick="_gen_wrapper()">生成</button>
+			<form name="主题输入" method="" action="" onsubmit="_gen_wrapper(); return false;">
+				<span>主题</span><input type="text"></input>
+				<input type="submit">生成</button>
+			</form>
 		</div>
 		<div id="文章"></div>
 	</div>
