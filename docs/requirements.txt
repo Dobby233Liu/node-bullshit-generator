@@ -1,3 +1,3 @@
 # Pin jinja2 and mkdocs in order to fix mkdocs/mkdocs#2799
-Jinja2 >=3.1.0, ==3.*.*
-mkdocs >=1.2.4, ==1.*.*
+Jinja2>=3.1.2
+mkdocs>=1.3.0
