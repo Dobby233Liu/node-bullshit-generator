@@ -9,6 +9,7 @@ const { spawnSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
 const rimraf = require("rimraf");
+const browserify = require("browserify");
 
 const cwdTrue = path.join(__dirname, "..");
 
@@ -72,16 +73,15 @@ const npx = `"${findExecutable("npx")}"`;
 
 const runBabel = () => exec(npx, ["babel", srcDir, "--out-dir", libDir]);
 
-const runBundle = () =>
-    exec(npx, [
-        "browserify",
-        "-e",
-        `${libDir}/${libFile}`,
-        "-s",
-        libBrowserName,
-        "-o",
-        libFileDistTemp,
-    ]);
+const runBundle = () => {
+    console.log(
+        `> browserify "${libDir}/${libFile}" -s "${libBrowserName}" > "${libFileDistTemp}"`
+    );
+    let bundler = browserify(`${libDir}/${libFile}`, {
+        standalone: libBrowserName,
+    });
+    fs.writeFileSync(libFileDistTemp, bundler.bundle());
+};
 
 const runMinifyBundle = (bundleFile, outputFile) => () =>
     exec(npx, ["terser", bundleFile, "-o", outputFile, "-m", "-c", "--warn"]);
@@ -106,12 +106,13 @@ const runClean = () => {
 
 const steps = {
     babel: runBabel,
-    bundle: [runBabel, runBundle, fixFilenames],
+    bundle: [runClean, runBabel, runBundle, fixFilenames],
     "minify-bundle": [
         runMinifyBundle(libFileDistTemp, libMinifiedFileTemp),
         fixFilenames,
     ],
     "bundle+min": [
+        runClean,
         runBabel,
         runBundle,
         runMinifyBundle(libFileDistTemp, libMinifiedFileTemp),
