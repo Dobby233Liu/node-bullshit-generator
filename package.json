@@ -27,8 +27,7 @@
         "bundle": "node ./scripts/build.js bundle",
         "bundle+min": "node ./scripts/build.js bundle+min",
         "minify-bundle": "node ./scripts/build.js minify-bundle",
-        "prepare": "npm run bundle+min",
-        "postpack": "npm run clean"
+        "prepare": "npm run bundle+min"
     },
     "author": {
         "name": "Liu Wenyuan",
