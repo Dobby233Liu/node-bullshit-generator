@@ -24,6 +24,10 @@ const 默认选项 = {
 };
 const 默认字典 = require("./dict/default/配置");
 
+/**
+ * 库的主类
+ * @author Dobby233Liu
+ */
 class 狗屁库 {
     // FIXME: 把这个去掉
     constructor() {}
