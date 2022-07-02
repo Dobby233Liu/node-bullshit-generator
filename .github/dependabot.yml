@@ -1,14 +1,21 @@
 version: 2
 
 updates:
+    - package-ecosystem: "github-actions"
+      directory: "/"
+      schedule:
+          interval: "weekly"
+      labels:
+          - "dependencies"
     - package-ecosystem: "npm"
       directory: "/"
       schedule:
           interval: "weekly"
-      #assignees:
-      #  - "Dobby233Liu"
-      #reviewers:
-      #  - "Dobby233Liu"
       labels:
           - "dependencies"
-      #versioning-strategy: increase
+    - package-ecosystem: "pip"
+      directory: "docs/"
+      schedule:
+          interval: "weekly"
+      labels:
+          - "dependencies"
