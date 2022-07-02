@@ -1,18 +1,20 @@
 on:
     push:
         paths:
-          - '*.md'
-          - '*.js'
-          - '*.json'
+          - '**/*.md'
+          - '**/*.js'
+          - '**/*.json'
           - '.babelrc'
-          - '*.yml'
+          - '**/*.yml'
+          - '.github/workflows/beautify.yml'
     pull_request:
         paths:
-          - '*.md'
-          - '*.js'
-          - '*.json'
+          - '**/*.md'
+          - '**/*.js'
+          - '**/*.json'
           - '.babelrc'
-          - '*.yml'
+          - '**/*.yml'
+          - '.github/workflows/beautify.yml'
     workflow_dispatch:
 
 jobs:
