@@ -4,7 +4,7 @@ There are multiple dicts that comes with `node-bullshit-generator`.
 To use them, you need to `require` their configuration files and pass it to the `生成` function, like:
 
 ```javascript
-const dict = require("@lwys-pkg-releaser/node-bullshit-generator/src/dict/{codename}/配置.js");
+const dict = require("@lwys-pkg-releaser/node-bullshit-generator/lib/dict/{codename}/配置.js");
 bullshit.生成("coding", 3000, dict);
 ```
 

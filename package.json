@@ -2,11 +2,11 @@
     "name": "@lwys-pkg-releaser/node-bullshit-generator",
     "version": "1.2.0",
     "description": "Port of menzi11/BullshitGenerator@github.com to JavaScript",
-    "main": "./src/狗屁库.js",
-    "browser": "./dist/狗屁库.js",
-    "unpkg": "./dist/狗屁库.js",
+    "main": "lib/狗屁库.js",
+    "browser": "dist/狗屁库.js",
+    "unpkg": "dist/狗屁库.js",
     "bin": {
-        "bullshit-generator": "./bin/bs-gen.js"
+        "bullshit-generator": "bin/bs-gen.js"
     },
     "directories": {
         "src": "src",
@@ -24,12 +24,13 @@
         "test": "node ./bin/bs-gen.js 学生会退会",
         "build": "npm run bundle+min",
         "clean": "node ./scripts/build.js clean",
+        "clean-bundle": "node ./scripts/build.js clean-bundle",
         "babel": "node ./scripts/build.js babel",
         "bundle": "node ./scripts/build.js bundle",
         "bundle+min": "node ./scripts/build.js bundle+min",
         "minify-bundle": "node ./scripts/build.js minify-bundle",
         "prepack": "npm run bundle+min",
-        "postpack": "npm run clean"
+        "postpack": "npm run clean-bundle"
     },
     "author": {
         "name": "Liu Wenyuan",

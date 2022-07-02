@@ -57,7 +57,7 @@ For example, passing `a` as `主题` produces the following text:
 You can use a pre-made dict, for example:
 
 ```js
-const engDict = require("@lwys-pkg-releaser/node-bullshit-generator/src/dict/english/配置.js");
+const engDict = require("@lwys-pkg-releaser/node-bullshit-generator/lib/dict/english/配置.js");
 bullshit.生成("the world ending", 3000, engDict);
 ```
 

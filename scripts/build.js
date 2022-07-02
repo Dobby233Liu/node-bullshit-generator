@@ -6,14 +6,18 @@
 
 let { spawnSync } = require("child_process");
 let rimraf = require("rimraf");
+const process = require("process");
 const path = require("path");
 const fs = require("fs");
 
-let exec = (cmd, args = []) => {
+let cwdTrue = path.join(__dirname, "..");
+
+let exec = (cmd, args = [], cwd = cwdTrue) => {
     console.log(`> ${cmd} ${args.join(" ")}`);
     let data = spawnSync(cmd, args, {
         stdio: "inherit",
         shell: true,
+        cwd: cwd,
     });
     if (data.status != 0 || data.signal) {
         console.log("");
@@ -66,19 +70,7 @@ function findExecutable(exe) {
 }
 let npx = `"${findExecutable("npx")}"`;
 
-// browserify will only bundle these files
-let onlyCompileFiles = ["src/*.js", "src/dict/default/*.js"]
-    .map((v) => `"${v}"`)
-    .join(",");
-let runBabel = () =>
-    exec(npx, [
-        "babel",
-        srcDir,
-        "--out-dir",
-        libDir,
-        "--only",
-        onlyCompileFiles,
-    ]);
+let runBabel = () => exec(npx, ["babel", srcDir, "--out-dir", libDir]);
 
 let runBundle = () =>
     exec(npx, [
@@ -88,15 +80,16 @@ let runBundle = () =>
         "-s",
         libBrowserName,
         "-o",
-        `${libFileDistTemp}`,
+        libFileDistTemp,
+        "--no-bf", // this is due of how our package.json is configured
     ]);
 
 let runMinifyBundle = () =>
     exec(npx, [
         "terser",
-        `${libFileDistTemp}`,
+        libFileDistTemp,
         "-o",
-        `${libMinifiedFileTemp}`,
+        libMinifiedFileTemp,
         "-m",
         "-c",
         "--warn",
@@ -119,6 +112,9 @@ let runClean = () => {
     doRm(libDir);
     doRm(distDir);
 };
+let runCleanBundle = () => {
+    doRm(distDir);
+};
 
 let steps = {
     babel: runBabel,
@@ -126,6 +122,7 @@ let steps = {
     "minify-bundle": [runMinifyBundle, fixFilenames],
     "bundle+min": [runBabel, runBundle, runMinifyBundle, fixFilenames],
     clean: runClean,
+    "clean-bundle": runCleanBundle,
 };
 
 let param = process.argv[2];
