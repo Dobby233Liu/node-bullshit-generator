@@ -84,12 +84,12 @@ let runMinifyBundle = () =>
     ]);
 let doMoveFile = (fnOld, fnNew) => {
     console.log(`> mv "${fnOld}" "${fnNew}"`);
-    fs.renameSync(fnOld, fnNew)
-}
+    fs.renameSync(fnOld, fnNew);
+};
 let fixFilenames = () => {
     doMoveFile(libFileDistTemp, libFileDist);
     doMoveFile(libMinifiedFileTemp, libMinifiedFile);
-}
+};
 let doRimraf = (dir) => {
     console.log(`> rimraf "${dir}"`);
     rimraf.sync(dir);
