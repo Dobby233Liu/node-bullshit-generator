@@ -52,7 +52,10 @@ A compliation of random confusing terms that Chinese IT people use, for some rea
 ## English Translation
 
 -   Codename: `english`
--   Source: Heavliy modified version of https://github.com/JIUYANGZH/BullshitGenerator-English/blob/master/bullshitgenerator_English/bullshit_generator.csv
+-   Sources:
+    -   Heavliy modified version of https://github.com/JIUYANGZH/BullshitGenerator-English/blob/master/bullshitgenerator_English/bullshit_generator.csv
+    -   https://github.com/chengtianyue/Steve-s-lowAP4-generator
+    -   https://github.com/nextchentong/BullshitGenerator-English
 
 This dict is based on a translation and fork of the `classic` dict to English. Relys on the `允许字典处理字符串` option being enabled a lot, also turns the theme into lower case by default. It is suggested that you set the `结段强制带标点符号` option to true while using this dict.
 
@@ -80,6 +83,7 @@ Copyright (c) 2020 PyBird/Windy-Dance
 Copyright (c) 2020 Acfboy
 Copyright (c) 2020 shadowings-zy
 Copyright (c) 2020 yubaoquan
+Copyright (c) 2020 nextchentong
 
 "Anti 996" License Version 1.0 (Draft)
 
@@ -133,6 +137,7 @@ MIT License
 Copyright (c) 2019 meng ke
 Copyright (c) 2019 JIUYANGZH
 Copyright (c) 2019 garily
+Copyright (c) 2020 chengtianyue
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

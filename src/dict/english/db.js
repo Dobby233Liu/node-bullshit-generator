@@ -4,8 +4,8 @@
 module.exports = {
     bullshits: [
         "{主题} is a common condition in today’s society, so, ",
-        "{主题} has become increasingly evident among teens according to many scientists, ",
-        "now, the necessity of solving the problem of {主题} is becoming more and more apparent, ",
+        "{主题} has become increasingly evident among people according to many scientists, ",
+        "now, the necessity of solving the problem of {主题} is becoming more and more apparent, so, ",
         "we have to face an embarrassing situation, that is, ",
         "what should we do to give rise to {主题}, and what should we do to prevent {主题}'s happening? ",
         "but these are not the most urgent issue, the more pressing issue about {主题} is, ",
@@ -33,6 +33,8 @@ module.exports = {
         "when facing the difficult choice of {主题}, I rarely slept well. ",
         "if {主题} takes place in our daily life, we have to consider it's consequences. ",
         "the consequece of {主题} is of great significance to me and many other people. ",
+        "we all know that as long as something makes sense, it must be carefully considered.",
+        "that being the case, ",
         "in my opinion, ",
         "in general, ",
         "as far as I know, ",
@@ -44,6 +46,7 @@ module.exports = {
         "to a certain extent, {主题} is right. ",
         "after seeing this evidence, there is no way we can agree with {主题}. ",
         "the evidence presented about {主题} has shown that, ",
+        "after the above discussion, we can see that ",
     ],
     addings: [
         "furthermore, ",
@@ -60,6 +63,7 @@ module.exports = {
         "in other words, ",
         "it is important to note that ",
         "on the other hand, ",
+        "on the one hand, ",
     ],
     examples: [
         "that is to say, ",
@@ -90,6 +94,8 @@ module.exports = {
         " told us that ",
         " showed us that ",
         " mentioned that ",
+        " said before that ",
+        " said inadvertently that ",
         "{prefix_2}, ",
     ],
     prefix_2: ["according to ", "to quote from "],
@@ -99,6 +105,10 @@ module.exports = {
         "That aroused my imagination. ",
         "That solved my problem. ",
         "That brought a new way of thinking about {主题}. ",
+        "That can't help me ponder.",
+        "With that sentence, we have to look at this issue more carefully.",
+        "I hope that you can understand that sentence well.",
+        "Although that sentence is very short, it makes me think.",
     ],
     author: [
         "Lao Tzu",
@@ -125,6 +135,7 @@ module.exports = {
         "Orson Scott Card",
         "Ljupka Cvetanova",
         "Comte de Lautréamont",
+        "Nelson Mandela",
     ],
     saying: [
         "the flame that burns twice as bright burns half as long.",
@@ -141,7 +152,7 @@ module.exports = {
         "I have forgotten my umbrella.",
         "the trouble about men is twofold - one cannot learn truths which are too complicated, while one forgets truths which are too simple.",
         "the shortest distance between two points is always under construction.",
-        "some people talk about other people’s failures with so much pleasure that you would swear they are talking about their own successes.",
+        "some people talk about other people's failures with so much pleasure that you would swear they are talking about their own successes.",
         "there is music you never hear unless you play it yourself.",
         "what you choose also chooses you.",
         //"all Excess is ill, but Drunkenness is of the worst Sort - it spoils Health, dismounts the Mind, and unmans Men, and it reveals Secrets, is Quarrelsome, Lascivious, Impudent, Dangerous and Mad.",
@@ -151,5 +162,6 @@ module.exports = {
         "never mock a tender heart.",
         "smile and the world will laugh at you.",
         "people say sound things when they do not strive to say to say extraordinary ones.",
+        "the greatest glory in living lies not in never falling, but in rising every time we fall.",
     ],
 };
