@@ -71,6 +71,7 @@ function findExecutable(exe) {
 }
 const npx = `"${findExecutable("npx")}"`;
 
+// TODO: probably rewrite this to use babel api
 const runBabel = () => exec(npx, ["babel", srcDir, "--out-dir", libDir]);
 
 const runBundle = () => {
@@ -83,6 +84,7 @@ const runBundle = () => {
     fs.writeFileSync(libFileDistTemp, bundler.bundle());
 };
 
+// TODO: probably rewrite this to use terser api
 const runMinifyBundle = (bundleFile, outputFile) => () =>
     exec(npx, ["terser", bundleFile, "-o", outputFile, "-m", "-c", "--warn"]);
 
