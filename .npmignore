@@ -4,6 +4,7 @@ node_modules
 *.md
 !README.md
 docs
+!docs/packeddicts.md
 .gitpod.Dockerfile
 .gitpod.yml
 .prettierrc.json
