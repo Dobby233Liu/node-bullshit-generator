@@ -66,10 +66,9 @@ class 常用 {
     }
 
     /**
-     * 返回文章中所有段落的长度，如果加换行符长度为真，
-     * 把隐性的换行符也算在内
+     * 返回文章中所有段落的长度
      * @param {string[]} 文章
-     * @param {boolean} 加换行符长度
+     * @param {boolean} 加换行符长度 - 如果为真，把隐性的换行符也算在内
      * @returns {number}
      */
     static 总长(文章, 加换行符长度 = true) {
