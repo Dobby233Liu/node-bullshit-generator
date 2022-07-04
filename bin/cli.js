@@ -25,7 +25,7 @@ if (argvClean.indexOf("--help") >= 0 || argvClean.indexOf("-h") >= 0) {
     console.log(helpText);
     process.exit(1);
 } else {
-    theme = process.argv[0] || "学生会退会";
+    theme = argvClean[0] || "学生会退会";
     length = argvClean[1]
         ? argvClean[1] >= 0 && parseInt(argvClean[1])
         : undefined;
