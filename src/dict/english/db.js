@@ -33,8 +33,10 @@ module.exports = {
         "when facing the difficult choice of {主题}, I rarely slept well. ",
         "if {主题} takes place in our daily life, we have to consider it's consequences. ",
         "the consequece of {主题} is of great significance to me and many other people. ",
-        "we all know that as long as something makes sense, it must be carefully considered.",
+        /*"we all know that as long as something makes sense, it must be carefully considered.",
         "that being the case, ",
+        https://github.com/nextchentong/BullshitGenerator-English
+        */
         "in my opinion, ",
         "in general, ",
         "as far as I know, ",
@@ -47,7 +49,9 @@ module.exports = {
         "after seeing this evidence, there is no way we can agree with {主题}. ",
         "the evidence presented about {主题} has shown that, ",
         //"the evidence presented in this assignment has shown that, ",
-        "after the above discussion, we can see that ",
+        /*"after the discussion above, we can see that ",
+        https://github.com/nextchentong/BullshitGenerator-English
+        */
     ],
     addings: [
         "furthermore, ",
@@ -95,8 +99,10 @@ module.exports = {
         " told us that ",
         " showed us that ",
         " mentioned that ",
-        " said before that ",
+        /*" said before that ",
         " said inadvertently that ",
+        https://github.com/nextchentong/BullshitGenerator-English
+        */
         "{prefix_2}, ",
     ],
     prefix_2: ["according to ", "to quote from "],
@@ -106,10 +112,12 @@ module.exports = {
         "That aroused my imagination. ",
         "That solved my problem. ",
         "That brought a new way of thinking about {主题}. ",
-        "That can't help me ponder. ",
+        /*"That can't help me ponder. ",
         "With that sentence, we have to look at this issue more carefully. ",
         "I hope that you can understand that sentence well. ",
         "Although that sentence is very short, it makes me think. ",
+        https://github.com/nextchentong/BullshitGenerator-English
+        */
     ],
     author: [
         "Lao Tzu",

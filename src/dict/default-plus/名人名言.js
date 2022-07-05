@@ -10551,7 +10551,7 @@ const bestQwas982Quotes = [
     "佚名{前面垫话}，人要锻炼自己的想象力，掌握抽象。{后面垫话}",
 ];
 const pr206 = ["古人{前面垫话}，莫看江面平如镜，要看水底万丈深。{后面垫话}"];
-const ybqQuotes = [
+/*const ybqQuotes = [
     "古人{前面垫话}，不听老人言, 吃亏在眼前。{后面垫话}",
     "古人{前面垫话}，亡羊补牢, 为时不晚。{后面垫话}",
     "古人{前面垫话}，破鼓万人捶。{后面垫话}",
@@ -10562,12 +10562,10 @@ const ybqQuotes = [
     "古人{前面垫话}，大学之道, 在明明德。{后面垫话}",
     "古人{前面垫话}，道可道, 非常道。{后面垫话}",
     "古人{前面垫话}，天地不仁, 以万物为刍狗。{后面垫话}",
-];
+];*/
 module.exports = (applyQwas982Quotes = true) => {
-    let newFamous = originalFamous
-        .concat(liutongyangFamous)
-        .concat(pr206)
-        .concat(ybqQuotes);
+    let newFamous = originalFamous.concat(liutongyangFamous).concat(pr206);
+    //.concat(ybqQuotes);
     if (applyQwas982Quotes) newFamous = newFamous.concat(bestQwas982Quotes);
     return newFamous;
 };
