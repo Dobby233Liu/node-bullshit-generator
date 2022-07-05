@@ -11,14 +11,14 @@ bullshit.生成("coding", 3000, dict);
 ## Default
 
 -   Codename: `default`
--   Source: https://github.com/menzi11/BullshitGenerator/blob/master/data.json (with some modifications)
+-   Source: [menzi11/BullshitGenerator](https://github.com/menzi11/BullshitGenerator/blob/master/data.json) (with some modifications)
 
 The default dict that is used if none is specified. It is a slightly improved version of the dict from the original Python version.
 
 ## Classic
 
 -   Codename: `classic`
--   Source: https://github.com/menzi11/BullshitGenerator/blob/master/data.json
+-   Source: [menzi11/BullshitGenerator](https://github.com/menzi11/BullshitGenerator/blob/master/data.json)
 
 A recreation of the dict in the original Python `BullshitGenerator`.
 
@@ -28,16 +28,16 @@ A recreation of the dict in the original Python `BullshitGenerator`.
 
 -   Codename: `default-plus`
 -   Sources:
-    -   https://github.com/menzi11/BullshitGenerator/pull/110
-    -   A fork of the Python version by https://github.com/aetherwu (original repo can no longer be found)
-    -   https://github.com/menzi11/BullshitGenerator/pull/107
-    -   https://github.com/menzi11/BullshitGenerator/pull/209
-    -   https://github.com/qwas982 (their quotes can be disabled)
-    -   https://github.com/menzi11/BullshitGenerator/pull/175
-    -   https://github.com/Windy-Dance/BullShitGenerator2.0
-    -   https://github.com/Acfboy/BullshitGenerator/blob/master/data.json
-    -   https://github.com/yubaoquan/BullshitGenerator
+    -   [menzi11/BullshitGenerator#107](https://github.com/liutongyang/BullshitGenerator/blob/master/data.json)
+    -   [menzi11/BullshitGenerator#110](https://github.com/NagisaVon/BullshitGenerator/blob/master/data.json)
+    -   A fork of the Python version by [aetherwu](https://github.com/aetherwu) (original repo can no longer be found)
+    -   [menzi11/BullshitGenerator#209](https://github.com/fslongjin/BullshitGenerator/blob/master/data.json)
+    -   [menzi11/BullshitGenerator#175](https://github.com/menzi11/BullshitGenerator/blob/82f9ba333e2b5cf6bd47d9026bb77335c5987d6f/data.json)
+    -   [Windy-Dance/BullShitGenerator2.0](https://github.com/Windy-Dance/BullShitGenerator2.0/blob/master/data.json)
+    -   [Acfboy/BullshitGenerator](https://github.com/Acfboy/BullshitGenerator/blob/master/data.json)
+    -   [yubaoquan/BullshitGenerator](https://github.com/yubaoquan/BullshitGenerator/blob/master/src/data.ts)
     -   Dobby233Liu's scrapped modifications of the `default` dict
+    -   [qwas982](https://github.com/qwas982) (their quotes can be disabled)
 
 The Default dict, but with some _new and cool_ stuff inside.
 It is recommended to use components in this dict in your own dict configurations, rather than just using the pre-made configuration.
@@ -45,7 +45,7 @@ It is recommended to use components in this dict in your own dict configurations
 ## Chinese Internet Industry Terms
 
 -   Codename: `internet-industry-terms`
--   Source: https://github.com/shadowings-zy/internet-industry-terms-generator/blob/master/index.js
+-   Source: [shadowings-zy/internet-industry-terms-generator](https://github.com/shadowings-zy/internet-industry-terms-generator/blob/master/index.js)
 
 A compliation of random confusing terms that Chinese IT people use, for some reason.
 
@@ -53,24 +53,24 @@ A compliation of random confusing terms that Chinese IT people use, for some rea
 
 -   Codename: `english`
 -   Sources:
-    -   Heavliy modified version of https://github.com/JIUYANGZH/BullshitGenerator-English/blob/master/bullshitgenerator_English/bullshit_generator.csv
-    -   https://github.com/JIUYANGZH/bullshitgenerator
-    -   https://github.com/chengtianyue/Steve-s-lowAP4-generator
-    -   https://github.com/nextchentong/BullshitGenerator-English
+    -   Heavliy modified version of [JIUYANGZH/BullshitGenerator-English](https://github.com/JIUYANGZH/BullshitGenerator-English/blob/master/bullshitgenerator_English/bullshit_generator.csv)
+    -   [JIUYANGZH/bullshitgenerator](https://github.com/JIUYANGZH/bullshitgenerator/blob/master/bullshit_generator.csv)
+    -   [chengtianyue/Steve-s-lowAP4-generator](https://github.com/chengtianyue/Steve-s-lowAP4-generator/blob/master/SteveslowAP4generator.csv)
+    -   [nextchentong/BullshitGenerator-English](https://github.com/nextchentong/BullshitGenerator-English/blob/master/src/language/en.js)
 
 This dict is based on a translation and fork of the `classic` dict to English. Relys on the `允许字典处理字符串` option being enabled a lot, also turns the theme into lower case by default. It is suggested that you set the `结段强制带标点符号` option to true while using this dict.
 
 ## Japanese Translation
 
 -   Codename: `japanese`
--   Source: https://github.com/garily/BullshitGenerator-Japanese/blob/master/index.html
+-   Source: [garily/BullshitGenerator-Japanese@master/index.html](https://github.com/garily/BullshitGenerator-Japanese/blob/master/index.html)
 
 This dict is based on a translation of the `classic` dict to Japanese.
 
 ## qwas982
 
 -   Codename: `qwas982`
--   Source: https://github.com/qwas982
+-   Source: [https://github.com/qwas982](https://github.com/qwas982)
 
 Badly made dict with data based on some infamous quotes from the infamous Hanzi-based... Uh, no, "mandarin symbol" programming language pionner qwas982.
 
