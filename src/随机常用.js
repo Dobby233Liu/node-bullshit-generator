@@ -54,11 +54,10 @@ class 随机常用 {
     static *洗牌遍历(数组, 重复度 = 2) {
         let 洗牌后数组 = [];
         for (let i = 0; i < 重复度; i++) 洗牌后数组 = 洗牌后数组.concat(数组);
-        洗牌后数组 = this.洗牌(洗牌后数组);
 
         while (true) {
-            for (返回值 of 洗牌后数组) yield 返回值;
             洗牌后数组 = this.洗牌(洗牌后数组);
+            for (返回值 of 洗牌后数组) yield 返回值;
         }
     }
 }
