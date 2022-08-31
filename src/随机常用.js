@@ -50,7 +50,7 @@ class 随机常用 {
      * @param {number} 重复度
      * @returns {Object}
      */
-    static 重复(数组, 重复度 = 2) {
+    static 重复(数组, 重复度) {
         return Array(重复度).fill(数组).flat();
     }
 
