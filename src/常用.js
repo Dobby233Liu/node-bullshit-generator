@@ -47,11 +47,12 @@ class 常用 {
     /**
      * 将段中的所有段落添加到文章里
      * @param {string[]} 文章
-     * @param {string} 段
+     * @param {string} 起段
+     * @param {string} 段缓冲
      * @returns {string}
      */
-    static 加段(文章, 段) {
-        let 分段 = 段.trimEnd().split("\n");
+    static 加段(文章, 起段 = "", 段缓冲) {
+        let 分段 = 段缓冲.trimEnd().split("\n").map(x => 起段 + x);
         文章 = 文章.concat(分段);
         return 文章;
     }
