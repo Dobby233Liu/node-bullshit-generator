@@ -35,16 +35,6 @@ class 常用 {
     }
 
     /**
-     * 检测段落是否有换行符（适合使用加段函数）
-     * @param {string} 段
-     * @returns {boolean}
-     * @see 加段
-     */
-    static 能加段(段) {
-        return 段.includes("\n");
-    }
-
-    /**
      * 将段中的所有段落添加到文章里
      * @param {string[]} 文章
      * @param {string} 起段
