@@ -1,3 +1,5 @@
+const 常用 = require("./常用");
+
 /**
  * 随机相关的函数
  * @author Dobby233Liu
@@ -45,16 +47,6 @@ class 随机常用 {
     }
 
     /**
-     * 重复数组中的元素重复数遍
-     * @param {any[]} 数组
-     * @param {number} 重复度
-     * @returns {Object}
-     */
-    static 重复(数组, 重复度) {
-        return Array(重复度).fill(数组).flat();
-    }
-
-    /**
      * 返回一个迭代器，其将（重复度次重复并）洗牌过的数组中的元素按顺序返回，
      * 完毕后再次洗牌并从头开始
      * @param {any[]} 数组
@@ -62,7 +54,7 @@ class 随机常用 {
      * @yields {any}
      */
     static *洗牌遍历(数组, 重复度 = 2) {
-        let 洗牌后数组 = this.重复(数组, 重复度);
+        let 洗牌后数组 = 常用.重复(数组, 重复度);
 
         while (true) {
             洗牌后数组 = this.洗牌(洗牌后数组);
