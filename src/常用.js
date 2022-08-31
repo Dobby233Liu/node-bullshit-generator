@@ -72,6 +72,16 @@ class 常用 {
             长 += 文章[i].length + (加换行符长度 ? 换行符号长 : 0);
         return 长;
     }
+
+    /**
+     * 重复数组中的元素重复度遍
+     * @param {any[]} 数组
+     * @param {number} 重复度
+     * @returns {Object}
+     */
+    static 重复(数组, 重复度) {
+        return Array(重复度).fill(数组).flat();
+    }
 }
 
 module.exports = 常用;
