@@ -168,7 +168,10 @@ class 狗屁库 {
                 let 最后一个换行符 = 段缓冲.lastIndexOf("\n");
                 if (最后一个换行符 + 1 < 段缓冲.length) {
                     let 实际可加的文字 = 段缓冲.substring(0, 最后一个换行符);
-                    let 不加的文字 = 段缓冲.substring(最后一个换行符 + 1, 段缓冲.length);
+                    let 不加的文字 = 段缓冲.substring(
+                        最后一个换行符 + 1,
+                        段缓冲.length
+                    );
                     文章 = 常用.加段(文章, 起段, 实际可加的文字);
                     段缓冲 = 不加的文字;
                 } else {
