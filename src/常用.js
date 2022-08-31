@@ -52,7 +52,10 @@ class 常用 {
      * @returns {string}
      */
     static 加段(文章, 起段 = "", 段缓冲) {
-        let 分段 = 段缓冲.trimEnd().split("\n").map(x => 起段 + x);
+        let 分段 = 段缓冲
+            .trimEnd()
+            .split("\n")
+            .map((x) => 起段 + x);
         文章 = 文章.concat(分段);
         return 文章;
     }
