@@ -52,8 +52,6 @@ class 随机常用 {
      * @returns {Object}
      */
     static *洗牌遍历(数组, 重复度 = 2) {
-        if (数组.length < 1) throw Error("Invaild array");
-
         let 洗牌后数组 = [];
         for (let i = 0; i < 重复度; i++) 洗牌后数组 = 洗牌后数组.concat(数组);
         洗牌后数组 = this.洗牌(洗牌后数组);
