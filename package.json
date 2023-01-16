@@ -59,7 +59,7 @@
         "browserify": "^17.0.0",
         "core-js": "^3.6.4",
         "prettier": "2.7.1",
-        "rimraf": "^3.0.2",
+        "rimraf": "^4.0.7",
         "terser": "^5.7.0"
     },
     "files": [
